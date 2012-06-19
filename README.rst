@@ -4,8 +4,8 @@ IsCool Entertainment Pynba
 Pynba is a WSGI Middleware for Pinba_. It allows realtime monitoring/statistics
 server using MySQL as a read-only interface.
 
-It accumulates and processes data sent over UDP by multiple PHP processes and
-displays statistics in a nice human-readable form of simple "reports", also
+It accumulates and processes data sent over UDP by multiple Python processes
+and displays statistics in a nice human-readable form of simple "reports", also
 providing read-only interface to the raw data in order to make possible
 generation of more sophisticated reports and stats.
 

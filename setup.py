@@ -5,7 +5,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
-version = '0.1'
+version = '0.2'
 
 install_requires = [
     'protobuf',
@@ -27,6 +27,8 @@ setup(name='iscool_e.pynba',
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
         "Topic :: Internet :: Log Analysis",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
