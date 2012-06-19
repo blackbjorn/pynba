@@ -35,7 +35,11 @@ If it is not, please refer to the installation of this package.
 Setup
 -----
 
-::
+If you want to install the official release, do::
+
+    $ pip install iscool_e.pynba
+
+But i you prefer to use the current developement version, do::
 
     $ git clone https://github.com/IsCoolEntertainment/pynba.git
     $ python setup.py install
