@@ -31,6 +31,7 @@ You will need to install theses packages before using Pynba.
 The installation process requires setuptools to be installed.
 If it is not, please refer to the installation of this package.
 
+
 Setup
 -----
 
@@ -38,6 +39,7 @@ Setup
 
     $ git clone https://github.com/IsCoolEntertainment/pynba.git
     $ python setup.py install
+
 
 Usage
 -----
@@ -71,6 +73,7 @@ For it, just import the pynba proxy, and use it to create new timers::
 
 Some use cases are available on src/examples/
 
+
 Differences with PHP extension
 ------------------------------
 
@@ -101,6 +104,7 @@ About timers:
         ('baz, 'seq1'),
         ('baz, 'seq2'),
         ('qux.map1', 'val1')
+
 
 License
 -------
