@@ -10,7 +10,7 @@
 from timeit import default_timer
 import functools
 from copy import copy
-import logging
+from .log import logger
 
 class Timer(object):
     """
@@ -199,7 +199,7 @@ class DataCollector(object):
     def flush(self):
         """Flushs.
         """
-        logging.debug('flush', extra={
+        logger.debug('flush', extra={
             'timers': self.timers,
             'elapsed': self.elapsed,
         })

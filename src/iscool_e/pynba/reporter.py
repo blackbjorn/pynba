@@ -9,7 +9,7 @@
 
 from socket import socket, AF_INET, SOCK_DGRAM
 import collections
-import logging
+from .log import logger
 import types
 from .pinba_pb2 import Request
 
@@ -43,7 +43,7 @@ class Reporter(object):
         """Prepares the message
         """
 
-        logging.debug("Preprare protobuff", extra={
+        logger.debug("Preprare protobuff", extra={
             'servername': servername,
             'hostname': hostname,
             'scriptname': scriptname,
