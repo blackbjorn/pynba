@@ -43,7 +43,7 @@ class Reporter(object):
         """Prepares the message
         """
 
-        logger.debug("Preprare protobuff", extra={
+        logger.debug("prepare protobuff", extra={
             'servername': servername,
             'hostname': hostname,
             'scriptname': scriptname,
