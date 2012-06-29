@@ -9,3 +9,10 @@ News
 *Release date: 19-Jun-2012*
 
 * First release
+
+0.2
+---
+
+*Release date: 29-Jun-2012*
+
+* Logging refactoring
