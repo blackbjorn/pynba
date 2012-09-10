@@ -18,8 +18,8 @@ def app(environ, start_response):
         sleep(.1)
 
     #: Evently benchmark a function with a decorator
-    @pynba.timer(tag5='foo', tag6='bar')
-    def long_process(self):
+    @pynba.timer(tag5='foo', tag6={'bar': 'baz'})
+    def long_process():
         sleep(.1)
 
     long_process()

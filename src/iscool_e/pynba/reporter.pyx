@@ -13,7 +13,7 @@ from .log import logger
 import types
 from .pinba_pb2 import Request
 
-cpdef Reporter_prepare(char* servername, char* hostname, char* scriptname, elapsed, list timers,
+cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             ru_utime=None, ru_stime=None, document_size=None,
             memory_peak=None):
     """Prepares the message
@@ -87,12 +87,13 @@ cdef class Reporter(object):
         self.address = address
         self.sock = socket(AF_INET, SOCK_DGRAM)
 
-    def __call__(self, char* servername, char* hostname, char* scriptname,
+    def __call__(self, servername, hostname, scriptname,
             elapsed, list timers, ru_utime=None, ru_stime=None,
             document_size=None, memory_peak=None):
         """
         Same as PHP pinba_flush()
         """
+
         msg = Reporter.prepare(servername, hostname, scriptname, elapsed,
                                timers, ru_utime, ru_stime, document_size,
                                memory_peak)
@@ -141,7 +142,7 @@ cdef list flatten(dict tags, char* namespace):
     cdef list output
 
     if len(namespace):
-        pref = "." + namespace
+        pref = namespace + "."
     else:
         pref = ''
 

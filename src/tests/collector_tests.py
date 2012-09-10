@@ -14,7 +14,7 @@ class CollectorTestCase(unittest.TestCase):
         self.assertEqual(collector.timers, set())
         self.assertEqual(collector.scriptname, scriptname)
         self.assertEqual(collector.hostname, hostname)
-        self.assertEqual(collector._start, None)
+        self.assertEqual(collector.dt_start, None)
         self.assertFalse(collector.started)
         self.assertEqual(collector.elapsed, None)
         with self.assertRaises(RuntimeError):

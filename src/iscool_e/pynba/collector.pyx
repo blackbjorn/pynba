@@ -10,6 +10,7 @@
 import functools
 from .log import logger
 
+
 cdef extern from "sys/time.h":
     ctypedef long time_t
     struct timeval:
@@ -19,12 +20,66 @@ cdef extern from "sys/time.h":
         pass
     int gettimeofday(timeval *tv, timezone *tz)
 
+
 cdef enum RunningState:
     initialized = 0,
-    running = 1,
-    finished = 2
+    started = 1,
+    stoped = 2
 
-cdef class Timer(object):
+
+cdef class Timed(object):
+    cdef RunningState _state
+    cdef timeval _tt_start
+    cdef timeval _tt_end
+    cdef long _tt_elapsed
+
+    def __cinit__(self):
+        self._state = initialized
+
+    property started:
+        """Tell if timer is started"""
+        def __get__(self):
+            return self._state == started
+
+    property elapsed:
+        """Returns the elapsed time in seconds"""
+        def __get__(self):
+            if self._state == stoped:
+                return <float>self._tt_elapsed / 1000000
+            return None
+
+    property dt_start:
+        """Returns the elapsed time in seconds"""
+        def __get__(self):
+            cdef long time
+            if self._state != initialized:
+                time = self._tt_start.tv_sec * 1000000 + self._tt_start.tv_usec
+                return <float>time / 1000000
+            return None
+
+    cdef _start(self):
+        """Starts timer"""
+        if self._state == started:
+            raise RuntimeError('Already started')
+        self._state = started
+        gettimeofday(&self._tt_start, NULL)
+
+    cdef _stop(self):
+        """Stops timer"""
+        if self._state != started:
+            raise RuntimeError('Not started')
+        gettimeofday(&self._tt_end, NULL)
+        self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
+        self._state = stoped
+
+    cdef _flush(self):
+        """Flushs.
+        """
+        gettimeofday(&self._tt_start, NULL)
+        self._state = started
+
+
+cdef class Timer(Timed):
     """
     Differences with the PHP version
 
@@ -41,30 +96,6 @@ cdef class Timer(object):
     cdef public object tags
     cdef public object data
     cdef DataCollector parent
-
-    cdef RunningState _state
-    cdef timeval _tt_start
-    cdef timeval _tt_end
-    cdef long _tt_elapsed
-
-    property started:
-        """Tell if timer is started"""
-        def __get__(self):
-            return self._state == running
-
-    property elapsed:
-        """Returns the elapsed time in seconds"""
-        def __get__(self):
-            if self._state == running:
-                gettimeofday(&self._tt_end, NULL)
-                self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
-                return <float>self._tt_elapsed / 1000000
-            elif self._state == finished:
-                return <float>self._tt_elapsed / 1000000
-            return None
-
-    def __cinit__(self):
-        self._state = initialized
 
     def __init__(self, object tags, DataCollector parent=None):
         """
@@ -97,21 +128,14 @@ cdef class Timer(object):
             self.parent.timers.add(instance)
         return instance
 
-    cpdef start(self):
+    def start(self):
         """Starts timer"""
-        if self._state == running:
-            raise RuntimeError('Already started')
-        self._state = running
-        gettimeofday(&self._tt_start, NULL)
+        self._start()
         return self
 
-    cpdef stop(self):
+    def stop(self):
         """Stops timer"""
-        if self._state != running:
-            raise RuntimeError('Not started')
-        gettimeofday(&self._tt_end, NULL)
-        self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
-        self._state = finished
+        self._stop()
         return self
 
     cpdef __enter__(self):
@@ -147,12 +171,12 @@ cdef class Timer(object):
 
     def __repr__(self):
         label, period = '', ''
-        if self.elapsed:
+        if self._state == stoped:
             label = ' elapsed:'
             period = self.elapsed
-        elif self._state == running:
+        elif self._state == started:
             label = ' started:'
-            period = '{tv_sec}.{tv_usec}'.format(self._tt_start)
+            period = self.dt_start
 
         return '<{0}({1}){2}{3}>'.format(
             self.__class__.__name__,
@@ -160,7 +184,7 @@ cdef class Timer(object):
             label, period)
 
 
-cdef class DataCollector(object):
+cdef class DataCollector(Timed):
     """
     This is the main data container.
 
@@ -184,35 +208,10 @@ cdef class DataCollector(object):
 
     cdef public bint enabled
     cdef public set timers
-    cdef public char*  scriptname
-    cdef public char*  hostname
-    cdef object _start
+    cdef public str scriptname
+    cdef public str hostname
     cdef public object document_size
     cdef public object memory_peak
-
-    cdef RunningState _state
-    cdef timeval _tt_start
-    cdef timeval _tt_end
-    cdef long _tt_elapsed
-
-    property started:
-        """Tell if timer is started"""
-        def __get__(self):
-            return self._state == running
-
-    property elapsed:
-        """Returns the elapsed time in seconds"""
-        def __get__(self):
-            if self._state == running:
-                gettimeofday(&self._tt_end, NULL)
-                self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
-                return <float>self._tt_elapsed / 1000000
-            elif self._state == finished:
-                return <float>self._tt_elapsed / 1000000
-            return None
-
-    def __cinit__(self):
-        self._state = initialized
 
     def __init__(self, object scriptname=None, object hostname=None):
         self.enabled = True
@@ -225,28 +224,20 @@ cdef class DataCollector(object):
         #: You can use this placeholder to store the memory peak
         self.memory_peak = None
 
-    cpdef start(self):
+    def start(self):
         """Starts"""
-        if self._state == running:
-            raise RuntimeError('Already started')
-        self._state = running
-        gettimeofday(&self._tt_start, NULL)
+        self._start()
+        return self
 
-    cpdef stop(self):
+    def stop(self):
         """Stops current elapsed time and every attached timers.
         """
         cdef Timer timer
-
-        if self._state != running:
-            raise RuntimeError('Not started')
-        self._state = finished
-
-        gettimeofday(&self._tt_end, NULL)
-        self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
-
+        self._stop()
         for timer in self.timers:
             if timer.started:
                 timer.stop()
+        return self
 
     def timer(self, **tags):
         """Factory new timer.
@@ -254,19 +245,16 @@ cdef class DataCollector(object):
         cdef Timer timer
         timer = Timer(tags, self)
         self.timers.add(timer)
-
         return timer
 
-    cpdef flush(self):
+    def flush(self):
         """Flushs.
         """
         logger.debug('flush', extra={
             'timers': self.timers,
             'elapsed': self.elapsed,
         })
-
-        gettimeofday(&self._tt_start, NULL)
-        self._state = running
-
+        self._flush()
         self.timers.clear()
+        return self
 

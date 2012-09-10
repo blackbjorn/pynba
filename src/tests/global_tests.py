@@ -3,7 +3,8 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.globals import Fallback, pynba, _CTX_STACK
+from iscool_e.pynba.globals import pynba
+from iscool_e.pynba.local import LOCAL_STACK
 from contextlib import contextmanager
 
 class GlobalTestCase(unittest.TestCase):
@@ -16,16 +17,11 @@ class GlobalTestCase(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             foo()
 
-        class Ctx(object):
-            def __init__(self):
-                class X(object):
-                    @contextmanager
-                    def timer(self, *args, **kwargs):
-                        yield
-                self.pynba = X()
-
-        bar = Ctx()
-        _CTX_STACK.push(bar)
+        class X(object):
+            @contextmanager
+            def timer(self, *args, **kwargs):
+                yield
+        x = X()
+        LOCAL_STACK.pynba = x
 
         foo()
-

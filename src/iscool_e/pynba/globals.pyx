@@ -7,33 +7,47 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from functools import partial, wraps
-from werkzeug.local import LocalStack, LocalProxy
+from functools import wraps
+from .local import LOCAL_STACK
 
-cpdef _lookup_object(name, fallback=False):
-    top = _CTX_STACK.top
-    if top is None:
-        if fallback:
-            return Fallback
-        raise RuntimeError('working outside of request context')
-    return getattr(top, name)
+__all__ = ['pynba']
 
-_CTX_STACK = LocalStack()
-pynba = LocalProxy(partial(_lookup_object, 'pynba', True))
+cdef class LocalProxy(object):
+    def timer(self, **tags):
+        pynba = LOCAL_STACK.pynba
+        if pynba:
+            return pynba.timer(**tags)
 
-def Fallback_timer(**tags):
-    def decorator(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            _pynba = _lookup_object("pynba", fallback=False)
-            with _pynba.timer(**tags):
-                response = func(*args, **kwargs)
-            return response
-        return wrapper
-    return decorator
+        def decorator(func):
+            @wraps(func)
+            def wrapper(*args, **kwargs):
+                try:
+                    timer = LOCAL_STACK.pynba.timer(**tags)
+                except (TypeError, AttributeError):
+                    raise RuntimeError('working outside of request context')
 
-cdef class Fallback(object):
-    """Used to define timers globally of a context.
-    """
+                with timer:
+                    response = func(*args, **kwargs)
+                return response
+            return wrapper
+        return decorator
 
-    timer = staticmethod(Fallback_timer)
+    def __getattr__(self, name):
+        try:
+            return getattr(LOCAL_STACK.pynba, name)
+        except TypeError:
+            raise RuntimeError('working outside of request context')
+
+    def __setattr__(self, name, value):
+        try:
+            setattr(LOCAL_STACK.pynba, name, value)
+        except TypeError:
+            raise RuntimeError('working outside of request context')
+
+    def __delattr__(self, name):
+        try:
+            delattr(LOCAL_STACK.pynba, name)
+        except TypeError:
+            raise RuntimeError('working outside of request context')
+
+pynba = LocalProxy()

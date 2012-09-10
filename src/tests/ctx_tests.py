@@ -5,7 +5,8 @@ except ImportError:
 
 from iscool_e.pynba.ctx import RequestContext
 from iscool_e.pynba.collector import DataCollector
-from iscool_e.pynba.globals import _CTX_STACK, pynba
+from iscool_e.pynba.globals import pynba
+from iscool_e.pynba.local import LOCAL_STACK
 
 class ContextTestCase(unittest.TestCase):
     def test_config(self):
@@ -21,16 +22,19 @@ class ContextTestCase(unittest.TestCase):
         reporter = lambda x: x
         environ = {}
 
-        top = _CTX_STACK.top
         ctx = RequestContext(reporter, environ)
-        self.assertIsNot(ctx, top)
-        ctx.push()
-        top = _CTX_STACK.top
-        self.assertIs(ctx, top)
+        top = LOCAL_STACK.pynba
+        assert top is None
+        assert ctx.pynba is None
 
+        ctx.push()
+        top = LOCAL_STACK.pynba
+        assert ctx.pynba == top
+
+        top = LOCAL_STACK.pynba
         ctx.pop()
-        top = _CTX_STACK.top
-        self.assertIsNot(ctx, top)
+        assert ctx.pynba is None
+        assert ctx.pynba != top
 
     def test_context2(self):
         with self.assertRaises((RuntimeError, AttributeError)):
