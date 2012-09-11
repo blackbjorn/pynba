@@ -170,13 +170,17 @@ cdef class Timer(Timed):
         return wrapper
 
     def __repr__(self):
-        label, period = '', ''
+        cdef char* label
+        cdef float period
         if self._state == stoped:
             label = ' elapsed:'
             period = self.elapsed
         elif self._state == started:
             label = ' started:'
             period = self.dt_start
+        else:
+            label = ''
+            period = 0
 
         return '<{0}({1}){2}{3}>'.format(
             self.__class__.__name__,

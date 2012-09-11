@@ -134,9 +134,10 @@ cpdef flattener(dict tags):
     data = set(flatten(tags, ''))
     return [(key, str(value)) for key, value in data]
 
-cdef list flatten(dict tags, char* namespace):
+cdef inline list flatten(dict tags, char* namespace):
     """Flatten recursively"""
     cdef object pref
+    cdef object key
     cdef object value
     cdef list values
     cdef list output
