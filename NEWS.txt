@@ -16,3 +16,11 @@ News
 *Release date: 29-Jun-2012*
 
 * Logging refactoring
+
+0.3
+---
+
+*Release date: 26-Sept-2012*
+
+* Migrate to cython
+* Removed Werkzeug dependency

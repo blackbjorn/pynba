@@ -27,10 +27,7 @@ def extension_maker():
                     Extension(
                         name = name[:-2],
                         sources = [path],
-                        include_dirs = ['src', "."],   # adding the '.' to include_dirs is CRUCIAL!!
-                        # extra_compile_args = ["-O3", "-Wall"],
-                        # extra_link_args = ['-g'],
-                        # libraries = ["dv",],
+                        include_dirs = ['src', "."],
                     )
                 )
             elif os.path.isdir(path):
@@ -72,6 +69,5 @@ setup(name='iscool_e.pynba',
     zip_safe=False,
     install_requires=install_requires,
     tests_require=['nose-exclude'],
-    # ext_package = 'iscool_e.pynba',
     ext_modules = extension_maker()
 )

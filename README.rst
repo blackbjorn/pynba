@@ -25,7 +25,8 @@ applications.
 Requirements
 ------------
 
-This library relies on Pinba_, Protobuf_ and Werkzeug_.
+This library relies on Pinba_ and Protobuf_,
+and Werkzeug_ before the version 0.3.
 You will need to install theses packages before using Pynba.
 
 The installation process requires setuptools to be installed.
