@@ -24,3 +24,10 @@ News
 
 * Migrate to cython
 * Removed Werkzeug dependency
+
+0.3.2
+-----
+
+*Release date: 1-Oct-2012*
+
+* Fixed empty strings
