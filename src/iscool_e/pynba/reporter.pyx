@@ -35,9 +35,9 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
     })
 
     msg = Request()
-    msg.hostname = hostname
-    msg.server_name = servername
-    msg.script_name = scriptname
+    msg.hostname = hostname if hostname else ''
+    msg.server_name = servername if servername else ''
+    msg.script_name = scriptname if scriptname else ''
     msg.request_count = 1
     msg.document_size = document_size if document_size else 0
     msg.memory_peak = memory_peak if memory_peak else 0
