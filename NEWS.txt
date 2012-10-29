@@ -31,3 +31,10 @@ News
 *Release date: 1-Oct-2012*
 
 * Fixed empty strings
+
+0.3.3
+-----
+
+*Release date: 29-Oct-2012*
+
+* Added util for scripts monitoring

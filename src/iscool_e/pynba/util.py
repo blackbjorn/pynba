@@ -18,20 +18,20 @@ __all__ = ['ScriptMonitor']
 class ScriptMonitor(object):
     """Helper for monitoring standalone scripts.
 
-    > monitor = ScriptMonitor(('127.0.0.1', 30002))
-    > timer = monitor.timer(tag1='bar')
-    > timer.start()
-    > timer.stop()
-    >
-    > @monitor.timer(tag1='bar')
-    > def baz():
-    >     pass
-    > baz()
-    >
-    > with monitor.timer(tag1='baz'):
-    >     print "hello"
-    >
-    > monitor.send()
+    >>> monitor = ScriptMonitor(('127.0.0.1', 30002))
+    >>> timer = monitor.timer(tag1='bar')
+    >>> timer.start()
+    >>> timer.stop()
+    >>>
+    >>> @monitor.timer(tag1='bar')
+    >>> def baz():
+    >>>     pass
+    >>> baz()
+    >>>
+    >>> with monitor.timer(tag1='baz'):
+    >>>     print "hello"
+    >>>
+    >>> monitor.send()
     """
 
     default_reporter = Reporter

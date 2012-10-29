@@ -54,7 +54,6 @@ Says that your main WSGI application is::
     def app(environ, start_response):
         ...
 
-
 Import the pynba decorator, and decorate your main app with it::
 
     from iscool_e.pynba import monitor
@@ -74,6 +73,17 @@ For it, just import the pynba proxy, and use it to create new timers::
     timer.start()
     ...
     timer.stop()
+
+But you may want to supervise simple scripts. For this usage, use ``ScriptMonitor``::
+
+    from iscool_e.pynba.util import ScriptMonitor
+
+    monitor = ScriptMonitor(('127.0.0.1', 30002))
+    timer = monitor.timer(foo='bar')
+    timer.start()
+    ...
+    timer.stop()
+    monitor.send()
 
 
 Some use cases are available on src/examples/
@@ -109,6 +119,10 @@ About timers:
         ('baz, 'seq1'),
         ('baz, 'seq2'),
         ('qux.map1', 'val1')
+
+Other additions:
+
+*   ``ScriptMonitor`` allows to monitor single scripts. At IsCool Entertainment, we use it for monitoring our AMQ based workers.
 
 
 License
