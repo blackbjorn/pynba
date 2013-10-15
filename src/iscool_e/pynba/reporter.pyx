@@ -7,7 +7,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from socket import socket, AF_INET, SOCK_DGRAM
+from socket import socket, AF_INET, SOCK_DGRAM, gaierror
 import collections
 from .log import logger
 import types
@@ -101,10 +101,13 @@ cdef class Reporter(object):
 
     prepare = staticmethod(Reporter_prepare)
 
-    cpdef send(self, msg):
+    def send(self, msg):
         """Sends message to pinba server"""
-        return self.sock.sendto(msg, self.address)
-
+        try:
+            return self.sock.sendto(msg, self.address)
+        except gaierror as exception:
+            logger.exception(exception)
+        return None
 
 cpdef flattener(dict tags):
     """
