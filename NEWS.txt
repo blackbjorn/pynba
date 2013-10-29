@@ -38,3 +38,10 @@ News
 *Release date: 29-Oct-2012*
 
 * Added util for scripts monitoring
+
+0.3.5
+-----
+
+*Release date: 29-Oct-2013*
+
+* Status support on reporter
