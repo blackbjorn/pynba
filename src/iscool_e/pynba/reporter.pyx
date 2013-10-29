@@ -15,7 +15,7 @@ from .pinba_pb2 import Request
 
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             ru_utime=None, ru_stime=None, document_size=None,
-            memory_peak=None):
+            memory_peak=None, status=None):
     """Prepares the message
     """
 
@@ -44,7 +44,7 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
     msg.request_time = elapsed
     msg.ru_utime = ru_utime if ru_utime else 0.0
     msg.ru_stime = ru_stime if ru_stime else 0.0
-    msg.status = 200
+    msg.status = status if status else 200
 
     if timers:
         dictionary = [] # contains mapping of tags name or value => uniq id
@@ -87,16 +87,16 @@ cdef class Reporter(object):
         self.address = address
         self.sock = socket(AF_INET, SOCK_DGRAM)
 
-    def __call__(self, servername, hostname, scriptname,
+    def __call__(self, server_name, hostname, script_name,
             elapsed, list timers, ru_utime=None, ru_stime=None,
-            document_size=None, memory_peak=None):
+            document_size=None, memory_peak=None, status=None):
         """
         Same as PHP pinba_flush()
         """
 
-        msg = Reporter.prepare(servername, hostname, scriptname, elapsed,
+        msg = Reporter.prepare(server_name, hostname, script_name, elapsed,
                                timers, ru_utime, ru_stime, document_size,
-                               memory_peak)
+                               memory_peak, status)
         self.send(msg)
 
     prepare = staticmethod(Reporter_prepare)
