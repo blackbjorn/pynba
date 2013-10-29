@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages, Extension
-import sys, os
+import sys
+import os
 
 here = os.path.abspath(os.path.dirname(__file__))
-# here = os.path.dirname(__file__)
 README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
@@ -15,9 +15,11 @@ install_requires = [
 if sys.version_info < (2, 7):
     install_requires += ['unittest2']
 
+
 # make extensions
 def extension_maker():
     extensions = []
+
     def loop(directory, module=None):
         for file in os.listdir(directory):
             path = os.path.join(directory, file)
@@ -25,19 +27,25 @@ def extension_maker():
             if os.path.isfile(path) and path.endswith(".c"):
                 extensions.append(
                     Extension(
-                        name = name[:-2],
-                        sources = [path],
-                        include_dirs = ['src', "."],
+                        name=name[:-2],
+                        sources=[path],
+                        include_dirs=['src', "."],
                     )
                 )
             elif os.path.isdir(path):
                 loop(path, name)
+
     loop('src/iscool_e', 'iscool_e')
     return extensions
 
-setup(name='iscool_e.pynba',
+
+setup(
+    name='iscool_e.pynba',
     version=version,
-    description='This is a wsgi middleware to monitor performance in production systems',
+    description=str(
+        'This is a wsgi middleware to monitor '
+        'performance in production systems'
+    ),
     long_description=README + '\n\n' + NEWS,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -63,11 +71,11 @@ setup(name='iscool_e.pynba',
     url='https://github.com/IsCoolEntertainment/pynba',
     license='MIT',
     packages=find_packages('src'),
-    package_dir = {'': 'src'},
-    namespace_packages = ['iscool_e'],
+    package_dir={'': 'src'},
+    namespace_packages=['iscool_e'],
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
     tests_require=['nose-exclude'],
-    ext_modules = extension_maker()
+    ext_modules=extension_maker()
 )
