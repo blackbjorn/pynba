@@ -154,7 +154,7 @@ DESCRIPTOR.message_types_by_name['Request'] = _REQUEST
 class Request(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
   DESCRIPTOR = _REQUEST
-  
+
   # @@protoc_insertion_point(class_scope:Pinba.Request)
 
 # @@protoc_insertion_point(module_scope)

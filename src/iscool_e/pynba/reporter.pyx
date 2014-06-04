@@ -10,8 +10,8 @@
 from socket import socket, AF_INET, SOCK_DGRAM, gaierror
 import collections
 from .log import logger
-import types
 from .pinba_pb2 import Request
+from six import b as cast
 
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             ru_utime=None, ru_stime=None, document_size=None,
@@ -35,9 +35,9 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
     })
 
     msg = Request()
-    msg.hostname = hostname if hostname else ''
-    msg.server_name = servername if servername else ''
-    msg.script_name = scriptname if scriptname else ''
+    msg.hostname = cast(hostname if hostname else '')
+    msg.server_name = cast(servername if servername else '')
+    msg.script_name = cast(scriptname if scriptname else '')
     msg.request_count = 1
     msg.document_size = document_size if document_size else 0
     msg.memory_peak = memory_peak if memory_peak else 0
@@ -57,6 +57,7 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             # Encode associated tags
             tag_count = 0
             for name, value in flattener(timer.tags):
+                name, value = cast(name), cast(value)
                 if name not in dictionary:
                     dictionary.append(name)
                 if value not in dictionary:
@@ -135,9 +136,9 @@ cpdef flattener(dict tags):
     cdef set data
 
     data = set(flatten(tags, ''))
-    return [(key, str(value)) for key, value in data]
+    return sorted([(key, str(value)) for key, value in data])
 
-cdef inline list flatten(dict tags, char* namespace):
+cdef inline list flatten(dict tags, str namespace):
     """Flatten recursively"""
     cdef object pref
     cdef object key
@@ -146,22 +147,23 @@ cdef inline list flatten(dict tags, char* namespace):
     cdef list output
 
     if len(namespace):
-        pref = namespace + "."
+        pref = str(namespace + ".")
     else:
-        pref = ''
+        pref = str('')
 
     output = []
-    for key, value in tags.iteritems():
+    for key, value in tags.items():
         if isinstance(value, collections.Callable):
             value = value()
-
-        if isinstance(value, collections.Sequence) \
-            and not isinstance(value, types.StringTypes):
-            values = [(pref + str(key), v) for v in set(value)]
-            output.extend(values)
-        elif isinstance(value, collections.Mapping):
-            output.extend(flatten(value, key))
-        else:
-            output.append((pref + key, value))
+        try:
+            if isinstance(value, (list, tuple, set)):
+                values = [(pref + str(key), v) for v in set(value)]
+                output.extend(values)
+            elif isinstance(value, dict):
+                output.extend(flatten(value, key))
+            else:
+                output.append((pref + str(key), value))
+        except TypeError as error:
+            logger.exception(error)
 
     return output

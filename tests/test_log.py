@@ -17,23 +17,28 @@ class MockLoggingHandler(logging.Handler):
     """
 
     def __init__(self, *args, **kwargs):
-        self.reset()
+        self.messages = defaultdict(list)
         logging.Handler.__init__(self, *args, **kwargs)
 
     def emit(self, record):
         self.messages[record.levelname.lower()].append(record.getMessage())
+        # raise Exception(dict(self.messages))
 
     def reset(self):
-        self.messages = defaultdict(list)
+        self.messages.clear()
 
 
 class LogTestCase(unittest.TestCase):
-    handler = MockLoggingHandler()
+    handler = MockLoggingHandler(level=logging.DEBUG)
+    level = None
 
     def setUp(self):
+        self.level = logger.getEffectiveLevel()
+        logger.setLevel(logging.DEBUG)
         logger.addHandler(self.handler)
 
     def tearDown(self):
+        logger.setLevel(self.level)
         logger.removeHandler(self.handler)
         self.handler.reset()
 

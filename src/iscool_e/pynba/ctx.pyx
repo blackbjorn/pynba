@@ -130,15 +130,15 @@ cdef class RequestContext(object):
         ru_stime = usage.ru_stime - self.resources.ru_stime
 
         self.reporter(
-            servername= self.servername,
-            hostname= self.hostname,
-            scriptname= self.scriptname,
-            elapsed= self.pynba.elapsed,
-            timers= timers,
-            ru_utime= ru_utime,
-            ru_stime= ru_stime,
-            document_size= document_size,
-            memory_peak= memory_peak
+            self.servername,
+            self.hostname,
+            self.scriptname,
+            self.pynba.elapsed,
+            timers,
+            ru_utime=ru_utime,
+            ru_stime=ru_stime,
+            document_size=document_size,
+            memory_peak=memory_peak
         )
 
         self.pynba.flush()
