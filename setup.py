@@ -8,9 +8,12 @@ NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
 version = '0.3.5'
 
-install_requires = [
-    'protobuf',
-]
+install_requires = []
+
+if sys.version_info < (3, 0):
+    install_requires += ['protobuf==2.5.0']
+else:
+    install_requires += ['python3-protobuf==2.5.0']
 
 if sys.version_info < (2, 7):
     install_requires += ['unittest2']
