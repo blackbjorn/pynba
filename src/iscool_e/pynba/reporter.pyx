@@ -79,14 +79,17 @@ cdef class Reporter(object):
     """Formats and send report to pinba server.
 
     :param address: the address to the udp server.
+    :param raise_on_fail: raise exception on fail.
     """
 
     cdef public object address
     cdef public object sock
+    cdef public object raise_on_fail
 
-    def __init__(self, address):
+    def __init__(self, address, raise_on_fail=False):
         self.address = address
         self.sock = socket(AF_INET, SOCK_DGRAM)
+        self.raise_on_fail = raise_on_fail
 
     def __call__(self, server_name, hostname, script_name,
             elapsed, list timers, ru_utime=None, ru_stime=None,
@@ -106,8 +109,10 @@ cdef class Reporter(object):
         """Sends message to pinba server"""
         try:
             return self.sock.sendto(msg, self.address)
-        except gaierror as exception:
-            logger.exception(exception)
+        except Exception as error:
+            if self.raise_on_fail:
+                raise
+            logger.exception(error)
         return None
 
 cpdef flattener(dict tags):

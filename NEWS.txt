@@ -46,9 +46,12 @@ News
 
 * Status support on reporter
 
-0.4.0
+0.3.6
 -----
 
 *Release date: 4-Jun-2014*
 
-* support Python 3
+* preparation for Python 3 support
+* use pytest and tox for testing
+* added a Reporter.raise_on_fail attribute, in order to hide exceptions on production servers.
+* describe logging strategy
