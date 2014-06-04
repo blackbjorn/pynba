@@ -6,6 +6,7 @@ from google.protobuf import reflection
 from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
+from six import u as unicode
 
 
 DESCRIPTOR = descriptor.FileDescriptor(
@@ -26,21 +27,21 @@ _REQUEST = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='hostname', full_name='Pinba.Request.hostname', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=unicode(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='server_name', full_name='Pinba.Request.server_name', index=1,
       number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=unicode(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='script_name', full_name='Pinba.Request.script_name', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      has_default_value=False, default_value=unicode(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),

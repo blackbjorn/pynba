@@ -45,3 +45,10 @@ News
 *Release date: 29-Oct-2013*
 
 * Status support on reporter
+
+0.4.0
+-----
+
+*Release date: 4-Jun-2014*
+
+* support Python 3

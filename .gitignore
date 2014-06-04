@@ -22,3 +22,4 @@ nose_exclude-0.1.8-py2.6.egg/
 
 docs/_build
 docs/
+.tox

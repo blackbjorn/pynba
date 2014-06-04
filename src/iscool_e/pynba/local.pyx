@@ -13,7 +13,10 @@ except ImportError:
     try:
         from thread import get_ident
     except ImportError:
-        from dummy_thread import get_ident
+        try:
+            from dummy_thread import get_ident
+        except ImportError:
+            from _dummy_thread import get_ident
 
 
 __all__ = ['LOCAL_STACK']
