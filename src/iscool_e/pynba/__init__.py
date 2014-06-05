@@ -20,4 +20,3 @@ def monitor(address, **config):
     def wrapper(func):
         return PynbaMiddleware(func, address, **config)
     return wrapper
-

@@ -11,6 +11,7 @@ import resource
 from .local import LOCAL_STACK
 from .collector import DataCollector
 
+
 cdef class RequestContext(object):
     """
     A new instance will be created every new request.
@@ -128,6 +129,7 @@ cdef class RequestContext(object):
         usage = resource.getrusage(resource.RUSAGE_SELF)
         ru_utime = usage.ru_utime - self.resources.ru_utime
         ru_stime = usage.ru_stime - self.resources.ru_stime
+        memory_footprint = self.pynba.memory_peak
 
         self.reporter(
             self.servername,
@@ -138,7 +140,8 @@ cdef class RequestContext(object):
             ru_utime=ru_utime,
             ru_stime=ru_stime,
             document_size=document_size,
-            memory_peak=memory_peak
+            memory_peak=memory_peak,
+            memory_footprint=memory_footprint
         )
 
         self.pynba.flush()

@@ -216,6 +216,7 @@ cdef class DataCollector(Timed):
     cdef public str hostname
     cdef public object document_size
     cdef public object memory_peak
+    cdef public object memory_footprint
 
     def __init__(self, object scriptname=None, object hostname=None):
         self.enabled = True
@@ -227,6 +228,8 @@ cdef class DataCollector(Timed):
         self.document_size = None
         #: You can use this placeholder to store the memory peak
         self.memory_peak = None
+        #: You can use this placeholder to store the memory footprint
+        self.memory_footprint = None
 
     def start(self):
         """Starts"""

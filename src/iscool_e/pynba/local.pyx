@@ -11,13 +11,16 @@ try:
     from greenlet import getcurrent as get_ident
 except ImportError:
     try:
-        from thread import get_ident
+        from six.moves._thread import get_ident
     except ImportError:
-        try:
-            from dummy_thread import get_ident
-        except ImportError:
-            from _dummy_thread import get_ident
+        def get_ident():
+            """Dummy implementation of thread.get_ident().
 
+            Since this module should only be used when threadmodule is not
+            available, it is safe to assume that the current process is the
+            only thread.  Thus a constant can be safely returned.
+            """
+            return -1
 
 __all__ = ['LOCAL_STACK']
 

@@ -13,9 +13,10 @@ from .log import logger
 from .pinba_pb2 import Request
 from six import b as cast
 
+
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             ru_utime=None, ru_stime=None, document_size=None,
-            memory_peak=None, status=None):
+            memory_peak=None, status=None, memory_footprint=None):
     """Prepares the message
     """
 
@@ -45,6 +46,7 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
     msg.ru_utime = ru_utime if ru_utime else 0.0
     msg.ru_stime = ru_stime if ru_stime else 0.0
     msg.status = status if status else 200
+    msg.memory_footprint = status if memory_footprint else 0
 
     if timers:
         dictionary = [] # contains mapping of tags name or value => uniq id
