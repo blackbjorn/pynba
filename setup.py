@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages, Extension
+from setuptools import setup, find_packages, Extension, Command
 import sys
 import os
 
@@ -21,27 +21,68 @@ if sys.version_info < (2, 7):
     install_requires += ['unittest2']
 
 
+def loop(directory, module=None):
+    for file in os.listdir(directory):
+        path = os.path.join(directory, file)
+        name = module + "." + file if module else file
+        if os.path.isfile(path):
+            yield path, name.rpartition('.')[0]
+        elif os.path.isdir(path):
+            for path2, name2 in loop(path, name):
+                yield path2, name2
+
+
 # make extensions
 def extension_maker():
     extensions = []
 
-    def loop(directory, module=None):
-        for file in os.listdir(directory):
-            path = os.path.join(directory, file)
-            name = module + "." + file if module else file
-            if os.path.isfile(path) and path.endswith(".c"):
-                extensions.append(
-                    Extension(
-                        name=name[:-2],
-                        sources=[path],
-                        include_dirs=['src', "."],
-                    )
+    for path, name in loop('src/iscool_e', 'iscool_e'):
+        if path.endswith(".c"):
+            extensions.append(
+                Extension(
+                    name=name[:-2],
+                    sources=[path],
+                    include_dirs=['src', "."],
                 )
-            elif os.path.isdir(path):
-                loop(path, name)
-
-    loop('src/iscool_e', 'iscool_e')
+            )
     return extensions
+
+
+class CythonizeCommand(Command):
+    description = "cythonize all *.pyx files"
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        from distutils.spawn import find_executable
+        import subprocess
+        import sys
+
+        errno = 0
+        executable = find_executable('cython')
+        if not executable:
+            print('cython is not installed')
+            errno = 1
+        else:
+            for path, name in loop('src/iscool_e', 'iscool_e'):
+                if path.endswith(".pyx"):
+                    dest = path.rpartition('.')[0] + '.c'
+                    if os.path.exists(dest) and os.path.getmtime(path) <= os.path.getmtime(dest):
+                        print('cythonize {} noop'.format(path))
+                        continue
+                    else:
+                        errno = subprocess.call([executable, path])
+                        print('cythonize {} ok'.format(path))
+                        if errno != 0:
+                            print('cythonize {} failed'.format(path))
+
+        if errno != 0:
+            raise SystemExit(errno)
 
 
 setup(
@@ -82,5 +123,6 @@ setup(
     zip_safe=False,
     install_requires=install_requires,
     tests_require=['nose-exclude'],
-    ext_modules=extension_maker()
+    ext_modules=extension_maker(),
+    cmdclass = {'cythonize': CythonizeCommand},
 )
