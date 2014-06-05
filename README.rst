@@ -130,6 +130,13 @@ Or the script usage::
     monitor.reporter.raise_on_fail = True
 
 
+Contribute
+----------
+
+While debugging, you can rebuild c package with this command::
+
+    $ python setup.py cythonize develop
+
 
 Differences with PHP extension
 ------------------------------
