@@ -25,8 +25,7 @@ applications.
 Requirements
 ------------
 
-This library relies on Pinba_ and Protobuf_,
-and Werkzeug_ before the version 0.3.
+This library relies only on Pinba_.
 You will need to install theses packages before using Pynba.
 
 The installation process requires setuptools to be installed.
@@ -196,10 +195,6 @@ Credits
 -------
 
 - Pinba_
-- Werkzeug_
-- Protobuf_
 
 .. _Pinba: http://pinba.org
-.. _Werkzeug: http://werkzeug.pocoo.org
-.. _Protobuf: http://code.google.com/p/protobuf/
 .. _`IsCool Entertainment`: http://www.iscoolentertainment.com/en/
