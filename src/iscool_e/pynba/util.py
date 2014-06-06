@@ -36,9 +36,10 @@ class ScriptMonitor(object):
 
     default_reporter = Reporter
 
-    def __init__(self, address, hostname=None, scriptname=None, servername=None, reporter=None):
+    def __init__(self, address, hostname=None, scriptname=None,
+                 servername=None, reporter=None, tags=None):
         self.reporter = reporter if reporter else self.default_reporter(address)
-        self.collector = DataCollector()
+        self.collector = DataCollector(tags=tags or {})
         self.hostname = hostname if hostname else socket.gethostname()
         self.scriptname = scriptname if scriptname else " ".join(sys.argv)
         self.servername = servername if servername else socket.gethostname()
@@ -61,6 +62,11 @@ class ScriptMonitor(object):
         self.ru_utime = usage.ru_utime - self.resources.ru_utime
         self.ru_stime = usage.ru_stime - self.resources.ru_stime
         return self
+
+    @property
+    def tags(self):
+        """Return collector tags"""
+        return self.collector.tags
 
     def timer(self, **kwargs):
         """Factory new timer.

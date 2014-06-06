@@ -59,10 +59,25 @@ cdef class RequestContext(object):
         def __get__(self):
             return self._servername
 
+    property tags:
+        def __get__(self):
+            cdef object pynba
+            cdef dict response
+            if self.pynba:
+                pynba = self.pynba
+                if pynba.tags:
+                    response = pynba.tags
+                else:
+                    response = {}
+            else:
+                response = self.config.get('tags', {})
+            return response
+
     def __init__(self, object reporter, dict environ, **config):
         self.reporter = reporter
 
         #: config['prefix'] prepends the sent scriptname to pinba.
+        #: config['tags'] prepends tags to pinba.
         self.config = config
 
         #: futur :class:`DataCollector`
@@ -78,7 +93,10 @@ cdef class RequestContext(object):
         """Pushes current context into local stack.
         """
 
-        self.pynba = DataCollector(self._scriptname, self._hostname, self._schema)
+        self.pynba = DataCollector(self._scriptname,
+                                   self._hostname,
+                                   self._schema,
+                                   self.config.get('tags', {}))
         self.pynba.start()
         LOCAL_STACK.pynba = self.pynba
         self.resources = resource.getrusage(resource.RUSAGE_SELF)
@@ -144,7 +162,8 @@ cdef class RequestContext(object):
             document_size=document_size,
             memory_peak=memory_peak,
             memory_footprint=memory_footprint,
-            schema=schema
+            schema=schema,
+            tags=self.tags
         )
 
         self.pynba.flush()

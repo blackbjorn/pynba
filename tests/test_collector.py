@@ -9,11 +9,15 @@ class CollectorTestCase(unittest.TestCase):
     def test_data_collector(self):
         scriptname = "foo"
         hostname = "bar"
-        collector = DataCollector(scriptname, hostname)
+        schema = "http"
+        tags = {"baz": "qux"}
+        collector = DataCollector(scriptname, hostname, schema, tags)
         self.assertTrue(collector.enabled)
         self.assertEqual(collector.timers, set())
         self.assertEqual(collector.scriptname, scriptname)
         self.assertEqual(collector.hostname, hostname)
+        self.assertEqual(collector.schema, schema)
+        self.assertEqual(collector.tags, tags)
         self.assertEqual(collector.dt_start, None)
         self.assertFalse(collector.started)
         self.assertEqual(collector.elapsed, None)

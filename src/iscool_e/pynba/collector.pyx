@@ -28,6 +28,8 @@ cdef enum RunningState:
 
 
 cdef class Timed(object):
+
+    cdef public object tags
     cdef RunningState _state
     cdef timeval _tt_start
     cdef timeval _tt_end
@@ -81,6 +83,10 @@ cdef class Timed(object):
 
 cdef class Timer(Timed):
     """
+
+    :param tags: tags for the current timer
+    :param parent: attached DataCollector
+
     Differences with the PHP version
 
     =========================== =========================
@@ -93,14 +99,13 @@ cdef class Timer(Timed):
 
     """
 
-    cdef public object tags
     cdef public object data
     cdef DataCollector parent
 
     def __init__(self, object tags, DataCollector parent=None):
         """
         Tags values can be any scalar, mapping, sequence or callable.
-        In case of a callable, redered value must be a sequence.
+        In case of a callable, rendered value must be a sequence.
 
         :param tags: each values can be any scalar, mapping, sequence or
                      callable. In case of a callable, rendered value must
@@ -195,6 +200,7 @@ cdef class DataCollector(Timed):
     :param scriptname: the current scriptname
     :param hostname: the current hostname
     :param schema: the current schema
+    :param tags: tags for the current script
 
     Differences with the PHP version
 
@@ -220,12 +226,13 @@ cdef class DataCollector(Timed):
     cdef public object memory_footprint
     cdef public str schema
 
-    def __init__(self, object scriptname=None, object hostname=None, object schema=None):
+    def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
         self.enabled = True
         self.timers = set()
         self.scriptname = scriptname
         self.hostname = hostname
         self.schema = schema
+        self.tags = dict(tags or {})
 
         #: You can use this placeholder to store the real document size
         self.document_size = None

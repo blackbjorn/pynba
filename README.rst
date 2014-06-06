@@ -64,6 +64,12 @@ Import the pynba decorator, and decorate your main app with it::
 
 Each time the app will be processed, a new UPD stream will be sent.
 
+You can also tag the process, for example:
+
+    @monitor(('127.0.0.1', 30002), tags={'foo': 'bar'})
+    def app(environ, start_response):
+        ...
+
 Eventualy, you can use timers to measure particular parts of your code.
 For it, just import the pynba proxy, and use it to create new timers::
 
@@ -78,7 +84,7 @@ But you may want to supervise simple scripts. For this usage, use ``ScriptMonito
 
     from iscool_e.pynba.util import ScriptMonitor
 
-    monitor = ScriptMonitor(('127.0.0.1', 30002))
+    monitor = ScriptMonitor(('127.0.0.1', 30002), tags={'foo': 'bar'})
     timer = monitor.timer(foo='bar')
     timer.start()
     ...

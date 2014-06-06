@@ -15,7 +15,7 @@ from .message import dumps
 
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             ru_utime=None, ru_stime=None, document_size=None,
-            memory_peak=None, status=None, memory_footprint=None, schema=None):
+            memory_peak=None, status=None, memory_footprint=None, schema=None, tags=None):
     """Prepares the message
     """
 
@@ -49,14 +49,20 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
         'schema': schema if schema else '',
     }
 
-    if timers:
-        dictionary = [] # contains mapping of tags name or value => uniq id
-        timer_hit_count = []
-        timer_value = []
-        timer_tag_name = []
-        timer_tag_value = []
-        timer_tag_count = []
+    dictionary = [] # contains mapping of tags name or value => uniq id
+    timer_hit_count = []
+    timer_value = []
 
+    # tags for timer
+    timer_tag_name = []
+    timer_tag_value = []
+    timer_tag_count = []
+
+    # tags for request
+    tag_name = []
+    tag_value = []
+
+    if timers:
         for timer in timers:
             # Add a single timer
             timer_hit_count.append(1)
@@ -76,6 +82,15 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             # Number of tags
             timer_tag_count.append(tag_count)
 
+        if tags:
+            for name, value in flattener(tags):
+                if name not in dictionary:
+                    dictionary.append(name)
+                if value not in dictionary:
+                    dictionary.append(value)
+                tag_name.append(dictionary.index(name))
+                tag_value.append(dictionary.index(value))
+
         msg.update({
             'dictionary': dictionary,
             'timer_hit_count': timer_hit_count,
@@ -83,6 +98,8 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             'timer_tag_name': timer_tag_name,
             'timer_tag_value': timer_tag_value,
             'timer_tag_count': timer_tag_count,
+            'tag_name': tag_name,
+            'tag_value': tag_value,
         })
 
     # Send message to Pinba server
@@ -108,14 +125,15 @@ cdef class Reporter(object):
     def __call__(self, server_name, hostname, script_name,
             elapsed, list timers, ru_utime=None, ru_stime=None,
             document_size=None, memory_peak=None, status=None,
-            memory_footprint=None, schema=None):
+            memory_footprint=None, schema=None, tags=None):
         """
         Same as PHP pinba_flush()
         """
 
         msg = Reporter.prepare(server_name, hostname, script_name, elapsed,
                                timers, ru_utime, ru_stime, document_size,
-                               memory_peak, status, memory_footprint, schema)
+                               memory_peak, status, memory_footprint, schema,
+                               tags)
         self.send(msg)
 
     prepare = staticmethod(Reporter_prepare)

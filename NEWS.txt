@@ -72,3 +72,4 @@ News
 *Release date: ???*
 
 * don't raise an Exception on pynba.enabled when outside of context
+* implements DataCollector tags
