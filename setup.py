@@ -40,7 +40,7 @@ def extension_maker():
         if path.endswith(".c"):
             extensions.append(
                 Extension(
-                    name=name[:-2],
+                    name=name,
                     sources=[path],
                     include_dirs=['src', "."],
                 )
