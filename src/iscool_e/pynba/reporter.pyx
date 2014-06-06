@@ -16,7 +16,7 @@ from six import b as cast
 
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
             ru_utime=None, ru_stime=None, document_size=None,
-            memory_peak=None, status=None, memory_footprint=None):
+            memory_peak=None, status=None, memory_footprint=None, schema=None):
     """Prepares the message
     """
 
@@ -46,7 +46,8 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
     msg.ru_utime = ru_utime if ru_utime else 0.0
     msg.ru_stime = ru_stime if ru_stime else 0.0
     msg.status = status if status else 200
-    msg.memory_footprint = status if memory_footprint else 0
+    msg.memory_footprint = memory_footprint if memory_footprint else 0
+    msg.schema = cast(schema if schema else '')
 
     if timers:
         dictionary = [] # contains mapping of tags name or value => uniq id
@@ -77,6 +78,7 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
     # Send message to Pinba server
     return msg.SerializeToString()
 
+
 cdef class Reporter(object):
     """Formats and send report to pinba server.
 
@@ -95,14 +97,15 @@ cdef class Reporter(object):
 
     def __call__(self, server_name, hostname, script_name,
             elapsed, list timers, ru_utime=None, ru_stime=None,
-            document_size=None, memory_peak=None, status=None):
+            document_size=None, memory_peak=None, status=None,
+            memory_footprint=None, schema=None):
         """
         Same as PHP pinba_flush()
         """
 
         msg = Reporter.prepare(server_name, hostname, script_name, elapsed,
                                timers, ru_utime, ru_stime, document_size,
-                               memory_peak, status)
+                               memory_peak, status, memory_footprint, schema)
         self.send(msg)
 
     prepare = staticmethod(Reporter_prepare)
@@ -116,6 +119,7 @@ cdef class Reporter(object):
                 raise
             logger.exception(error)
         return None
+
 
 cpdef flattener(dict tags):
     """
