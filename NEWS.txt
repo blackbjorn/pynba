@@ -65,3 +65,10 @@ News
 * added memory_footprint and schema reporting
 * added cythonize command
 * dropped protobuf library for the benefit of a small embedded script
+
+0.4.?
+-----
+
+*Release date: ???*
+
+* don't raise an Exception on pynba.enabled when outside of context

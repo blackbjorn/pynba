@@ -37,12 +37,12 @@ class ContextTestCase(unittest.TestCase):
         assert ctx.pynba != top
 
     def test_context2(self):
-        with self.assertRaises((RuntimeError, AttributeError)):
-            pynba.enabled
+        assert not pynba.enabled
 
         reporter = lambda *x, **y: x
         environ = {}
         with RequestContext(reporter, environ) as ctx:
+            assert pynba.enabled
             timer = pynba.timer(foo='bar')
             self.assertIn(timer, pynba.timers)
 

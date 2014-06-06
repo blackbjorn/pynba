@@ -9,10 +9,17 @@
 
 from functools import wraps
 from .local import LOCAL_STACK
+from .log import logger
 
 __all__ = ['pynba']
 
 cdef class LocalProxy(object):
+
+    cdef dict defaults
+
+    def __init__(self, **defaults):
+        self.defaults = defaults
+
     def timer(self, **tags):
         pynba = LOCAL_STACK.pynba
         if pynba:
@@ -35,7 +42,11 @@ cdef class LocalProxy(object):
     def __getattr__(self, name):
         try:
             return getattr(LOCAL_STACK.pynba, name)
-        except TypeError:
+        except (TypeError, AttributeError):
+            if name in self.defaults:
+                value = self.defaults[name]
+                logger.warn('working outside of request context render %s with %s', name, value)
+                return value
             raise RuntimeError('working outside of request context')
 
     def __setattr__(self, name, value):
@@ -50,4 +61,4 @@ cdef class LocalProxy(object):
         except TypeError:
             raise RuntimeError('working outside of request context')
 
-pynba = LocalProxy()
+pynba = LocalProxy(enabled=False)
