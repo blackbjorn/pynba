@@ -64,7 +64,7 @@ Import the pynba decorator, and decorate your main app with it::
 
 Each time the app will be processed, a new UPD stream will be sent.
 
-You can also tag the process, for example:
+You can also tag the process, for example::
 
     @monitor(('127.0.0.1', 30002), tags={'foo': 'bar'})
     def app(environ, start_response):

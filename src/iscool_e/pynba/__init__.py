@@ -7,7 +7,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 __all__ = ['monitor', 'pynba', 'PynbaMiddleware']
 
 from .middleware import PynbaMiddleware
