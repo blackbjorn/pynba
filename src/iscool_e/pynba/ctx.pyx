@@ -29,6 +29,7 @@ cdef class RequestContext(object):
     cdef str _scriptname
     cdef str _hostname
     cdef str _servername
+    cdef str _schema
 
     property scriptname:
         def __get__(self):
@@ -71,13 +72,13 @@ cdef class RequestContext(object):
 
         self._scriptname = environ.get('PATH_INFO', '')
         self._hostname = environ.get('SERVER_NAME', None)
-        self._servername = environ.get('HTTP_HOST', None)
+        self._schema = environ.get('wsgi.url_scheme', None)
 
     cpdef push(self):
         """Pushes current context into local stack.
         """
 
-        self.pynba = DataCollector(self._scriptname, self._hostname)
+        self.pynba = DataCollector(self._scriptname, self._hostname, self._schema)
         self.pynba.start()
         LOCAL_STACK.pynba = self.pynba
         self.resources = resource.getrusage(resource.RUSAGE_SELF)
@@ -130,6 +131,7 @@ cdef class RequestContext(object):
         ru_utime = usage.ru_utime - self.resources.ru_utime
         ru_stime = usage.ru_stime - self.resources.ru_stime
         memory_footprint = self.pynba.memory_peak
+        schema = self.pynba.schema
 
         self.reporter(
             self.servername,
@@ -141,7 +143,8 @@ cdef class RequestContext(object):
             ru_stime=ru_stime,
             document_size=document_size,
             memory_peak=memory_peak,
-            memory_footprint=memory_footprint
+            memory_footprint=memory_footprint,
+            schema=schema
         )
 
         self.pynba.flush()

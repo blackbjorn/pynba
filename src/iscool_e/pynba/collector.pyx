@@ -194,6 +194,7 @@ cdef class DataCollector(Timed):
 
     :param scriptname: the current scriptname
     :param hostname: the current hostname
+    :param schema: the current schema
 
     Differences with the PHP version
 
@@ -217,12 +218,14 @@ cdef class DataCollector(Timed):
     cdef public object document_size
     cdef public object memory_peak
     cdef public object memory_footprint
+    cdef public str schema
 
-    def __init__(self, object scriptname=None, object hostname=None):
+    def __init__(self, object scriptname=None, object hostname=None, object schema=None):
         self.enabled = True
         self.timers = set()
         self.scriptname = scriptname
         self.hostname = hostname
+        self.schema = schema
 
         #: You can use this placeholder to store the real document size
         self.document_size = None
