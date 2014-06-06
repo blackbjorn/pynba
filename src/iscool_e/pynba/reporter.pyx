@@ -10,8 +10,7 @@
 from socket import socket, AF_INET, SOCK_DGRAM, gaierror
 import collections
 from .log import logger
-from .pinba_pb2 import Request
-from six import b as cast
+from .message import dumps
 
 
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
@@ -35,48 +34,59 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
         'timers': timers
     })
 
-    msg = Request()
-    msg.hostname = cast(hostname if hostname else '')
-    msg.server_name = cast(servername if servername else '')
-    msg.script_name = cast(scriptname if scriptname else '')
-    msg.request_count = 1
-    msg.document_size = document_size if document_size else 0
-    msg.memory_peak = memory_peak if memory_peak else 0
-    msg.request_time = elapsed
-    msg.ru_utime = ru_utime if ru_utime else 0.0
-    msg.ru_stime = ru_stime if ru_stime else 0.0
-    msg.status = status if status else 200
-    msg.memory_footprint = memory_footprint if memory_footprint else 0
-    msg.schema = cast(schema if schema else '')
+    msg = {
+        'hostname': hostname if hostname else '',
+        'server_name': servername if servername else '',
+        'script_name': scriptname if scriptname else '',
+        'request_count': 1,
+        'document_size': document_size if document_size else 0,
+        'memory_peak': memory_peak if memory_peak else 0,
+        'request_time': elapsed,
+        'ru_utime': ru_utime if ru_utime else 0.0,
+        'ru_stime': ru_stime if ru_stime else 0.0,
+        'status': status if status else 200,
+        'memory_footprint': memory_footprint if memory_footprint else 0,
+        'schema': schema if schema else '',
+    }
 
     if timers:
         dictionary = [] # contains mapping of tags name or value => uniq id
+        timer_hit_count = []
+        timer_value = []
+        timer_tag_name = []
+        timer_tag_value = []
+        timer_tag_count = []
 
         for timer in timers:
             # Add a single timer
-            msg.timer_hit_count.append(1)
-            msg.timer_value.append(timer.elapsed)
+            timer_hit_count.append(1)
+            timer_value.append(timer.elapsed)
 
             # Encode associated tags
             tag_count = 0
             for name, value in flattener(timer.tags):
-                name, value = cast(name), cast(value)
                 if name not in dictionary:
                     dictionary.append(name)
                 if value not in dictionary:
                     dictionary.append(value)
-                msg.timer_tag_name.append(dictionary.index(name))
-                msg.timer_tag_value.append(dictionary.index(value))
+                timer_tag_name.append(dictionary.index(name))
+                timer_tag_value.append(dictionary.index(value))
                 tag_count += 1
 
             # Number of tags
-            msg.timer_tag_count.append(tag_count)
+            timer_tag_count.append(tag_count)
 
-        # Global tags dictionary
-        msg.dictionary.extend(dictionary)
+        msg.update({
+            'dictionary': dictionary,
+            'timer_hit_count': timer_hit_count,
+            'timer_value': timer_value,
+            'timer_tag_name': timer_tag_name,
+            'timer_tag_value': timer_tag_value,
+            'timer_tag_count': timer_tag_count,
+        })
 
     # Send message to Pinba server
-    return msg.SerializeToString()
+    return dumps(**msg)
 
 
 cdef class Reporter(object):

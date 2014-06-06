@@ -6,16 +6,11 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
-version = '0.3.6'
+version = '0.4.0'
 
 install_requires = [
     'six'
 ]
-
-if sys.version_info < (3, 0):
-    install_requires += ['protobuf==2.5.0']
-else:
-    install_requires += ['python3-protobuf==2.5.0']
 
 if sys.version_info < (2, 7):
     install_requires += ['unittest2']
@@ -89,8 +84,8 @@ setup(
     name='iscool_e.pynba',
     version=version,
     description=str(
-        'This is a wsgi middleware to monitor '
-        'performance in production systems'
+        'lightweight timers and wsgi middleware to '
+        'monitor performance in production systems'
     ),
     long_description=README + '\n\n' + NEWS,
     classifiers=[
@@ -103,6 +98,9 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Internet :: Log Analysis",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",

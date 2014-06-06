@@ -55,3 +55,13 @@ News
 * use pytest and tox for testing
 * added a Reporter.raise_on_fail attribute, in order to hide exceptions on production servers.
 * describe logging strategy
+
+0.4.0
+-----
+
+*Release date: 6-Jun-2014*
+
+* Python >= 3.3 support !
+* added memory_footprint and schema reporting
+* added cythonize command
+* dropped protobuf library for the benefit of a small embedded script

@@ -2,7 +2,7 @@ IsCool Entertainment Pynba
 ==========================
 
 Pynba is a WSGI Middleware for Pinba_. It allows realtime monitoring/statistics
-server using MySQL as a read-only interface.
+server using MySQL as a read-only interface. It works on Python 2.7, 3.3 and more.
 
 It accumulates and processes data sent over UDP by multiple Python processes
 and displays statistics in a nice human-readable form of simple "reports", also
@@ -154,6 +154,11 @@ About the data sent:
     you can set manually this value like this::
 
         pynba.memory_peak = [YOUR VALUE]
+
+*   ``memory_footprint`` also is currently not implemented. Like the previous data,
+    you can set manually this value like this::
+
+        pynba.memory_footprint = [YOUR VALUE]
 
 About timers:
 
