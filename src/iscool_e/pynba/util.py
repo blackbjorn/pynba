@@ -7,13 +7,14 @@
     :license: MIT, see LICENSE for more details.
 """
 
+__all__ = ['ScriptMonitor']
+
 import resource
 import socket
 import sys
 from .reporter import Reporter
 from .collector import DataCollector
 
-__all__ = ['ScriptMonitor']
 
 class ScriptMonitor(object):
     """Helper for monitoring standalone scripts.
@@ -90,15 +91,15 @@ class ScriptMonitor(object):
         ru_stime = self.ru_stime
 
         self.reporter(
-            servername= self.servername,
-            hostname= self.hostname,
-            scriptname= self.scriptname,
-            elapsed= self.collector.elapsed,
-            timers= timers,
-            ru_utime= ru_utime,
-            ru_stime= ru_stime,
-            document_size= document_size,
-            memory_peak= memory_peak
+            self.servername,
+            self.hostname,
+            self.scriptname,
+            self.collector.elapsed,
+            timers,
+            ru_utime=ru_utime,
+            ru_stime=ru_stime,
+            document_size=document_size,
+            memory_peak=memory_peak
         )
 
         self.flush()

@@ -4,10 +4,13 @@ except ImportError:
     import unittest
 
 from iscool_e.pynba.util import ScriptMonitor
+from multiprocessing import Process
+from time import sleep
 
 class ScriptMonitorCase(unittest.TestCase):
     def test_main(self):
-        reporter = lambda **x: x
+        def reporter(*args, **kwargs):
+            pass
         monitor = ScriptMonitor(('127.0.0.1', 3002), reporter=reporter)
 
         assert len(monitor.collector.timers) == 0

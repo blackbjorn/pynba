@@ -73,3 +73,10 @@ News
 
 * don't raise an Exception on pynba.enabled when outside of context
 * implements DataCollector tags
+
+0.4.2
+-----
+
+*Release date: 18-Jul-2014*
+
+* fix util.ScriptMonitor

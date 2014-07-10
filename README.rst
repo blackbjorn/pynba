@@ -195,6 +195,7 @@ Credits
 -------
 
 - Pinba_
+- `IsCool Entertainment`_
 
 .. _Pinba: http://pinba.org
 .. _`IsCool Entertainment`: http://www.iscoolentertainment.com/en/
