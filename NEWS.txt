@@ -80,3 +80,10 @@ News
 *Release date: 18-Jul-2014*
 
 * fix util.ScriptMonitor
+
+0.4.3
+-----
+
+*Release date: 06-Nov-2014*
+
+* fix util.ScriptMonitor tags
