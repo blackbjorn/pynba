@@ -99,7 +99,11 @@ class ScriptMonitor(object):
             ru_utime=ru_utime,
             ru_stime=ru_stime,
             document_size=document_size,
-            memory_peak=memory_peak
+            memory_peak=memory_peak,
+            status=None,
+            memory_footprint=None,
+            schema=None,
+            tags=self.collector.tags
         )
 
         self.flush()
