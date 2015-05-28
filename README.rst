@@ -1,5 +1,5 @@
-IsCool Entertainment Pynba
-==========================
+Pynba
+=====
 
 Pynba is a WSGI Middleware for Pinba_. It allows realtime monitoring/statistics
 server using MySQL as a read-only interface. It works on Python 2.7, 3.3 and more.
@@ -18,7 +18,7 @@ Why another statistics manager ?
 
 Because Pinba rocks!
 
-At `IsCool Entertainment`_, we already use Pinba for monitoring our PHP based
+And `IsCool Entertainment`_ already uses Pinba for monitoring PHP based
 applications.
 
 
@@ -37,11 +37,11 @@ Setup
 
 If you want to install the official release, do::
 
-    $ pip install iscool_e.pynba
+    $ pip install pynba
 
 But i you prefer to use the current developement version, do::
 
-    $ git clone https://github.com/IsCoolEntertainment/pynba.git
+    $ git clone https://github.com/johnnoone/pynba.git
     $ python setup.py install
 
 
@@ -55,7 +55,7 @@ Says that your main WSGI application is::
 
 Import the pynba decorator, and decorate your main app with it::
 
-    from iscool_e.pynba import monitor
+    from pynba import monitor
 
     @monitor(('127.0.0.1', 30002))
     def app(environ, start_response):
@@ -72,7 +72,7 @@ You can also tag the process, for example::
 Eventualy, you can use timers to measure particular parts of your code.
 For it, just import the pynba proxy, and use it to create new timers::
 
-    from iscool_e.pynba import pynba
+    from pynba import pynba
 
     timer = pynba.timer(foo="bar")
     timer.start()
@@ -81,7 +81,7 @@ For it, just import the pynba proxy, and use it to create new timers::
 
 But you may want to supervise simple scripts. For this usage, use ``ScriptMonitor``::
 
-    from iscool_e.pynba.util import ScriptMonitor
+    from pynba.util import ScriptMonitor
 
     monitor = ScriptMonitor(('127.0.0.1', 30002), tags={'foo': 'bar'})
     timer = monitor.timer(foo='bar')
@@ -113,14 +113,14 @@ reporter instance.
 
 For the WSGI usage::
 
-    from iscool_e.pynba import PynbaMiddleware
+    from pynba import PynbaMiddleware
 
     monitored_app = PynbaMiddleware(app, ('127.0.0.1', 30002))
     monitored_app.reporter.raise_on_fail = True
 
 The decorated version::
 
-    from iscool_e.pynba import monitor
+    from pynba import monitor
 
     @monitor(('127.0.0.1', 30002))
     def app(environ, start_response):
@@ -129,7 +129,7 @@ The decorated version::
 
 Or the script usage::
 
-    from iscool_e.pynba.util import ScriptMonitor
+    from pynba.util import ScriptMonitor
 
     monitor = ScriptMonitor(('127.0.0.1', 30002))
     monitor.reporter.raise_on_fail = True
@@ -181,7 +181,8 @@ About timers:
 
 Other additions:
 
-*   ``ScriptMonitor`` allows to monitor single scripts. At IsCool Entertainment, we use it for monitoring our AMQ based workers.
+*   ``ScriptMonitor`` allows to monitor single scripts. `IsCool Entertainment`_
+    uses it for monitoring our AMQ based workers.
 
 
 License

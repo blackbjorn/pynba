@@ -707,12 +707,12 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t); /*proto*/
 
 
-/* Module declarations from 'iscool_e.pynba.middleware' */
+/* Module declarations from 'pynba.middleware' */
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_10middleware_PynbaMiddleware = 0;
-#define __Pyx_MODULE_NAME "iscool_e.pynba.middleware"
+#define __Pyx_MODULE_NAME "pynba.middleware"
 int __pyx_module_is_main_iscool_e__pynba__middleware = 0;
 
-/* Implementation of 'iscool_e.pynba.middleware' */
+/* Implementation of 'pynba.middleware' */
 static PyObject *__pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_11default_ctx___get__(struct __pyx_obj_8iscool_e_5pynba_10middleware_PynbaMiddleware *__pyx_v_self); /* proto */
 static int __pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_11default_ctx_2__set__(struct __pyx_obj_8iscool_e_5pynba_10middleware_PynbaMiddleware *__pyx_v_self, PyObject *__pyx_v_ctx); /* proto */
 static int __pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_11default_ctx_4__del__(struct __pyx_obj_8iscool_e_5pynba_10middleware_PynbaMiddleware *__pyx_v_self); /* proto */
@@ -842,7 +842,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_11defa
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.default_ctx.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.default_ctx.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1018,7 +1018,7 @@ static int __pyx_pw_8iscool_e_5pynba_10middleware_15PynbaMiddleware_1__init__(Py
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_config); __pyx_v_config = 0;
-  __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
@@ -1106,7 +1106,7 @@ static int __pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware___init__(str
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -1171,7 +1171,7 @@ static PyObject *__pyx_pw_8iscool_e_5pynba_10middleware_15PynbaMiddleware_3__cal
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__call__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -1277,7 +1277,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_2__cal
  * 
  */
         /*except:*/ {
-          __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_3);
@@ -1376,7 +1376,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_2__cal
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1470,7 +1470,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_10middleware_15PynbaMiddleware_4reque
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("iscool_e.pynba.middleware.PynbaMiddleware.request_context", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.middleware.PynbaMiddleware.request_context", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1898,7 +1898,7 @@ static struct PyGetSetDef __pyx_getsets_8iscool_e_5pynba_10middleware_PynbaMiddl
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_10middleware_PynbaMiddleware = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.middleware.PynbaMiddleware"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.middleware.PynbaMiddleware"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_10middleware_PynbaMiddleware), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_10middleware_PynbaMiddleware, /*tp_dealloc*/
@@ -2098,8 +2098,8 @@ PyMODINIT_FUNC PyInit_middleware(void)
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "iscool_e.pynba.middleware")) {
-      if (unlikely(PyDict_SetItemString(modules, "iscool_e.pynba.middleware", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pynba.middleware")) {
+      if (unlikely(PyDict_SetItemString(modules, "pynba.middleware", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -2176,10 +2176,10 @@ PyMODINIT_FUNC PyInit_middleware(void)
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
-    __Pyx_AddTraceback("init iscool_e.pynba.middleware", __pyx_clineno, __pyx_lineno, __pyx_filename);
+    __Pyx_AddTraceback("init pynba.middleware", __pyx_clineno, __pyx_lineno, __pyx_filename);
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init iscool_e.pynba.middleware");
+    PyErr_SetString(PyExc_ImportError, "init pynba.middleware");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

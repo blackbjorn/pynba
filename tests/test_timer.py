@@ -3,7 +3,7 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.collector import Timer
+from pynba.collector import Timer
 
 class TimerTestCase(unittest.TestCase):
     def test_timer(self):

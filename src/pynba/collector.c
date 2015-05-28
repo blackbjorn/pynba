@@ -924,15 +924,15 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t); /*proto*/
 
 
-/* Module declarations from 'iscool_e.pynba.collector' */
+/* Module declarations from 'pynba.collector' */
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_9collector_Timed = 0;
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_9collector_Timer = 0;
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_9collector_DataCollector = 0;
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_9collector___pyx_scope_struct____call__ = 0;
-#define __Pyx_MODULE_NAME "iscool_e.pynba.collector"
+#define __Pyx_MODULE_NAME "pynba.collector"
 int __pyx_module_is_main_iscool_e__pynba__collector = 0;
 
-/* Implementation of 'iscool_e.pynba.collector' */
+/* Implementation of 'pynba.collector' */
 static PyObject *__pyx_builtin_RuntimeError;
 static int __pyx_pf_8iscool_e_5pynba_9collector_5Timed___cinit__(struct __pyx_obj_8iscool_e_5pynba_9collector_Timed *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timed_7started___get__(struct __pyx_obj_8iscool_e_5pynba_9collector_Timed *__pyx_v_self); /* proto */
@@ -1033,7 +1033,7 @@ static char __pyx_k_RuntimeError[] = "RuntimeError";
 static char __pyx_k_Already_started[] = "Already started";
 static char __pyx_k_call___locals_wrapper[] = "__call__.<locals>.wrapper";
 static char __pyx_k_Tell_if_timer_is_started[] = "Tell if timer is started";
-static char __pyx_k_iscool_e_pynba_collector[] = "iscool_e.pynba.collector";
+static char __pyx_k_iscool_e_pynba_collector[] = "pynba.collector";
 static char __pyx_k_IsCool_e_Pynba_copyright_c_2012[] = "\n    IsCool-e Pynba\n    ~~~~~~~~~~~~~~\n\n    :copyright: (c) 2012 by IsCool Entertainment.\n    :license: MIT, see LICENSE for more details.\n";
 static char __pyx_k_Users_xavierbarbosa_Sources_Pyn[] = "/Users/xavierbarbosa/Sources/Pynba/src/pynba/src/iscool_e/pynba/collector.pyx";
 static char __pyx_k_Returns_the_elapsed_time_in_seco[] = "Returns the elapsed time in seconds";
@@ -1196,7 +1196,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timed_7started___get__(st
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timed.started.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timed.started.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1283,7 +1283,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timed_7elapsed___get__(st
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timed.elapsed.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timed.elapsed.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1380,7 +1380,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timed_8dt_start___get__(s
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timed.dt_start.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timed.dt_start.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1461,7 +1461,7 @@ static PyObject *__pyx_f_8iscool_e_5pynba_9collector_5Timed__start(struct __pyx_
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timed._start", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timed._start", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1551,7 +1551,7 @@ static PyObject *__pyx_f_8iscool_e_5pynba_9collector_5Timed__stop(struct __pyx_o
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timed._stop", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timed._stop", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1765,7 +1765,7 @@ static int __pyx_pw_8iscool_e_5pynba_9collector_5Timer_1__init__(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
@@ -1852,7 +1852,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_5Timer___init__(struct __pyx_obj
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -1945,7 +1945,7 @@ static PyObject *__pyx_f_8iscool_e_5pynba_9collector_5Timer_delete(struct __pyx_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.delete", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.delete", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1985,7 +1985,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_2delete(struct __py
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.delete", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.delete", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2131,7 +2131,7 @@ static PyObject *__pyx_f_8iscool_e_5pynba_9collector_5Timer_clone(struct __pyx_o
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.clone", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.clone", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_instance);
@@ -2172,7 +2172,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_4clone(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.clone", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.clone", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2245,7 +2245,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_6start(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.start", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.start", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2318,7 +2318,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_8stop(struct __pyx_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.stop", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.stop", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2419,7 +2419,7 @@ static PyObject *__pyx_f_8iscool_e_5pynba_9collector_5Timer___enter__(struct __p
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__enter__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__enter__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2459,7 +2459,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_10__enter__(struct 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__enter__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__enter__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2535,7 +2535,7 @@ static PyObject *__pyx_pw_8iscool_e_5pynba_9collector_5Timer_13__exit__(PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__exit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__exit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -2601,7 +2601,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_12__exit__(struct _
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__exit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__exit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2662,7 +2662,7 @@ static PyObject *__pyx_pw_8iscool_e_5pynba_9collector_5Timer_15__call__(PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -2793,7 +2793,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_8__call___wrapper(P
  *             return response
  */
         /*except:*/ {
-          __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__call__.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("pynba.collector.Timer.__call__.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_4, &__pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_4);
@@ -2883,7 +2883,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_8__call___wrapper(P
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__call__.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__call__.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_response);
@@ -3001,7 +3001,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_14__call__(struct _
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_wrapper);
@@ -3222,7 +3222,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_5Timer_16__repr__(struct _
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.Timer.__repr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.Timer.__repr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3409,7 +3409,7 @@ static int __pyx_pw_8iscool_e_5pynba_9collector_13DataCollector_1__init__(PyObje
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
@@ -3587,7 +3587,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_13DataCollector___init__(struct 
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -3659,7 +3659,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_2start(str
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.start", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.start", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3798,7 +3798,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_4stop(stru
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.stop", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.stop", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_timer);
@@ -3907,7 +3907,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_6timer(str
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.timer", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.timer", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_timer);
@@ -4053,7 +4053,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_8flush(str
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.flush", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.flush", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4100,7 +4100,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_7enabled__
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.enabled.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.enabled.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4136,7 +4136,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_7enabled_2__set_
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.enabled.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.enabled.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4215,7 +4215,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_6timers_2__set__
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.timers.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.timers.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4323,7 +4323,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_10scriptname_2__
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.scriptname.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.scriptname.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4431,7 +4431,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_8hostname_2__set
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.hostname.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.hostname.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4824,7 +4824,7 @@ static int __pyx_pf_8iscool_e_5pynba_9collector_13DataCollector_6schema_2__set__
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("iscool_e.pynba.collector.DataCollector.schema.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.collector.DataCollector.schema.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4948,7 +4948,7 @@ static struct PyGetSetDef __pyx_getsets_8iscool_e_5pynba_9collector_Timed[] = {
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_9collector_Timed = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.collector.Timed"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.collector.Timed"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_9collector_Timed), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_9collector_Timed, /*tp_dealloc*/
@@ -5087,7 +5087,7 @@ static struct PyGetSetDef __pyx_getsets_8iscool_e_5pynba_9collector_Timer[] = {
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_9collector_Timer = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.collector.Timer"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.collector.Timer"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_9collector_Timer), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_9collector_Timer, /*tp_dealloc*/
@@ -5345,7 +5345,7 @@ static struct PyGetSetDef __pyx_getsets_8iscool_e_5pynba_9collector_DataCollecto
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_9collector_DataCollector = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.collector.DataCollector"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.collector.DataCollector"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_9collector_DataCollector), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_9collector_DataCollector, /*tp_dealloc*/
@@ -5457,7 +5457,7 @@ static int __pyx_tp_clear_8iscool_e_5pynba_9collector___pyx_scope_struct____call
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_9collector___pyx_scope_struct____call__ = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.collector.__pyx_scope_struct____call__"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.collector.__pyx_scope_struct____call__"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_9collector___pyx_scope_struct____call__), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_9collector___pyx_scope_struct____call__, /*tp_dealloc*/
@@ -5732,8 +5732,8 @@ PyMODINIT_FUNC PyInit_collector(void)
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "iscool_e.pynba.collector")) {
-      if (unlikely(PyDict_SetItemString(modules, "iscool_e.pynba.collector", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pynba.collector")) {
+      if (unlikely(PyDict_SetItemString(modules, "pynba.collector", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -5848,10 +5848,10 @@ PyMODINIT_FUNC PyInit_collector(void)
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
-    __Pyx_AddTraceback("init iscool_e.pynba.collector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+    __Pyx_AddTraceback("init pynba.collector", __pyx_clineno, __pyx_lineno, __pyx_filename);
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init iscool_e.pynba.collector");
+    PyErr_SetString(PyExc_ImportError, "init pynba.collector");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

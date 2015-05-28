@@ -6,9 +6,9 @@ except ImportError:
 import logging
 from collections import defaultdict
 
-from iscool_e.pynba.log import logger
-from iscool_e.pynba.collector import DataCollector
-from iscool_e.pynba.reporter import Reporter
+from pynba.log import logger
+from pynba.collector import DataCollector
+from pynba.reporter import Reporter
 
 class MockLoggingHandler(logging.Handler):
     """Mock logging handler to check for expected logs.

@@ -3,7 +3,7 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.util import ScriptMonitor
+from pynba.util import ScriptMonitor
 from multiprocessing import Process
 from time import sleep
 

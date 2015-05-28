@@ -1,5 +1,5 @@
 from wsgiref.simple_server import make_server
-from iscool_e.pynba import monitor, pynba
+from pynba import monitor, pynba
 from time import sleep
 import logging
 

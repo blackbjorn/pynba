@@ -31,7 +31,7 @@ def loop(directory, module=None):
 def extension_maker():
     extensions = []
 
-    for path, name in loop('src/iscool_e', 'iscool_e'):
+    for path, name in loop('src/pynba', 'pynba'):
         if path.endswith(".c"):
             extensions.append(
                 Extension(
@@ -64,7 +64,7 @@ class CythonizeCommand(Command):
             print('cython is not installed')
             errno = 1
         else:
-            for path, name in loop('src/iscool_e', 'iscool_e'):
+            for path, name in loop('src/pynba', 'pynba'):
                 if path.endswith(".pyx"):
                     dest = path.rpartition('.')[0] + '.c'
                     if os.path.exists(dest) and os.path.getmtime(path) <= os.path.getmtime(dest):
@@ -81,7 +81,7 @@ class CythonizeCommand(Command):
 
 
 setup(
-    name='iscool_e.pynba',
+    name='pynba',
     version=version,
     description=str(
         'lightweight timers and wsgi middleware to '
@@ -111,12 +111,11 @@ setup(
     ],
     keywords='pinba wsgi monitoring',
     author='Xavier Barbosa',
-    author_email='xavier.barbosa@iscool-e.com',
-    url='https://github.com/IsCoolEntertainment/pynba',
+    author_email='clint.northwood@gmail.com',
+    url='https://github.com/johnnoone/pynba',
     license='MIT',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    namespace_packages=['iscool_e'],
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,

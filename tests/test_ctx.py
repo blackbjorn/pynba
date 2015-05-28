@@ -3,10 +3,10 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.ctx import RequestContext
-from iscool_e.pynba.collector import DataCollector
-from iscool_e.pynba.globals import pynba
-from iscool_e.pynba.local import LOCAL_STACK
+from pynba.ctx import RequestContext
+from pynba.collector import DataCollector
+from pynba.globals import pynba
+from pynba.local import LOCAL_STACK
 
 class ContextTestCase(unittest.TestCase):
     def test_config(self):

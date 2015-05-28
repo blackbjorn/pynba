@@ -722,11 +722,11 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t); /*proto*/
 
 
-/* Module declarations from 'iscool_e.pynba.log' */
-#define __Pyx_MODULE_NAME "iscool_e.pynba.log"
+/* Module declarations from 'pynba.log' */
+#define __Pyx_MODULE_NAME "pynba.log"
 int __pyx_module_is_main_iscool_e__pynba__log = 0;
 
-/* Implementation of 'iscool_e.pynba.log' */
+/* Implementation of 'pynba.log' */
 static PyObject *__pyx_builtin_ImportError;
 static PyObject *__pyx_pf_8iscool_e_5pynba_3log_11NullHandler_emit(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_record); /* proto */
 static char __pyx_k_all[] = "__all__";
@@ -751,7 +751,7 @@ static char __pyx_k_addHandler[] = "addHandler";
 static char __pyx_k_ImportError[] = "ImportError";
 static char __pyx_k_NullHandler[] = "NullHandler";
 static char __pyx_k_NullHandler_emit[] = "NullHandler.emit";
-static char __pyx_k_iscool_e_pynba_log[] = "iscool_e.pynba.log";
+static char __pyx_k_iscool_e_pynba_log[] = "pynba.log";
 static char __pyx_k_IsCool_e_Pynba_copyright_c_2012[] = "\n    IsCool-e Pynba\n    ~~~~~~~~~~~~~~\n\n    :copyright: (c) 2012 by IsCool Entertainment.\n    :license: MIT, see LICENSE for more details.\n";
 static char __pyx_k_Users_xavierbarbosa_Sources_Pyn[] = "/Users/xavierbarbosa/Sources/Pynba/src/pynba/src/iscool_e/pynba/log.pyx";
 static PyObject *__pyx_n_s_Handler;
@@ -841,7 +841,7 @@ static PyObject *__pyx_pw_8iscool_e_5pynba_3log_11NullHandler_1emit(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("emit", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("iscool_e.pynba.log.NullHandler.emit", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.log.NullHandler.emit", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -1039,8 +1039,8 @@ PyMODINIT_FUNC PyInit_log(void)
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "iscool_e.pynba.log")) {
-      if (unlikely(PyDict_SetItemString(modules, "iscool_e.pynba.log", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pynba.log")) {
+      if (unlikely(PyDict_SetItemString(modules, "pynba.log", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -1121,7 +1121,7 @@ PyMODINIT_FUNC PyInit_log(void)
  */
     __pyx_t_6 = PyErr_ExceptionMatches(__pyx_builtin_ImportError);
     if (__pyx_t_6) {
-      __Pyx_AddTraceback("iscool_e.pynba.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pynba.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_1, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L4_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_1);
@@ -1293,10 +1293,10 @@ PyMODINIT_FUNC PyInit_log(void)
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   if (__pyx_m) {
-    __Pyx_AddTraceback("init iscool_e.pynba.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
+    __Pyx_AddTraceback("init pynba.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init iscool_e.pynba.log");
+    PyErr_SetString(PyExc_ImportError, "init pynba.log");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

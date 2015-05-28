@@ -817,14 +817,14 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t); /*proto*/
 
 
-/* Module declarations from 'iscool_e.pynba.globals' */
+/* Module declarations from 'pynba.globals' */
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_7globals_LocalProxy = 0;
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_7globals___pyx_scope_struct__timer = 0;
 static PyTypeObject *__pyx_ptype_8iscool_e_5pynba_7globals___pyx_scope_struct_1_decorator = 0;
-#define __Pyx_MODULE_NAME "iscool_e.pynba.globals"
+#define __Pyx_MODULE_NAME "pynba.globals"
 int __pyx_module_is_main_iscool_e__pynba__globals = 0;
 
-/* Implementation of 'iscool_e.pynba.globals' */
+/* Implementation of 'pynba.globals' */
 static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_AttributeError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -863,7 +863,7 @@ static char __pyx_k_functools[] = "functools";
 static char __pyx_k_LOCAL_STACK[] = "LOCAL_STACK";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
 static char __pyx_k_AttributeError[] = "AttributeError";
-static char __pyx_k_iscool_e_pynba_globals[] = "iscool_e.pynba.globals";
+static char __pyx_k_iscool_e_pynba_globals[] = "pynba.globals";
 static char __pyx_k_timer_locals_decorator[] = "timer.<locals>.decorator";
 static char __pyx_k_IsCool_e_Pynba_copyright_c_2012[] = "\n    IsCool-e Pynba\n    ~~~~~~~~~~~~~~\n\n    :copyright: (c) 2012 by IsCool Entertainment.\n    :license: MIT, see LICENSE for more details.\n";
 static char __pyx_k_Users_xavierbarbosa_Sources_Pyn[] = "/Users/xavierbarbosa/Sources/Pynba/src/pynba/src/iscool_e/pynba/globals.pyx";
@@ -1142,7 +1142,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_5timer_9decorat
  */
     __pyx_t_7 = PyErr_ExceptionMatches(__pyx_builtin_TypeError) || PyErr_ExceptionMatches(__pyx_builtin_AttributeError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_5, &__pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_5);
@@ -1241,7 +1241,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_5timer_9decorat
  *                 return response
  */
         /*except:*/ {
-          __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_4, &__pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_GOTREF(__pyx_t_4);
@@ -1331,7 +1331,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_5timer_9decorat
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_timer);
@@ -1447,7 +1447,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_5timer_decorato
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.timer.decorator", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_wrapper);
@@ -1572,7 +1572,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_2timer(CYTHON_U
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.timer", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.globals.LocalProxy.timer", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pynba);
@@ -1676,7 +1676,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_4__getattr__(st
  */
     __pyx_t_6 = PyErr_ExceptionMatches(__pyx_builtin_TypeError) || PyErr_ExceptionMatches(__pyx_builtin_AttributeError);
     if (__pyx_t_6) {
-      __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pynba.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_5, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_5);
@@ -1818,7 +1818,7 @@ static PyObject *__pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_4__getattr__(st
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_value);
@@ -1911,7 +1911,7 @@ static int __pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_U
  */
     __pyx_t_7 = PyErr_ExceptionMatches(__pyx_builtin_TypeError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pynba.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
@@ -1965,7 +1965,7 @@ static int __pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_U
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2056,7 +2056,7 @@ static int __pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_U
  */
     __pyx_t_7 = PyErr_ExceptionMatches(__pyx_builtin_TypeError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pynba.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
@@ -2110,7 +2110,7 @@ static int __pyx_pf_8iscool_e_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_U
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("iscool_e.pynba.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2187,7 +2187,7 @@ static PyMethodDef __pyx_methods_8iscool_e_5pynba_7globals_LocalProxy[] = {
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_7globals_LocalProxy = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.globals.LocalProxy"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.globals.LocalProxy"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_7globals_LocalProxy), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_7globals_LocalProxy, /*tp_dealloc*/
@@ -2292,7 +2292,7 @@ static int __pyx_tp_clear_8iscool_e_5pynba_7globals___pyx_scope_struct__timer(Py
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_7globals___pyx_scope_struct__timer = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.globals.__pyx_scope_struct__timer"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.globals.__pyx_scope_struct__timer"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_7globals___pyx_scope_struct__timer), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_7globals___pyx_scope_struct__timer, /*tp_dealloc*/
@@ -2404,7 +2404,7 @@ static int __pyx_tp_clear_8iscool_e_5pynba_7globals___pyx_scope_struct_1_decorat
 
 static PyTypeObject __pyx_type_8iscool_e_5pynba_7globals___pyx_scope_struct_1_decorator = {
   PyVarObject_HEAD_INIT(0, 0)
-  __Pyx_NAMESTR("iscool_e.pynba.globals.__pyx_scope_struct_1_decorator"), /*tp_name*/
+  __Pyx_NAMESTR("pynba.globals.__pyx_scope_struct_1_decorator"), /*tp_name*/
   sizeof(struct __pyx_obj_8iscool_e_5pynba_7globals___pyx_scope_struct_1_decorator), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_8iscool_e_5pynba_7globals___pyx_scope_struct_1_decorator, /*tp_dealloc*/
@@ -2690,8 +2690,8 @@ PyMODINIT_FUNC PyInit_globals(void)
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "iscool_e.pynba.globals")) {
-      if (unlikely(PyDict_SetItemString(modules, "iscool_e.pynba.globals", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pynba.globals")) {
+      if (unlikely(PyDict_SetItemString(modules, "pynba.globals", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -2824,10 +2824,10 @@ PyMODINIT_FUNC PyInit_globals(void)
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
-    __Pyx_AddTraceback("init iscool_e.pynba.globals", __pyx_clineno, __pyx_lineno, __pyx_filename);
+    __Pyx_AddTraceback("init pynba.globals", __pyx_clineno, __pyx_lineno, __pyx_filename);
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init iscool_e.pynba.globals");
+    PyErr_SetString(PyExc_ImportError, "init pynba.globals");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

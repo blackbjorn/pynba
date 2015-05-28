@@ -3,8 +3,8 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.globals import pynba
-from iscool_e.pynba.local import LOCAL_STACK
+from pynba.globals import pynba
+from pynba.local import LOCAL_STACK
 from contextlib import contextmanager
 
 class GlobalTestCase(unittest.TestCase):

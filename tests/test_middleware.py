@@ -9,9 +9,9 @@ from wsgiref.simple_server import make_server
 from wsgiref.util import setup_testing_defaults
 # setup_testing_defaults = nottest(setup_testing_defaults)
 
-from iscool_e.pynba.middleware import PynbaMiddleware
-from iscool_e.pynba.globals import pynba
-from iscool_e.pynba import monitor
+from pynba.middleware import PynbaMiddleware
+from pynba.globals import pynba
+from pynba import monitor
 
 class MiddlewareTestCase(unittest.TestCase):
     def test_context(self):

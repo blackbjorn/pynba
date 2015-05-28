@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    IsCool-e Pynba
-    ~~~~~~~~~~~~~~
+    Pynba
+    ~~~~~
 
-    :copyright: (c) 2012 by IsCool Entertainment.
+    :copyright: (c) 2015 by Xavier Barbosa.
     :license: MIT, see LICENSE for more details.
 """
 

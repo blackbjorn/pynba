@@ -3,7 +3,7 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.collector import DataCollector
+from pynba.collector import DataCollector
 
 class CollectorTestCase(unittest.TestCase):
     def test_data_collector(self):

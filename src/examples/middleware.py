@@ -1,5 +1,5 @@
 from wsgiref.simple_server import make_server
-from iscool_e.pynba import PynbaMiddleware, pynba
+from pynba import PynbaMiddleware, pynba
 from time import sleep
 
 def app(environ, start_response):

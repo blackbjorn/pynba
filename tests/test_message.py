@@ -3,7 +3,7 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.message import dumps, cast
+from pynba.message import dumps, cast
 from six import binary_type
 
 class ProtoTestCase(unittest.TestCase):

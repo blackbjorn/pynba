@@ -3,7 +3,7 @@ try:
 except ImportError:
     import unittest
 
-from iscool_e.pynba.reporter import flattener
+from pynba.reporter import flattener
 
 class ReporterTestCase(unittest.TestCase):
     def test_flattener(self):
