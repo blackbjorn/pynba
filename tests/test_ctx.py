@@ -4,9 +4,12 @@ from pynba.wsgi import pynba
 from pynba.wsgi import RequestContext
 
 
+def reporter(arg, *args, **kwargs):
+    return arg
+
+
 class ContextTestCase(unittest.TestCase):
     def test_config(self):
-        reporter = lambda x: x
         environ = {}
         ctx = RequestContext(reporter, environ)
         assert ctx.scriptname == ''
@@ -15,7 +18,6 @@ class ContextTestCase(unittest.TestCase):
         assert ctx.scriptname.startswith('foo')
 
     def test_context(self):
-        reporter = lambda x: x
         environ = {}
 
         ctx = RequestContext(reporter, environ)
@@ -35,7 +37,6 @@ class ContextTestCase(unittest.TestCase):
     def test_context2(self):
         assert not pynba.enabled
 
-        reporter = lambda *x, **y: x
         environ = {}
         with RequestContext(reporter, environ) as ctx:
             assert pynba.enabled

@@ -8,11 +8,11 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['RequestContext']
-
 import resource
 from pynba.core import DataCollector
 from pynba.stacked import LOCAL_STACK
+
+__all__ = ['RequestContext']
 
 
 class RequestContext(object):

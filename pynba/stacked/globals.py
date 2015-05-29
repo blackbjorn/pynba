@@ -9,11 +9,11 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['LocalProxy']
-
 from .local import LOCAL_STACK
 from functools import wraps
 from pynba.core import logger
+
+__all__ = ['LocalProxy']
 
 
 class LocalProxy(object):

@@ -9,8 +9,6 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['LocalStack', 'LOCAL_STACK']
-
 try:
     from greenlet import getcurrent as get_ident
 except ImportError:
@@ -25,6 +23,8 @@ except ImportError:
             only thread.  Thus a constant can be safely returned.
             """
             return -1
+
+__all__ = ['LocalStack', 'LOCAL_STACK']
 
 
 class LocalStack(object):

@@ -8,11 +8,11 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['monitor', 'pynba', 'PynbaMiddleware', 'RequestContext']
-
 from .ctx import RequestContext
 from .middleware import PynbaMiddleware
 from pynba.stacked import LocalProxy
+
+__all__ = ['monitor', 'pynba', 'PynbaMiddleware', 'RequestContext']
 
 pynba = LocalProxy(enabled=False)
 

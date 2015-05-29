@@ -8,13 +8,13 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['DataCollector', 'Timer']
-
 import functools
 import os
 import time
 from .log import logger
 from enum import Enum
+
+__all__ = ['DataCollector', 'Timer']
 
 # time.clock() has better accuracy in windows
 now = time.clock if os.name == 'nt' else time.time

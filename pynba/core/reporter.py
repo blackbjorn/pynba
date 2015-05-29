@@ -9,12 +9,12 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['Reporter', 'flattener']
-
 import collections
 from .log import logger
 from .message import dumps
 from socket import socket, AF_INET, SOCK_DGRAM
+
+__all__ = ['Reporter', 'flattener']
 
 
 class Reporter(object):

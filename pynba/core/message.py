@@ -9,11 +9,11 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['dumps']
-
 import struct
 from collections import namedtuple
 from six import BytesIO, PY3
+
+__all__ = ['dumps']
 
 Field = namedtuple('Field', 'tag name type rule')
 fields = [

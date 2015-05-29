@@ -8,10 +8,10 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['PynbaMiddleware']
-
 from .ctx import RequestContext
 from pynba.core import Reporter
+
+__all__ = ['PynbaMiddleware']
 
 
 class PynbaMiddleware(object):

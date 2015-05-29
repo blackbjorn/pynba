@@ -12,7 +12,7 @@ class TimerTestCase(unittest.TestCase):
                 timer.stop()
 
             timer.start()
-            assert timer.elapsed == None
+            assert timer.elapsed is None
             assert timer.started is True
             with self.assertRaises(RuntimeError):
                 timer.start()

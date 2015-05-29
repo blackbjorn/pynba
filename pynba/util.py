@@ -8,12 +8,12 @@
 
 from __future__ import absolute_import, unicode_literals
 
-__all__ = ['ScriptMonitor']
-
 import resource
 import socket
 import sys
 from pynba.core import DataCollector, Reporter
+
+__all__ = ['ScriptMonitor']
 
 
 class ScriptMonitor(object):
