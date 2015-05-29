@@ -31,16 +31,16 @@ cdef class RequestContext(object):
     cdef public dict config
     cdef public object pynba
     cdef public object resources
-    cdef unicode _scriptname
-    cdef unicode _hostname
-    cdef unicode _servername
-    cdef unicode _schema
+    cdef str _scriptname
+    cdef str _hostname
+    cdef str _servername
+    cdef str _schema
 
     property scriptname:
         def __get__(self):
-            cdef unicode out
+            cdef str out
             cdef object pynba
-            out = <unicode>self.config.get('prefix', '')
+            out = <str>self.config.get('prefix', '')
 
             if self.pynba:
                 pynba = self.pynba
@@ -90,9 +90,9 @@ cdef class RequestContext(object):
         #: will keep a snap of :func:`resource.getrusage`
         self.resources = None
 
-        self._scriptname = <unicode>environ.get('PATH_INFO', '')
-        self._hostname = <unicode>environ.get('SERVER_NAME', None)
-        self._schema = <unicode>environ.get('wsgi.url_scheme', None)
+        self._scriptname = <str>environ.get('PATH_INFO', '')
+        self._hostname = <str>environ.get('SERVER_NAME', None)
+        self._schema = <str>environ.get('wsgi.url_scheme', None)
 
     cpdef push(self):
         """Pushes current context into local stack.

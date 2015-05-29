@@ -767,7 +767,7 @@ static PyObject *__pyx_kp_u_wsgi_url_scheme;
  * 
  *     property scriptname:
  *         def __get__(self):             # <<<<<<<<<<<<<<
- *             cdef unicode out
+ *             cdef str out
  *             cdef object pynba
  */
 
@@ -798,9 +798,9 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_10scriptname___get_
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "pynba/wsgi/ctx.pyx":43
- *             cdef unicode out
+ *             cdef str out
  *             cdef object pynba
- *             out = <unicode>self.config.get('prefix', '')             # <<<<<<<<<<<<<<
+ *             out = <str>self.config.get('prefix', '')             # <<<<<<<<<<<<<<
  * 
  *             if self.pynba:
  */
@@ -817,7 +817,7 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_10scriptname___get_
   __pyx_t_2 = 0;
 
   /* "pynba/wsgi/ctx.pyx":45
- *             out = <unicode>self.config.get('prefix', '')
+ *             out = <str>self.config.get('prefix', '')
  * 
  *             if self.pynba:             # <<<<<<<<<<<<<<
  *                 pynba = self.pynba
@@ -880,7 +880,7 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_10scriptname___get_
  *     property hostname:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_out, __pyx_v_self->_scriptname); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyNumber_Add(__pyx_v_out, __pyx_v_self->_scriptname); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -890,7 +890,7 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_10scriptname___get_
  * 
  *     property scriptname:
  *         def __get__(self):             # <<<<<<<<<<<<<<
- *             cdef unicode out
+ *             cdef str out
  *             cdef object pynba
  */
 
@@ -1000,7 +1000,7 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_8hostname___get__(s
  *                 return self._hostname
  * 
  */
-  __pyx_t_1 = (__pyx_v_self->_hostname != Py_None) && (PyUnicode_GET_SIZE(__pyx_v_self->_hostname) != 0);
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->_hostname); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
     /* "pynba/wsgi/ctx.pyx":59
@@ -1392,7 +1392,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
  *         #: will keep a snap of :func:`resource.getrusage`
  *         self.resources = None             # <<<<<<<<<<<<<<
  * 
- *         self._scriptname = <unicode>environ.get('PATH_INFO', '')
+ *         self._scriptname = <str>environ.get('PATH_INFO', '')
  */
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
@@ -1403,9 +1403,9 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
   /* "pynba/wsgi/ctx.pyx":93
  *         self.resources = None
  * 
- *         self._scriptname = <unicode>environ.get('PATH_INFO', '')             # <<<<<<<<<<<<<<
- *         self._hostname = <unicode>environ.get('SERVER_NAME', None)
- *         self._schema = <unicode>environ.get('wsgi.url_scheme', None)
+ *         self._scriptname = <str>environ.get('PATH_INFO', '')             # <<<<<<<<<<<<<<
+ *         self._hostname = <str>environ.get('SERVER_NAME', None)
+ *         self._schema = <str>environ.get('wsgi.url_scheme', None)
  */
   if (unlikely(__pyx_v_environ == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
@@ -1424,9 +1424,9 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
 
   /* "pynba/wsgi/ctx.pyx":94
  * 
- *         self._scriptname = <unicode>environ.get('PATH_INFO', '')
- *         self._hostname = <unicode>environ.get('SERVER_NAME', None)             # <<<<<<<<<<<<<<
- *         self._schema = <unicode>environ.get('wsgi.url_scheme', None)
+ *         self._scriptname = <str>environ.get('PATH_INFO', '')
+ *         self._hostname = <str>environ.get('SERVER_NAME', None)             # <<<<<<<<<<<<<<
+ *         self._schema = <str>environ.get('wsgi.url_scheme', None)
  * 
  */
   if (unlikely(__pyx_v_environ == Py_None)) {
@@ -1445,9 +1445,9 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
   __pyx_t_1 = 0;
 
   /* "pynba/wsgi/ctx.pyx":95
- *         self._scriptname = <unicode>environ.get('PATH_INFO', '')
- *         self._hostname = <unicode>environ.get('SERVER_NAME', None)
- *         self._schema = <unicode>environ.get('wsgi.url_scheme', None)             # <<<<<<<<<<<<<<
+ *         self._scriptname = <str>environ.get('PATH_INFO', '')
+ *         self._hostname = <str>environ.get('SERVER_NAME', None)
+ *         self._schema = <str>environ.get('wsgi.url_scheme', None)             # <<<<<<<<<<<<<<
  * 
  *     cpdef push(self):
  */
@@ -1488,7 +1488,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
 }
 
 /* "pynba/wsgi/ctx.pyx":97
- *         self._schema = <unicode>environ.get('wsgi.url_scheme', None)
+ *         self._schema = <str>environ.get('wsgi.url_scheme', None)
  * 
  *     cpdef push(self):             # <<<<<<<<<<<<<<
  *         """Pushes current context into local stack.
@@ -1711,7 +1711,7 @@ static PyObject *__pyx_f_5pynba_4wsgi_3ctx_14RequestContext_push(struct __pyx_ob
   __pyx_t_2 = 0;
 
   /* "pynba/wsgi/ctx.pyx":97
- *         self._schema = <unicode>environ.get('wsgi.url_scheme', None)
+ *         self._schema = <str>environ.get('wsgi.url_scheme', None)
  * 
  *     cpdef push(self):             # <<<<<<<<<<<<<<
  *         """Pushes current context into local stack.
@@ -2920,7 +2920,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_6config_4__del__(struct _
  *     cdef public dict config
  *     cdef public object pynba             # <<<<<<<<<<<<<<
  *     cdef public object resources
- *     cdef unicode _scriptname
+ *     cdef str _scriptname
  */
 
 /* Python wrapper */
@@ -3014,8 +3014,8 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_5pynba_4__del__(struct __
  *     cdef public dict config
  *     cdef public object pynba
  *     cdef public object resources             # <<<<<<<<<<<<<<
- *     cdef unicode _scriptname
- *     cdef unicode _hostname
+ *     cdef str _scriptname
+ *     cdef str _hostname
  */
 
 /* Python wrapper */
