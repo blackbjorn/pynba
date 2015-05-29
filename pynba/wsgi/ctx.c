@@ -878,7 +878,7 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_10scriptname___get_
  *     property hostname:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyNumber_Add(__pyx_v_out, __pyx_v_self->_scriptname); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyUnicode_ConcatSafe(__pyx_v_out, __pyx_v_self->_scriptname); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
@@ -998,7 +998,7 @@ static PyObject *__pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_8hostname___get__(s
  *                 return self._hostname
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->_hostname); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = (__pyx_v_self->_hostname != Py_None) && (PyUnicode_GET_SIZE(__pyx_v_self->_hostname) != 0);
   if (__pyx_t_1) {
 
     /* "pynba/wsgi/ctx.pyx":59
@@ -1410,7 +1410,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
   }
   __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_environ, __pyx_n_u_PATH_INFO, __pyx_kp_u_); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyString_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->_scriptname);
   __Pyx_DECREF(__pyx_v_self->_scriptname);
@@ -1430,7 +1430,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
   }
   __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_environ, __pyx_n_u_SERVER_NAME, Py_None); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyString_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->_hostname);
   __Pyx_DECREF(__pyx_v_self->_hostname);
@@ -1450,7 +1450,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext___init__(struct __pyx_obj
   }
   __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_environ, __pyx_kp_u_wsgi_url_scheme, Py_None); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyString_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->_schema);
   __Pyx_DECREF(__pyx_v_self->_schema);
@@ -2910,7 +2910,7 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_6config_4__del__(struct _
  *     cdef public dict config
  *     cdef public object pynba             # <<<<<<<<<<<<<<
  *     cdef public object resources
- *     cdef str _scriptname
+ *     cdef unicode _scriptname
  */
 
 /* Python wrapper */
@@ -3004,8 +3004,8 @@ static int __pyx_pf_5pynba_4wsgi_3ctx_14RequestContext_5pynba_4__del__(struct __
  *     cdef public dict config
  *     cdef public object pynba
  *     cdef public object resources             # <<<<<<<<<<<<<<
- *     cdef str _scriptname
- *     cdef str _hostname
+ *     cdef unicode _scriptname
+ *     cdef unicode _hostname
  */
 
 /* Python wrapper */

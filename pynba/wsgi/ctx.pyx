@@ -31,10 +31,10 @@ cdef class RequestContext(object):
     cdef public dict config
     cdef public object pynba
     cdef public object resources
-    cdef str _scriptname
-    cdef str _hostname
-    cdef str _servername
-    cdef str _schema
+    cdef unicode _scriptname
+    cdef unicode _hostname
+    cdef unicode _servername
+    cdef unicode _schema
 
     property scriptname:
         def __get__(self):

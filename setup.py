@@ -58,11 +58,12 @@ class CythonizeCommand(Command):
         import subprocess
         import sys
 
+        exitcode = 0
         errno = 0
         executable = find_executable('cython')
         if not executable:
             print('cython is not installed')
-            errno = 1
+            exitcode = 1
         else:
             for path, name in loop('pynba', 'pynba'):
                 if path.endswith(".pyx"):
@@ -74,10 +75,11 @@ class CythonizeCommand(Command):
                         errno = subprocess.call([executable, path])
                         print('cythonize {} ok'.format(path))
                         if errno != 0:
+                            exitcode = errno
                             print('cythonize {} failed'.format(path))
 
-        if errno != 0:
-            raise SystemExit(errno)
+        if exitcode > 0:
+            raise SystemExit(exitcode)
 
 
 setup(
