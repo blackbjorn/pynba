@@ -37,7 +37,7 @@ def extension_maker():
                     Extension(
                         name=name,
                         sources=[path],
-                        include_dirs=['src', "."],
+                        include_dirs=['.'],
                     )
                 )
     return extensions
@@ -64,7 +64,7 @@ class CythonizeCommand(Command):
             print('cython is not installed')
             errno = 1
         else:
-            for path, name in loop('src/pynba', 'pynba'):
+            for path, name in loop('pynba', 'pynba'):
                 if path.endswith(".pyx"):
                     dest = path.rpartition('.')[0] + '.c'
                     if os.path.exists(dest) and os.path.getmtime(path) <= os.path.getmtime(dest):
@@ -113,8 +113,8 @@ setup(
     author_email='clint.northwood@gmail.com',
     url='https://github.com/johnnoone/pynba',
     license='MIT',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
+    # packages=find_packages('src'),
+    # package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
