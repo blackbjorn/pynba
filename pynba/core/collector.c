@@ -436,7 +436,7 @@ struct __pyx_obj_5pynba_4core_9collector_Timer;
 struct __pyx_obj_5pynba_4core_9collector_DataCollector;
 struct __pyx_obj_5pynba_4core_9collector___pyx_scope_struct____call__;
 
-/* "pynba/core/collector.pyx":28
+/* "pynba/core/collector.pyx":26
  * 
  * 
  * cdef enum RunningState:             # <<<<<<<<<<<<<<
@@ -449,7 +449,7 @@ enum __pyx_t_5pynba_4core_9collector_RunningState {
   __pyx_e_5pynba_4core_9collector_stoped = 2
 };
 
-/* "pynba/core/collector.pyx":34
+/* "pynba/core/collector.pyx":32
  * 
  * 
  * cdef class Timed(object):             # <<<<<<<<<<<<<<
@@ -467,7 +467,7 @@ struct __pyx_obj_5pynba_4core_9collector_Timed {
 };
 
 
-/* "pynba/core/collector.pyx":90
+/* "pynba/core/collector.pyx":88
  * 
  * 
  * cdef class Timer(Timed):             # <<<<<<<<<<<<<<
@@ -481,7 +481,7 @@ struct __pyx_obj_5pynba_4core_9collector_Timer {
 };
 
 
-/* "pynba/core/collector.pyx":213
+/* "pynba/core/collector.pyx":211
  * 
  * 
  * cdef class DataCollector(Timed):             # <<<<<<<<<<<<<<
@@ -501,7 +501,7 @@ struct __pyx_obj_5pynba_4core_9collector_DataCollector {
 };
 
 
-/* "pynba/core/collector.pyx":177
+/* "pynba/core/collector.pyx":175
  *             self.stop()
  * 
  *     def __call__(self, object func):             # <<<<<<<<<<<<<<
@@ -516,7 +516,7 @@ struct __pyx_obj_5pynba_4core_9collector___pyx_scope_struct____call__ {
 
 
 
-/* "pynba/core/collector.pyx":34
+/* "pynba/core/collector.pyx":32
  * 
  * 
  * cdef class Timed(object):             # <<<<<<<<<<<<<<
@@ -532,7 +532,7 @@ struct __pyx_vtabstruct_5pynba_4core_9collector_Timed {
 static struct __pyx_vtabstruct_5pynba_4core_9collector_Timed *__pyx_vtabptr_5pynba_4core_9collector_Timed;
 
 
-/* "pynba/core/collector.pyx":90
+/* "pynba/core/collector.pyx":88
  * 
  * 
  * cdef class Timer(Timed):             # <<<<<<<<<<<<<<
@@ -549,7 +549,7 @@ struct __pyx_vtabstruct_5pynba_4core_9collector_Timer {
 static struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *__pyx_vtabptr_5pynba_4core_9collector_Timer;
 
 
-/* "pynba/core/collector.pyx":213
+/* "pynba/core/collector.pyx":211
  * 
  * 
  * cdef class DataCollector(Timed):             # <<<<<<<<<<<<<<
@@ -985,7 +985,7 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_codeobj__5;
 
-/* "pynba/core/collector.pyx":42
+/* "pynba/core/collector.pyx":40
  *     cdef long _tt_elapsed
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -1014,7 +1014,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timed___cinit__(struct __pyx_obj_5p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "pynba/core/collector.pyx":43
+  /* "pynba/core/collector.pyx":41
  * 
  *     def __cinit__(self):
  *         self._state = initialized             # <<<<<<<<<<<<<<
@@ -1023,7 +1023,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timed___cinit__(struct __pyx_obj_5p
  */
   __pyx_v_self->_state = __pyx_e_5pynba_4core_9collector_initialized;
 
-  /* "pynba/core/collector.pyx":42
+  /* "pynba/core/collector.pyx":40
  *     cdef long _tt_elapsed
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -1037,7 +1037,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timed___cinit__(struct __pyx_obj_5p
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":48
+/* "pynba/core/collector.pyx":46
  *         """Tell if timer is started
  *         """
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1067,7 +1067,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7started___get__(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pynba/core/collector.pyx":49
+  /* "pynba/core/collector.pyx":47
  *         """
  *         def __get__(self):
  *             return self._state == started             # <<<<<<<<<<<<<<
@@ -1075,13 +1075,13 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7started___get__(struct
  *     property elapsed:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_self->_state == __pyx_e_5pynba_4core_9collector_started)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_self->_state == __pyx_e_5pynba_4core_9collector_started)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":48
+  /* "pynba/core/collector.pyx":46
  *         """Tell if timer is started
  *         """
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1100,7 +1100,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7started___get__(struct
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":54
+/* "pynba/core/collector.pyx":52
  *         """Returns the elapsed time in seconds
  *         """
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1131,7 +1131,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7elapsed___get__(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pynba/core/collector.pyx":55
+  /* "pynba/core/collector.pyx":53
  *         """
  *         def __get__(self):
  *             if self._state == stoped:             # <<<<<<<<<<<<<<
@@ -1141,7 +1141,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7elapsed___get__(struct
   __pyx_t_1 = ((__pyx_v_self->_state == __pyx_e_5pynba_4core_9collector_stoped) != 0);
   if (__pyx_t_1) {
 
-    /* "pynba/core/collector.pyx":56
+    /* "pynba/core/collector.pyx":54
  *         def __get__(self):
  *             if self._state == stoped:
  *                 return <float>self._tt_elapsed / 1000000             # <<<<<<<<<<<<<<
@@ -1149,14 +1149,14 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7elapsed___get__(struct
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = PyFloat_FromDouble((((float)__pyx_v_self->_tt_elapsed) / 1000000.0)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyFloat_FromDouble((((float)__pyx_v_self->_tt_elapsed) / 1000000.0)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
   }
 
-  /* "pynba/core/collector.pyx":57
+  /* "pynba/core/collector.pyx":55
  *             if self._state == stoped:
  *                 return <float>self._tt_elapsed / 1000000
  *             return None             # <<<<<<<<<<<<<<
@@ -1168,7 +1168,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7elapsed___get__(struct
   __pyx_r = Py_None;
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":54
+  /* "pynba/core/collector.pyx":52
  *         """Returns the elapsed time in seconds
  *         """
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1187,7 +1187,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_7elapsed___get__(struct
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":61
+/* "pynba/core/collector.pyx":59
  *     property dt_start:
  *         """Returns the elapsed time in seconds"""
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1219,7 +1219,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_8dt_start___get__(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pynba/core/collector.pyx":63
+  /* "pynba/core/collector.pyx":61
  *         def __get__(self):
  *             cdef long time
  *             if self._state != initialized:             # <<<<<<<<<<<<<<
@@ -1229,7 +1229,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_8dt_start___get__(struc
   __pyx_t_1 = ((__pyx_v_self->_state != __pyx_e_5pynba_4core_9collector_initialized) != 0);
   if (__pyx_t_1) {
 
-    /* "pynba/core/collector.pyx":64
+    /* "pynba/core/collector.pyx":62
  *             cdef long time
  *             if self._state != initialized:
  *                 time = self._tt_start.tv_sec * 1000000 + self._tt_start.tv_usec             # <<<<<<<<<<<<<<
@@ -1238,7 +1238,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_8dt_start___get__(struc
  */
     __pyx_v_time = ((__pyx_v_self->_tt_start.tv_sec * 1000000) + __pyx_v_self->_tt_start.tv_usec);
 
-    /* "pynba/core/collector.pyx":65
+    /* "pynba/core/collector.pyx":63
  *             if self._state != initialized:
  *                 time = self._tt_start.tv_sec * 1000000 + self._tt_start.tv_usec
  *                 return <float>time / 1000000             # <<<<<<<<<<<<<<
@@ -1246,14 +1246,14 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_8dt_start___get__(struc
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = PyFloat_FromDouble((((float)__pyx_v_time) / 1000000.0)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyFloat_FromDouble((((float)__pyx_v_time) / 1000000.0)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
   }
 
-  /* "pynba/core/collector.pyx":66
+  /* "pynba/core/collector.pyx":64
  *                 time = self._tt_start.tv_sec * 1000000 + self._tt_start.tv_usec
  *                 return <float>time / 1000000
  *             return None             # <<<<<<<<<<<<<<
@@ -1265,7 +1265,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_8dt_start___get__(struc
   __pyx_r = Py_None;
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":61
+  /* "pynba/core/collector.pyx":59
  *     property dt_start:
  *         """Returns the elapsed time in seconds"""
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1284,7 +1284,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timed_8dt_start___get__(struc
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":68
+/* "pynba/core/collector.pyx":66
  *             return None
  * 
  *     cdef _start(self):             # <<<<<<<<<<<<<<
@@ -1302,7 +1302,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__start(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_start", 0);
 
-  /* "pynba/core/collector.pyx":70
+  /* "pynba/core/collector.pyx":68
  *     cdef _start(self):
  *         """Starts timer"""
  *         if self._state == started:             # <<<<<<<<<<<<<<
@@ -1312,21 +1312,21 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__start(struct __pyx_obj_
   __pyx_t_1 = ((__pyx_v_self->_state == __pyx_e_5pynba_4core_9collector_started) != 0);
   if (__pyx_t_1) {
 
-    /* "pynba/core/collector.pyx":71
+    /* "pynba/core/collector.pyx":69
  *         """Starts timer"""
  *         if self._state == started:
  *             raise RuntimeError('Already started')             # <<<<<<<<<<<<<<
  *         self._state = started
  *         gettimeofday(&self._tt_start, NULL)
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "pynba/core/collector.pyx":72
+  /* "pynba/core/collector.pyx":70
  *         if self._state == started:
  *             raise RuntimeError('Already started')
  *         self._state = started             # <<<<<<<<<<<<<<
@@ -1335,7 +1335,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__start(struct __pyx_obj_
  */
   __pyx_v_self->_state = __pyx_e_5pynba_4core_9collector_started;
 
-  /* "pynba/core/collector.pyx":73
+  /* "pynba/core/collector.pyx":71
  *             raise RuntimeError('Already started')
  *         self._state = started
  *         gettimeofday(&self._tt_start, NULL)             # <<<<<<<<<<<<<<
@@ -1344,7 +1344,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__start(struct __pyx_obj_
  */
   gettimeofday((&__pyx_v_self->_tt_start), NULL);
 
-  /* "pynba/core/collector.pyx":68
+  /* "pynba/core/collector.pyx":66
  *             return None
  * 
  *     cdef _start(self):             # <<<<<<<<<<<<<<
@@ -1365,7 +1365,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__start(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":75
+/* "pynba/core/collector.pyx":73
  *         gettimeofday(&self._tt_start, NULL)
  * 
  *     cdef _stop(self):             # <<<<<<<<<<<<<<
@@ -1383,7 +1383,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__stop(struct __pyx_obj_5
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_stop", 0);
 
-  /* "pynba/core/collector.pyx":77
+  /* "pynba/core/collector.pyx":75
  *     cdef _stop(self):
  *         """Stops timer"""
  *         if self._state != started:             # <<<<<<<<<<<<<<
@@ -1393,21 +1393,21 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__stop(struct __pyx_obj_5
   __pyx_t_1 = ((__pyx_v_self->_state != __pyx_e_5pynba_4core_9collector_started) != 0);
   if (__pyx_t_1) {
 
-    /* "pynba/core/collector.pyx":78
+    /* "pynba/core/collector.pyx":76
  *         """Stops timer"""
  *         if self._state != started:
  *             raise RuntimeError('Not started')             # <<<<<<<<<<<<<<
  *         gettimeofday(&self._tt_end, NULL)
  *         self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "pynba/core/collector.pyx":79
+  /* "pynba/core/collector.pyx":77
  *         if self._state != started:
  *             raise RuntimeError('Not started')
  *         gettimeofday(&self._tt_end, NULL)             # <<<<<<<<<<<<<<
@@ -1416,7 +1416,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__stop(struct __pyx_obj_5
  */
   gettimeofday((&__pyx_v_self->_tt_end), NULL);
 
-  /* "pynba/core/collector.pyx":80
+  /* "pynba/core/collector.pyx":78
  *             raise RuntimeError('Not started')
  *         gettimeofday(&self._tt_end, NULL)
  *         self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec             # <<<<<<<<<<<<<<
@@ -1425,7 +1425,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__stop(struct __pyx_obj_5
  */
   __pyx_v_self->_tt_elapsed = ((((__pyx_v_self->_tt_end.tv_sec - __pyx_v_self->_tt_start.tv_sec) * 1000000) + __pyx_v_self->_tt_end.tv_usec) - __pyx_v_self->_tt_start.tv_usec);
 
-  /* "pynba/core/collector.pyx":81
+  /* "pynba/core/collector.pyx":79
  *         gettimeofday(&self._tt_end, NULL)
  *         self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
  *         self._state = stoped             # <<<<<<<<<<<<<<
@@ -1434,7 +1434,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__stop(struct __pyx_obj_5
  */
   __pyx_v_self->_state = __pyx_e_5pynba_4core_9collector_stoped;
 
-  /* "pynba/core/collector.pyx":75
+  /* "pynba/core/collector.pyx":73
  *         gettimeofday(&self._tt_start, NULL)
  * 
  *     cdef _stop(self):             # <<<<<<<<<<<<<<
@@ -1455,7 +1455,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__stop(struct __pyx_obj_5
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":83
+/* "pynba/core/collector.pyx":81
  *         self._state = stoped
  * 
  *     cdef _flush(self):             # <<<<<<<<<<<<<<
@@ -1468,7 +1468,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__flush(struct __pyx_obj_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_flush", 0);
 
-  /* "pynba/core/collector.pyx":86
+  /* "pynba/core/collector.pyx":84
  *         """Flushs.
  *         """
  *         gettimeofday(&self._tt_start, NULL)             # <<<<<<<<<<<<<<
@@ -1477,7 +1477,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__flush(struct __pyx_obj_
  */
   gettimeofday((&__pyx_v_self->_tt_start), NULL);
 
-  /* "pynba/core/collector.pyx":87
+  /* "pynba/core/collector.pyx":85
  *         """
  *         gettimeofday(&self._tt_start, NULL)
  *         self._state = started             # <<<<<<<<<<<<<<
@@ -1486,7 +1486,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__flush(struct __pyx_obj_
  */
   __pyx_v_self->_state = __pyx_e_5pynba_4core_9collector_started;
 
-  /* "pynba/core/collector.pyx":83
+  /* "pynba/core/collector.pyx":81
  *         self._state = stoped
  * 
  *     cdef _flush(self):             # <<<<<<<<<<<<<<
@@ -1501,7 +1501,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timed__flush(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":36
+/* "pynba/core/collector.pyx":34
  * cdef class Timed(object):
  * 
  *     cdef public object tags             # <<<<<<<<<<<<<<
@@ -1596,7 +1596,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timed_4tags_4__del__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":112
+/* "pynba/core/collector.pyx":110
  *     cdef DataCollector parent
  * 
  *     def __init__(self, object tags, DataCollector parent=None):             # <<<<<<<<<<<<<<
@@ -1644,7 +1644,7 @@ static int __pyx_pw_5pynba_4core_9collector_5Timer_1__init__(PyObject *__pyx_v_s
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -1659,13 +1659,13 @@ static int __pyx_pw_5pynba_4core_9collector_5Timer_1__init__(PyObject *__pyx_v_s
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("pynba.core.collector.Timer.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_parent), __pyx_ptype_5pynba_4core_9collector_DataCollector, 1, "parent", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_parent), __pyx_ptype_5pynba_4core_9collector_DataCollector, 1, "parent", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_5pynba_4core_9collector_5Timer___init__(((struct __pyx_obj_5pynba_4core_9collector_Timer *)__pyx_v_self), __pyx_v_tags, __pyx_v_parent);
 
   /* function exit code */
@@ -1687,19 +1687,19 @@ static int __pyx_pf_5pynba_4core_9collector_5Timer___init__(struct __pyx_obj_5py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pynba/core/collector.pyx":123
+  /* "pynba/core/collector.pyx":121
  *             parent (DataCollector): attached data collector
  *         """
  *         self.tags = dict(tags)             # <<<<<<<<<<<<<<
  *         self.parent = parent
  *         self.data = None
  */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_tags);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_tags);
   __Pyx_GIVEREF(__pyx_v_tags);
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)(&PyDict_Type))), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)(&PyDict_Type))), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -1708,7 +1708,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timer___init__(struct __pyx_obj_5py
   __pyx_v_self->__pyx_base.tags = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pynba/core/collector.pyx":124
+  /* "pynba/core/collector.pyx":122
  *         """
  *         self.tags = dict(tags)
  *         self.parent = parent             # <<<<<<<<<<<<<<
@@ -1721,7 +1721,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timer___init__(struct __pyx_obj_5py
   __Pyx_DECREF(((PyObject *)__pyx_v_self->parent));
   __pyx_v_self->parent = __pyx_v_parent;
 
-  /* "pynba/core/collector.pyx":125
+  /* "pynba/core/collector.pyx":123
  *         self.tags = dict(tags)
  *         self.parent = parent
  *         self.data = None             # <<<<<<<<<<<<<<
@@ -1734,7 +1734,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timer___init__(struct __pyx_obj_5py
   __Pyx_DECREF(__pyx_v_self->data);
   __pyx_v_self->data = Py_None;
 
-  /* "pynba/core/collector.pyx":112
+  /* "pynba/core/collector.pyx":110
  *     cdef DataCollector parent
  * 
  *     def __init__(self, object tags, DataCollector parent=None):             # <<<<<<<<<<<<<<
@@ -1755,7 +1755,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timer___init__(struct __pyx_obj_5py
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":127
+/* "pynba/core/collector.pyx":125
  *         self.data = None
  * 
  *     cpdef delete(self):             # <<<<<<<<<<<<<<
@@ -1780,7 +1780,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_delete(struct __pyx_obj_
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_delete); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_delete); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5pynba_4core_9collector_5Timer_3delete)) {
       __Pyx_XDECREF(__pyx_r);
@@ -1796,10 +1796,10 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_delete(struct __pyx_obj_
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1811,24 +1811,24 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_delete(struct __pyx_obj_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pynba/core/collector.pyx":130
+  /* "pynba/core/collector.pyx":128
  *         """Discards timer from parent
  *         """
  *         if self.parent:             # <<<<<<<<<<<<<<
  *             self.parent.timers.discard(self)
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_self->parent)); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_self->parent)); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_5) {
 
-    /* "pynba/core/collector.pyx":131
+    /* "pynba/core/collector.pyx":129
  *         """
  *         if self.parent:
  *             self.parent.timers.discard(self)             # <<<<<<<<<<<<<<
  * 
  *     cpdef clone(self):
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->parent->timers, __pyx_n_s_discard); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->parent->timers, __pyx_n_s_discard); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -1841,16 +1841,16 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_delete(struct __pyx_obj_
       }
     }
     if (!__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -1860,7 +1860,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_delete(struct __pyx_obj_
   }
   __pyx_L3:;
 
-  /* "pynba/core/collector.pyx":127
+  /* "pynba/core/collector.pyx":125
  *         self.data = None
  * 
  *     cpdef delete(self):             # <<<<<<<<<<<<<<
@@ -1907,7 +1907,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_2delete(struct __pyx_ob
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("delete", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5pynba_4core_9collector_5Timer_delete(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_5pynba_4core_9collector_5Timer_delete(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -1924,7 +1924,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_2delete(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":133
+/* "pynba/core/collector.pyx":131
  *             self.parent.timers.discard(self)
  * 
  *     cpdef clone(self):             # <<<<<<<<<<<<<<
@@ -1951,7 +1951,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clone); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clone); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5pynba_4core_9collector_5Timer_5clone)) {
       __Pyx_XDECREF(__pyx_r);
@@ -1967,10 +1967,10 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1982,14 +1982,14 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pynba/core/collector.pyx":137
+  /* "pynba/core/collector.pyx":135
  *         """
  *         cdef Timer instance
  *         instance = Timer(self.tags, self.parent)             # <<<<<<<<<<<<<<
  *         if self.data:
  *             instance.data = self.data
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_self->__pyx_base.tags);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_self->__pyx_base.tags);
@@ -1997,23 +1997,23 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
   __Pyx_INCREF(((PyObject *)__pyx_v_self->parent));
   PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_self->parent));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->parent));
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_4core_9collector_Timer)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_4core_9collector_Timer)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_instance = ((struct __pyx_obj_5pynba_4core_9collector_Timer *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pynba/core/collector.pyx":138
+  /* "pynba/core/collector.pyx":136
  *         cdef Timer instance
  *         instance = Timer(self.tags, self.parent)
  *         if self.data:             # <<<<<<<<<<<<<<
  *             instance.data = self.data
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_self->data); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_self->data); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_5) {
 
-    /* "pynba/core/collector.pyx":139
+    /* "pynba/core/collector.pyx":137
  *         instance = Timer(self.tags, self.parent)
  *         if self.data:
  *             instance.data = self.data             # <<<<<<<<<<<<<<
@@ -2031,17 +2031,17 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
   }
   __pyx_L3:;
 
-  /* "pynba/core/collector.pyx":141
+  /* "pynba/core/collector.pyx":139
  *             instance.data = self.data
  * 
  *         if self.parent:             # <<<<<<<<<<<<<<
  *             self.parent.timers.add(instance)
  *         return instance
  */
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_self->parent)); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 141; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_self->parent)); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_5) {
 
-    /* "pynba/core/collector.pyx":142
+    /* "pynba/core/collector.pyx":140
  * 
  *         if self.parent:
  *             self.parent.timers.add(instance)             # <<<<<<<<<<<<<<
@@ -2050,14 +2050,14 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
  */
     if (unlikely(__pyx_v_self->parent->timers == Py_None)) {
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "add");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_6 = PySet_Add(__pyx_v_self->parent->timers, ((PyObject *)__pyx_v_instance)); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PySet_Add(__pyx_v_self->parent->timers, ((PyObject *)__pyx_v_instance)); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     goto __pyx_L4;
   }
   __pyx_L4:;
 
-  /* "pynba/core/collector.pyx":143
+  /* "pynba/core/collector.pyx":141
  *         if self.parent:
  *             self.parent.timers.add(instance)
  *         return instance             # <<<<<<<<<<<<<<
@@ -2069,7 +2069,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer_clone(struct __pyx_obj_5
   __pyx_r = ((PyObject *)__pyx_v_instance);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":133
+  /* "pynba/core/collector.pyx":131
  *             self.parent.timers.discard(self)
  * 
  *     cpdef clone(self):             # <<<<<<<<<<<<<<
@@ -2115,7 +2115,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_4clone(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clone", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5pynba_4core_9collector_5Timer_clone(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_5pynba_4core_9collector_5Timer_clone(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2132,7 +2132,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_4clone(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":145
+/* "pynba/core/collector.pyx":143
  *         return instance
  * 
  *     def start(self):             # <<<<<<<<<<<<<<
@@ -2163,18 +2163,18 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_6start(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("start", 0);
 
-  /* "pynba/core/collector.pyx":147
+  /* "pynba/core/collector.pyx":145
  *     def start(self):
  *         """Starts timer"""
  *         self._start()             # <<<<<<<<<<<<<<
  *         return self
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._start(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._start(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":148
+  /* "pynba/core/collector.pyx":146
  *         """Starts timer"""
  *         self._start()
  *         return self             # <<<<<<<<<<<<<<
@@ -2186,7 +2186,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_6start(struct __pyx_obj
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":145
+  /* "pynba/core/collector.pyx":143
  *         return instance
  * 
  *     def start(self):             # <<<<<<<<<<<<<<
@@ -2205,7 +2205,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_6start(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":150
+/* "pynba/core/collector.pyx":148
  *         return self
  * 
  *     def stop(self):             # <<<<<<<<<<<<<<
@@ -2236,18 +2236,18 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8stop(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("stop", 0);
 
-  /* "pynba/core/collector.pyx":152
+  /* "pynba/core/collector.pyx":150
  *     def stop(self):
  *         """Stops timer"""
  *         self._stop()             # <<<<<<<<<<<<<<
  *         return self
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._stop(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._stop(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":153
+  /* "pynba/core/collector.pyx":151
  *         """Stops timer"""
  *         self._stop()
  *         return self             # <<<<<<<<<<<<<<
@@ -2259,7 +2259,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8stop(struct __pyx_obj_
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":150
+  /* "pynba/core/collector.pyx":148
  *         return self
  * 
  *     def stop(self):             # <<<<<<<<<<<<<<
@@ -2278,7 +2278,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8stop(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":155
+/* "pynba/core/collector.pyx":153
  *         return self
  * 
  *     cpdef __enter__(self):             # <<<<<<<<<<<<<<
@@ -2304,7 +2304,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer___enter__(struct __pyx_o
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_5pynba_4core_9collector_5Timer_11__enter__)) {
       __Pyx_XDECREF(__pyx_r);
@@ -2320,10 +2320,10 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer___enter__(struct __pyx_o
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2335,28 +2335,28 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer___enter__(struct __pyx_o
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pynba/core/collector.pyx":165
+  /* "pynba/core/collector.pyx":163
  *                 pass
  *         """
  *         if not self.started:             # <<<<<<<<<<<<<<
  *             self.start()
  *         return self
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_started); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 165; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_started); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 165; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_6 = ((!__pyx_t_5) != 0);
   if (__pyx_t_6) {
 
-    /* "pynba/core/collector.pyx":166
+    /* "pynba/core/collector.pyx":164
  *         """
  *         if not self.started:
  *             self.start()             # <<<<<<<<<<<<<<
  *         return self
  * 
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_start); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_start); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2369,10 +2369,10 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer___enter__(struct __pyx_o
       }
     }
     if (__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -2381,7 +2381,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer___enter__(struct __pyx_o
   }
   __pyx_L3:;
 
-  /* "pynba/core/collector.pyx":167
+  /* "pynba/core/collector.pyx":165
  *         if not self.started:
  *             self.start()
  *         return self             # <<<<<<<<<<<<<<
@@ -2393,7 +2393,7 @@ static PyObject *__pyx_f_5pynba_4core_9collector_5Timer___enter__(struct __pyx_o
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":155
+  /* "pynba/core/collector.pyx":153
  *         return self
  * 
  *     cpdef __enter__(self):             # <<<<<<<<<<<<<<
@@ -2438,7 +2438,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_10__enter__(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__enter__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_5pynba_4core_9collector_5Timer___enter__(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_5pynba_4core_9collector_5Timer___enter__(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2455,7 +2455,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_10__enter__(struct __py
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":169
+/* "pynba/core/collector.pyx":167
  *         return self
  * 
  *     def __exit__(self, object exc_type, object exc_value, object traceback):             # <<<<<<<<<<<<<<
@@ -2497,16 +2497,16 @@ static PyObject *__pyx_pw_5pynba_4core_9collector_5Timer_13__exit__(PyObject *__
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_exc_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 169; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_traceback)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, 2); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 169; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, 2); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__exit__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 169; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__exit__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2521,7 +2521,7 @@ static PyObject *__pyx_pw_5pynba_4core_9collector_5Timer_13__exit__(PyObject *__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 169; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__exit__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("pynba.core.collector.Timer.__exit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2546,27 +2546,27 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_12__exit__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__exit__", 0);
 
-  /* "pynba/core/collector.pyx":174
+  /* "pynba/core/collector.pyx":172
  *         Automatically stops timer
  *         """
  *         if self.started:             # <<<<<<<<<<<<<<
  *             self.stop()
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_started); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_started); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "pynba/core/collector.pyx":175
+    /* "pynba/core/collector.pyx":173
  *         """
  *         if self.started:
  *             self.stop()             # <<<<<<<<<<<<<<
  * 
  *     def __call__(self, object func):
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_stop); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_stop); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_3))) {
@@ -2579,10 +2579,10 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_12__exit__(struct __pyx
       }
     }
     if (__pyx_t_4) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2591,7 +2591,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_12__exit__(struct __pyx
   }
   __pyx_L3:;
 
-  /* "pynba/core/collector.pyx":169
+  /* "pynba/core/collector.pyx":167
  *         return self
  * 
  *     def __exit__(self, object exc_type, object exc_value, object traceback):             # <<<<<<<<<<<<<<
@@ -2614,7 +2614,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_12__exit__(struct __pyx
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":177
+/* "pynba/core/collector.pyx":175
  *             self.stop()
  * 
  *     def __call__(self, object func):             # <<<<<<<<<<<<<<
@@ -2654,7 +2654,7 @@ static PyObject *__pyx_pw_5pynba_4core_9collector_5Timer_15__call__(PyObject *__
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -2665,7 +2665,7 @@ static PyObject *__pyx_pw_5pynba_4core_9collector_5Timer_15__call__(PyObject *__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("pynba.core.collector.Timer.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2678,7 +2678,7 @@ static PyObject *__pyx_pw_5pynba_4core_9collector_5Timer_15__call__(PyObject *__
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":188
+/* "pynba/core/collector.pyx":186
  *         """
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
@@ -2734,7 +2734,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
   __pyx_outer_scope = (struct __pyx_obj_5pynba_4core_9collector___pyx_scope_struct____call__ *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "pynba/core/collector.pyx":189
+  /* "pynba/core/collector.pyx":187
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):
  *             with self.clone():             # <<<<<<<<<<<<<<
@@ -2742,12 +2742,12 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
  *             return response
  */
   /*with:*/ {
-    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
-    __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *)__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_vtab)->clone(__pyx_cur_scope->__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
+    __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_Timer *)__pyx_cur_scope->__pyx_v_self->__pyx_base.__pyx_vtab)->clone(__pyx_cur_scope->__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_n_s_exit); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_n_s_exit); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -2760,10 +2760,10 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
       }
     }
     if (__pyx_t_5) {
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else {
-      __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     }
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2777,19 +2777,19 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
         __Pyx_XGOTREF(__pyx_t_8);
         /*try:*/ {
 
-          /* "pynba/core/collector.pyx":190
+          /* "pynba/core/collector.pyx":188
  *         def wrapper(*args, **kwargs):
  *             with self.clone():
  *                 response = func(*args, **kwargs)             # <<<<<<<<<<<<<<
  *             return response
  *         return wrapper
  */
-          if (unlikely(!__pyx_cur_scope->__pyx_v_func)) { __Pyx_RaiseClosureNameError("func"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L7_error;} }
-          __pyx_t_1 = PySequence_Tuple(__pyx_v_args); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L7_error;}
+          if (unlikely(!__pyx_cur_scope->__pyx_v_func)) { __Pyx_RaiseClosureNameError("func"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L7_error;} }
+          __pyx_t_1 = PySequence_Tuple(__pyx_v_args); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L7_error;}
           __Pyx_GOTREF(__pyx_t_1);
           __pyx_t_3 = __pyx_v_kwargs;
           __Pyx_INCREF(__pyx_t_3);
-          __pyx_t_4 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_func, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L7_error;}
+          __pyx_t_4 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_func, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L7_error;}
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2806,7 +2806,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "pynba/core/collector.pyx":189
+        /* "pynba/core/collector.pyx":187
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):
  *             with self.clone():             # <<<<<<<<<<<<<<
@@ -2815,20 +2815,20 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
  */
         /*except:*/ {
           __Pyx_AddTraceback("pynba.core.collector.Timer.__call__.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_3, &__pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
+          if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_3, &__pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_5 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
+          __pyx_t_5 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           __Pyx_GOTREF(__pyx_t_5);
           __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
+          if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           __Pyx_GOTREF(__pyx_t_9);
           __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_9);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-          if (__pyx_t_10 < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
+          if (__pyx_t_10 < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           __pyx_t_11 = ((!(__pyx_t_10 != 0)) != 0);
           if (__pyx_t_11) {
             __Pyx_GIVEREF(__pyx_t_4);
@@ -2836,7 +2836,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
             __Pyx_XGIVEREF(__pyx_t_1);
             __Pyx_ErrRestore(__pyx_t_4, __pyx_t_3, __pyx_t_1);
             __pyx_t_4 = 0; __pyx_t_3 = 0; __pyx_t_1 = 0; 
-            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
+            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L9_except_error;}
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2862,7 +2862,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
         if (__pyx_t_2) {
           __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__3, NULL);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         }
@@ -2877,7 +2877,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
     __pyx_L18:;
   }
 
-  /* "pynba/core/collector.pyx":191
+  /* "pynba/core/collector.pyx":189
  *             with self.clone():
  *                 response = func(*args, **kwargs)
  *             return response             # <<<<<<<<<<<<<<
@@ -2885,12 +2885,12 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_response)) { __Pyx_RaiseUnboundLocalError("response"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
+  if (unlikely(!__pyx_v_response)) { __Pyx_RaiseUnboundLocalError("response"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
   __Pyx_INCREF(__pyx_v_response);
   __pyx_r = __pyx_v_response;
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":188
+  /* "pynba/core/collector.pyx":186
  *         """
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
@@ -2913,7 +2913,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_8__call___wrapper(PyObj
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":177
+/* "pynba/core/collector.pyx":175
  *             self.stop()
  * 
  *     def __call__(self, object func):             # <<<<<<<<<<<<<<
@@ -2948,16 +2948,16 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_14__call__(struct __pyx
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_func);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_func);
 
-  /* "pynba/core/collector.pyx":187
+  /* "pynba/core/collector.pyx":185
  *                 pass
  *         """
  *         @functools.wraps(func)             # <<<<<<<<<<<<<<
  *         def wrapper(*args, **kwargs):
  *             with self.clone():
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_functools); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_functools); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_wraps); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_wraps); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -2971,29 +2971,29 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_14__call__(struct __pyx
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_cur_scope->__pyx_v_func); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_cur_scope->__pyx_v_func); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_func);
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_cur_scope->__pyx_v_func);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_func);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pynba/core/collector.pyx":188
+  /* "pynba/core/collector.pyx":186
  *         """
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
  *             with self.clone():
  *                 response = func(*args, **kwargs)
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pynba_4core_9collector_5Timer_8__call___1wrapper, 0, __pyx_n_s_call___locals_wrapper, ((PyObject*)__pyx_cur_scope), __pyx_n_s_pynba_core_collector, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pynba_4core_9collector_5Timer_8__call___1wrapper, 0, __pyx_n_s_call___locals_wrapper, ((PyObject*)__pyx_cur_scope), __pyx_n_s_pynba_core_collector, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3006,17 +3006,17 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_14__call__(struct __pyx
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
@@ -3024,7 +3024,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_14__call__(struct __pyx
   __pyx_v_wrapper = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":192
+  /* "pynba/core/collector.pyx":190
  *                 response = func(*args, **kwargs)
  *             return response
  *         return wrapper             # <<<<<<<<<<<<<<
@@ -3036,7 +3036,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_14__call__(struct __pyx
   __pyx_r = __pyx_v_wrapper;
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":177
+  /* "pynba/core/collector.pyx":175
  *             self.stop()
  * 
  *     def __call__(self, object func):             # <<<<<<<<<<<<<<
@@ -3061,7 +3061,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_14__call__(struct __pyx
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":194
+/* "pynba/core/collector.pyx":192
  *         return wrapper
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -3101,7 +3101,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pynba/core/collector.pyx":200
+  /* "pynba/core/collector.pyx":198
  *             label = ' elapsed:'
  *             period = self.elapsed
  *         elif self._state == started:             # <<<<<<<<<<<<<<
@@ -3110,7 +3110,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  */
   switch (__pyx_v_self->__pyx_base._state) {
 
-    /* "pynba/core/collector.pyx":197
+    /* "pynba/core/collector.pyx":195
  *         cdef char* label
  *         cdef float period
  *         if self._state == stoped:             # <<<<<<<<<<<<<<
@@ -3119,7 +3119,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  */
     case __pyx_e_5pynba_4core_9collector_stoped:
 
-    /* "pynba/core/collector.pyx":198
+    /* "pynba/core/collector.pyx":196
  *         cdef float period
  *         if self._state == stoped:
  *             label = ' elapsed:'             # <<<<<<<<<<<<<<
@@ -3128,21 +3128,21 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  */
     __pyx_v_label = __pyx_k_elapsed;
 
-    /* "pynba/core/collector.pyx":199
+    /* "pynba/core/collector.pyx":197
  *         if self._state == stoped:
  *             label = ' elapsed:'
  *             period = self.elapsed             # <<<<<<<<<<<<<<
  *         elif self._state == started:
  *             label = ' started:'
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_elapsed_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 199; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_elapsed_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 199; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_period = __pyx_t_2;
     break;
 
-    /* "pynba/core/collector.pyx":200
+    /* "pynba/core/collector.pyx":198
  *             label = ' elapsed:'
  *             period = self.elapsed
  *         elif self._state == started:             # <<<<<<<<<<<<<<
@@ -3151,7 +3151,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  */
     case __pyx_e_5pynba_4core_9collector_started:
 
-    /* "pynba/core/collector.pyx":201
+    /* "pynba/core/collector.pyx":199
  *             period = self.elapsed
  *         elif self._state == started:
  *             label = ' started:'             # <<<<<<<<<<<<<<
@@ -3160,22 +3160,22 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  */
     __pyx_v_label = __pyx_k_started_2;
 
-    /* "pynba/core/collector.pyx":202
+    /* "pynba/core/collector.pyx":200
  *         elif self._state == started:
  *             label = ' started:'
  *             period = self.dt_start             # <<<<<<<<<<<<<<
  *         else:
  *             label = ''
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_dt_start); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 202; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_dt_start); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 202; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_2 == (float)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_period = __pyx_t_2;
     break;
     default:
 
-    /* "pynba/core/collector.pyx":204
+    /* "pynba/core/collector.pyx":202
  *             period = self.dt_start
  *         else:
  *             label = ''             # <<<<<<<<<<<<<<
@@ -3184,7 +3184,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  */
     __pyx_v_label = __pyx_k__6;
 
-    /* "pynba/core/collector.pyx":205
+    /* "pynba/core/collector.pyx":203
  *         else:
  *             label = ''
  *             period = 0             # <<<<<<<<<<<<<<
@@ -3195,7 +3195,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
     break;
   }
 
-  /* "pynba/core/collector.pyx":207
+  /* "pynba/core/collector.pyx":205
  *             period = 0
  * 
  *         return '<{0}({1}){2}{3}>'.format(             # <<<<<<<<<<<<<<
@@ -3203,32 +3203,32 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
  *             self.tags,
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_0_1_2_3, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 207; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_0_1_2_3, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pynba/core/collector.pyx":208
+  /* "pynba/core/collector.pyx":206
  * 
  *         return '<{0}({1}){2}{3}>'.format(
  *             self.__class__.__name__,             # <<<<<<<<<<<<<<
  *             self.tags,
  *             label, period)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_class); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 208; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_class); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_name); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 208; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_name); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pynba/core/collector.pyx":210
+  /* "pynba/core/collector.pyx":208
  *             self.__class__.__name__,
  *             self.tags,
  *             label, period)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_label); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 210; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_label); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 208; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_period); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 210; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_period); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 208; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_7 = NULL;
   __pyx_t_8 = 0;
@@ -3242,7 +3242,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
       __pyx_t_8 = 1;
     }
   }
-  __pyx_t_9 = PyTuple_New(4+__pyx_t_8); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 207; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyTuple_New(4+__pyx_t_8); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
   if (__pyx_t_7) {
     PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __Pyx_GIVEREF(__pyx_t_7); __pyx_t_7 = NULL;
@@ -3259,7 +3259,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
   __pyx_t_5 = 0;
   __pyx_t_4 = 0;
   __pyx_t_6 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 207; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3267,7 +3267,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":194
+  /* "pynba/core/collector.pyx":192
  *         return wrapper
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -3292,7 +3292,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_5Timer_16__repr__(struct __pyx
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":109
+/* "pynba/core/collector.pyx":107
  *     """
  * 
  *     cdef public object data             # <<<<<<<<<<<<<<
@@ -3387,7 +3387,7 @@ static int __pyx_pf_5pynba_4core_9collector_5Timer_4data_4__del__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":246
+/* "pynba/core/collector.pyx":244
  *     cdef public str schema
  * 
  *     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):             # <<<<<<<<<<<<<<
@@ -3450,7 +3450,7 @@ static int __pyx_pw_5pynba_4core_9collector_13DataCollector_1__init__(PyObject *
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 244; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3469,7 +3469,7 @@ static int __pyx_pw_5pynba_4core_9collector_13DataCollector_1__init__(PyObject *
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 0, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 244; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("pynba.core.collector.DataCollector.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3493,7 +3493,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pynba/core/collector.pyx":247
+  /* "pynba/core/collector.pyx":245
  * 
  *     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
  *         self.enabled = True             # <<<<<<<<<<<<<<
@@ -3502,14 +3502,14 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
  */
   __pyx_v_self->enabled = 1;
 
-  /* "pynba/core/collector.pyx":248
+  /* "pynba/core/collector.pyx":246
  *     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
  *         self.enabled = True
  *         self.timers = set()             # <<<<<<<<<<<<<<
  *         self.scriptname = <str>scriptname
  *         self.hostname = hostname
  */
-  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->timers);
@@ -3517,7 +3517,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __pyx_v_self->timers = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":249
+  /* "pynba/core/collector.pyx":247
  *         self.enabled = True
  *         self.timers = set()
  *         self.scriptname = <str>scriptname             # <<<<<<<<<<<<<<
@@ -3532,14 +3532,14 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __pyx_v_self->scriptname = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":250
+  /* "pynba/core/collector.pyx":248
  *         self.timers = set()
  *         self.scriptname = <str>scriptname
  *         self.hostname = hostname             # <<<<<<<<<<<<<<
  *         self.schema = schema
  *         self.tags = dict(tags or {})
  */
-  if (!(likely(PyString_CheckExact(__pyx_v_hostname))||((__pyx_v_hostname) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_hostname)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyString_CheckExact(__pyx_v_hostname))||((__pyx_v_hostname) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_hostname)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_hostname;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -3548,14 +3548,14 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __pyx_v_self->hostname = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":251
+  /* "pynba/core/collector.pyx":249
  *         self.scriptname = <str>scriptname
  *         self.hostname = hostname
  *         self.schema = schema             # <<<<<<<<<<<<<<
  *         self.tags = dict(tags or {})
  * 
  */
-  if (!(likely(PyString_CheckExact(__pyx_v_schema))||((__pyx_v_schema) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_schema)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyString_CheckExact(__pyx_v_schema))||((__pyx_v_schema) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_schema)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_schema;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -3564,32 +3564,32 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __pyx_v_self->schema = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":252
+  /* "pynba/core/collector.pyx":250
  *         self.hostname = hostname
  *         self.schema = schema
  *         self.tags = dict(tags or {})             # <<<<<<<<<<<<<<
  * 
  *         #: You can use this placeholder to store the real document size
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_tags); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_tags); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (!__pyx_t_2) {
   } else {
     __Pyx_INCREF(__pyx_v_tags);
     __pyx_t_1 = __pyx_v_tags;
     goto __pyx_L3_bool_binop_done;
   }
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_t_3);
   __pyx_t_1 = __pyx_t_3;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_L3_bool_binop_done:;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)(&PyDict_Type))), __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)(&PyDict_Type))), __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_GIVEREF(__pyx_t_1);
@@ -3598,7 +3598,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __pyx_v_self->__pyx_base.tags = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":255
+  /* "pynba/core/collector.pyx":253
  * 
  *         #: You can use this placeholder to store the real document size
  *         self.document_size = None             # <<<<<<<<<<<<<<
@@ -3611,7 +3611,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __Pyx_DECREF(__pyx_v_self->document_size);
   __pyx_v_self->document_size = Py_None;
 
-  /* "pynba/core/collector.pyx":257
+  /* "pynba/core/collector.pyx":255
  *         self.document_size = None
  *         #: You can use this placeholder to store the memory peak
  *         self.memory_peak = None             # <<<<<<<<<<<<<<
@@ -3624,7 +3624,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __Pyx_DECREF(__pyx_v_self->memory_peak);
   __pyx_v_self->memory_peak = Py_None;
 
-  /* "pynba/core/collector.pyx":259
+  /* "pynba/core/collector.pyx":257
  *         self.memory_peak = None
  *         #: You can use this placeholder to store the memory footprint
  *         self.memory_footprint = None             # <<<<<<<<<<<<<<
@@ -3637,7 +3637,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __Pyx_DECREF(__pyx_v_self->memory_footprint);
   __pyx_v_self->memory_footprint = Py_None;
 
-  /* "pynba/core/collector.pyx":246
+  /* "pynba/core/collector.pyx":244
  *     cdef public str schema
  * 
  *     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):             # <<<<<<<<<<<<<<
@@ -3658,7 +3658,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":261
+/* "pynba/core/collector.pyx":259
  *         self.memory_footprint = None
  * 
  *     def start(self):             # <<<<<<<<<<<<<<
@@ -3689,18 +3689,18 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_2start(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("start", 0);
 
-  /* "pynba/core/collector.pyx":263
+  /* "pynba/core/collector.pyx":261
  *     def start(self):
  *         """Starts"""
  *         self._start()             # <<<<<<<<<<<<<<
  *         return self
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_DataCollector *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._start(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_DataCollector *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._start(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 261; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":264
+  /* "pynba/core/collector.pyx":262
  *         """Starts"""
  *         self._start()
  *         return self             # <<<<<<<<<<<<<<
@@ -3712,7 +3712,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_2start(struct 
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":261
+  /* "pynba/core/collector.pyx":259
  *         self.memory_footprint = None
  * 
  *     def start(self):             # <<<<<<<<<<<<<<
@@ -3731,7 +3731,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_2start(struct 
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":266
+/* "pynba/core/collector.pyx":264
  *         return self
  * 
  *     def stop(self):             # <<<<<<<<<<<<<<
@@ -3768,27 +3768,27 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("stop", 0);
 
-  /* "pynba/core/collector.pyx":270
+  /* "pynba/core/collector.pyx":268
  *         """
  *         cdef Timer timer
  *         self._stop()             # <<<<<<<<<<<<<<
  *         for timer in self.timers:
  *             if timer.started:
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_DataCollector *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._stop(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 270; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_DataCollector *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._stop(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 268; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":271
+  /* "pynba/core/collector.pyx":269
  *         cdef Timer timer
  *         self._stop()
  *         for timer in self.timers:             # <<<<<<<<<<<<<<
  *             if timer.started:
  *                 timer.stop()
  */
-  __pyx_t_1 = PyObject_GetIter(__pyx_v_self->timers); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyObject_GetIter(__pyx_v_self->timers); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 269; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 269; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   for (;;) {
     {
       __pyx_t_3 = __pyx_t_2(__pyx_t_1);
@@ -3796,37 +3796,37 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 269; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_3);
     }
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5pynba_4core_9collector_Timer))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5pynba_4core_9collector_Timer))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 269; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_XDECREF_SET(__pyx_v_timer, ((struct __pyx_obj_5pynba_4core_9collector_Timer *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "pynba/core/collector.pyx":272
+    /* "pynba/core/collector.pyx":270
  *         self._stop()
  *         for timer in self.timers:
  *             if timer.started:             # <<<<<<<<<<<<<<
  *                 timer.stop()
  *         return self
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_timer), __pyx_n_s_started); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 272; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_timer), __pyx_n_s_started); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 270; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 272; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 270; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_4) {
 
-      /* "pynba/core/collector.pyx":273
+      /* "pynba/core/collector.pyx":271
  *         for timer in self.timers:
  *             if timer.started:
  *                 timer.stop()             # <<<<<<<<<<<<<<
  *         return self
  * 
  */
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_timer), __pyx_n_s_stop); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_timer), __pyx_n_s_stop); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_6 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_5))) {
@@ -3839,10 +3839,10 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
         }
       }
       if (__pyx_t_6) {
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       } else {
-        __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_3 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -3851,7 +3851,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
     }
     __pyx_L5:;
 
-    /* "pynba/core/collector.pyx":271
+    /* "pynba/core/collector.pyx":269
  *         cdef Timer timer
  *         self._stop()
  *         for timer in self.timers:             # <<<<<<<<<<<<<<
@@ -3861,7 +3861,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":274
+  /* "pynba/core/collector.pyx":272
  *             if timer.started:
  *                 timer.stop()
  *         return self             # <<<<<<<<<<<<<<
@@ -3873,7 +3873,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":266
+  /* "pynba/core/collector.pyx":264
  *         return self
  * 
  *     def stop(self):             # <<<<<<<<<<<<<<
@@ -3896,7 +3896,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_4stop(struct _
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":276
+/* "pynba/core/collector.pyx":274
  *         return self
  * 
  *     def timer(self, **tags):             # <<<<<<<<<<<<<<
@@ -3938,14 +3938,14 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_6timer(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("timer", 0);
 
-  /* "pynba/core/collector.pyx":280
+  /* "pynba/core/collector.pyx":278
  *         """
  *         cdef Timer timer
  *         timer = Timer(tags, self)             # <<<<<<<<<<<<<<
  *         self.timers.add(timer)
  *         return timer
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 278; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_tags);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_tags);
@@ -3953,13 +3953,13 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_6timer(struct 
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_4core_9collector_Timer)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_4core_9collector_Timer)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 278; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_timer = ((struct __pyx_obj_5pynba_4core_9collector_Timer *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pynba/core/collector.pyx":281
+  /* "pynba/core/collector.pyx":279
  *         cdef Timer timer
  *         timer = Timer(tags, self)
  *         self.timers.add(timer)             # <<<<<<<<<<<<<<
@@ -3968,11 +3968,11 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_6timer(struct 
  */
   if (unlikely(__pyx_v_self->timers == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "add");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 279; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_3 = PySet_Add(__pyx_v_self->timers, ((PyObject *)__pyx_v_timer)); if (unlikely(__pyx_t_3 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PySet_Add(__pyx_v_self->timers, ((PyObject *)__pyx_v_timer)); if (unlikely(__pyx_t_3 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 279; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pynba/core/collector.pyx":282
+  /* "pynba/core/collector.pyx":280
  *         timer = Timer(tags, self)
  *         self.timers.add(timer)
  *         return timer             # <<<<<<<<<<<<<<
@@ -3984,7 +3984,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_6timer(struct 
   __pyx_r = ((PyObject *)__pyx_v_timer);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":276
+  /* "pynba/core/collector.pyx":274
  *         return self
  * 
  *     def timer(self, **tags):             # <<<<<<<<<<<<<<
@@ -4005,7 +4005,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_6timer(struct 
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":284
+/* "pynba/core/collector.pyx":282
  *         return timer
  * 
  *     def flush(self):             # <<<<<<<<<<<<<<
@@ -4040,71 +4040,71 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_8flush(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("flush", 0);
 
-  /* "pynba/core/collector.pyx":287
+  /* "pynba/core/collector.pyx":285
  *         """Flushs.
  *         """
  *         logger.debug('flush', extra={             # <<<<<<<<<<<<<<
  *             'timers': self.timers,
  *             'elapsed': self.elapsed,
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_logger); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_logger); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_debug); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pynba/core/collector.pyx":288
+  /* "pynba/core/collector.pyx":286
  *         """
  *         logger.debug('flush', extra={
  *             'timers': self.timers,             # <<<<<<<<<<<<<<
  *             'elapsed': self.elapsed,
  *         })
  */
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_timers, __pyx_v_self->timers) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_timers, __pyx_v_self->timers) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pynba/core/collector.pyx":289
+  /* "pynba/core/collector.pyx":287
  *         logger.debug('flush', extra={
  *             'timers': self.timers,
  *             'elapsed': self.elapsed,             # <<<<<<<<<<<<<<
  *         })
  *         self._flush()
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_elapsed_2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_elapsed_2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_elapsed_2, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_elapsed_2, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_extra, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_extra, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pynba/core/collector.pyx":287
+  /* "pynba/core/collector.pyx":285
  *         """Flushs.
  *         """
  *         logger.debug('flush', extra={             # <<<<<<<<<<<<<<
  *             'timers': self.timers,
  *             'elapsed': self.elapsed,
  */
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__7, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__7, __pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pynba/core/collector.pyx":291
+  /* "pynba/core/collector.pyx":289
  *             'elapsed': self.elapsed,
  *         })
  *         self._flush()             # <<<<<<<<<<<<<<
  *         self.timers.clear()
  *         return self
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_DataCollector *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._flush(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = ((struct __pyx_vtabstruct_5pynba_4core_9collector_DataCollector *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base._flush(((struct __pyx_obj_5pynba_4core_9collector_Timed *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pynba/core/collector.pyx":292
+  /* "pynba/core/collector.pyx":290
  *         })
  *         self._flush()
  *         self.timers.clear()             # <<<<<<<<<<<<<<
@@ -4113,11 +4113,11 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_8flush(struct 
  */
   if (unlikely(__pyx_v_self->timers == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "clear");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_5 = PySet_Clear(__pyx_v_self->timers); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PySet_Clear(__pyx_v_self->timers); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pynba/core/collector.pyx":293
+  /* "pynba/core/collector.pyx":291
  *         self._flush()
  *         self.timers.clear()
  *         return self             # <<<<<<<<<<<<<<
@@ -4128,7 +4128,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_8flush(struct 
   __pyx_r = ((PyObject *)__pyx_v_self);
   goto __pyx_L0;
 
-  /* "pynba/core/collector.pyx":284
+  /* "pynba/core/collector.pyx":282
  *         return timer
  * 
  *     def flush(self):             # <<<<<<<<<<<<<<
@@ -4150,7 +4150,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_8flush(struct 
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":237
+/* "pynba/core/collector.pyx":235
  *     """
  * 
  *     cdef public bint enabled             # <<<<<<<<<<<<<<
@@ -4180,7 +4180,7 @@ static PyObject *__pyx_pf_5pynba_4core_9collector_13DataCollector_7enabled___get
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->enabled); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->enabled); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4218,7 +4218,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_7enabled_2__set__(st
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->enabled = __pyx_t_1;
 
   /* function exit code */
@@ -4232,7 +4232,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_7enabled_2__set__(st
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":238
+/* "pynba/core/collector.pyx":236
  * 
  *     cdef public bint enabled
  *     cdef public set timers             # <<<<<<<<<<<<<<
@@ -4290,7 +4290,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_6timers_2__set__(str
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(PySet_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "set", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PySet_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "set", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -4340,7 +4340,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_6timers_4__del__(str
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":239
+/* "pynba/core/collector.pyx":237
  *     cdef public bint enabled
  *     cdef public set timers
  *     cdef public str scriptname             # <<<<<<<<<<<<<<
@@ -4398,7 +4398,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_10scriptname_2__set_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(PyString_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyString_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -4448,7 +4448,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_10scriptname_4__del_
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":240
+/* "pynba/core/collector.pyx":238
  *     cdef public set timers
  *     cdef public str scriptname
  *     cdef public str hostname             # <<<<<<<<<<<<<<
@@ -4506,7 +4506,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_8hostname_2__set__(s
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(PyString_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyString_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -4556,7 +4556,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_8hostname_4__del__(s
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":241
+/* "pynba/core/collector.pyx":239
  *     cdef public str scriptname
  *     cdef public str hostname
  *     cdef public object document_size             # <<<<<<<<<<<<<<
@@ -4651,7 +4651,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_13document_size_4__d
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":242
+/* "pynba/core/collector.pyx":240
  *     cdef public str hostname
  *     cdef public object document_size
  *     cdef public object memory_peak             # <<<<<<<<<<<<<<
@@ -4746,7 +4746,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_11memory_peak_4__del
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":243
+/* "pynba/core/collector.pyx":241
  *     cdef public object document_size
  *     cdef public object memory_peak
  *     cdef public object memory_footprint             # <<<<<<<<<<<<<<
@@ -4841,7 +4841,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_16memory_footprint_4
   return __pyx_r;
 }
 
-/* "pynba/core/collector.pyx":244
+/* "pynba/core/collector.pyx":242
  *     cdef public object memory_peak
  *     cdef public object memory_footprint
  *     cdef public str schema             # <<<<<<<<<<<<<<
@@ -4899,7 +4899,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector_6schema_2__set__(str
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(PyString_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 244; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyString_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 242; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -5669,7 +5669,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -5679,59 +5679,59 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pynba/core/collector.pyx":71
+  /* "pynba/core/collector.pyx":69
  *         """Starts timer"""
  *         if self._state == started:
  *             raise RuntimeError('Already started')             # <<<<<<<<<<<<<<
  *         self._state = started
  *         gettimeofday(&self._tt_start, NULL)
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_Already_started); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_Already_started); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pynba/core/collector.pyx":78
+  /* "pynba/core/collector.pyx":76
  *         """Stops timer"""
  *         if self._state != started:
  *             raise RuntimeError('Not started')             # <<<<<<<<<<<<<<
  *         gettimeofday(&self._tt_end, NULL)
  *         self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_u_Not_started); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_u_Not_started); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pynba/core/collector.pyx":189
+  /* "pynba/core/collector.pyx":187
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):
  *             with self.clone():             # <<<<<<<<<<<<<<
  *                 response = func(*args, **kwargs)
  *             return response
  */
-  __pyx_tuple__3 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__3 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "pynba/core/collector.pyx":188
+  /* "pynba/core/collector.pyx":186
  *         """
  *         @functools.wraps(func)
  *         def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
  *             with self.clone():
  *                 response = func(*args, **kwargs)
  */
-  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_n_s_args, __pyx_n_s_kwargs, __pyx_n_s_response); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_n_s_args, __pyx_n_s_kwargs, __pyx_n_s_response); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_wrapper, 188, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_wrapper, 186, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pynba/core/collector.pyx":287
+  /* "pynba/core/collector.pyx":285
  *         """Flushs.
  *         """
  *         logger.debug('flush', extra={             # <<<<<<<<<<<<<<
  *             'timers': self.timers,
  *             'elapsed': self.elapsed,
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_n_u_flush); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_n_u_flush); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
   __Pyx_RefNannyFinishContext();
@@ -5833,10 +5833,10 @@ PyMODINIT_FUNC PyInit_collector(void)
   __pyx_vtable_5pynba_4core_9collector_Timed._start = (PyObject *(*)(struct __pyx_obj_5pynba_4core_9collector_Timed *))__pyx_f_5pynba_4core_9collector_5Timed__start;
   __pyx_vtable_5pynba_4core_9collector_Timed._stop = (PyObject *(*)(struct __pyx_obj_5pynba_4core_9collector_Timed *))__pyx_f_5pynba_4core_9collector_5Timed__stop;
   __pyx_vtable_5pynba_4core_9collector_Timed._flush = (PyObject *(*)(struct __pyx_obj_5pynba_4core_9collector_Timed *))__pyx_f_5pynba_4core_9collector_5Timed__flush;
-  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector_Timed) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector_Timed) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_5pynba_4core_9collector_Timed.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_5pynba_4core_9collector_Timed.tp_dict, __pyx_vtabptr_5pynba_4core_9collector_Timed) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "Timed", (PyObject *)&__pyx_type_5pynba_4core_9collector_Timed) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_5pynba_4core_9collector_Timed.tp_dict, __pyx_vtabptr_5pynba_4core_9collector_Timed) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "Timed", (PyObject *)&__pyx_type_5pynba_4core_9collector_Timed) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5pynba_4core_9collector_Timed = &__pyx_type_5pynba_4core_9collector_Timed;
   __pyx_vtabptr_5pynba_4core_9collector_Timer = &__pyx_vtable_5pynba_4core_9collector_Timer;
   __pyx_vtable_5pynba_4core_9collector_Timer.__pyx_base = *__pyx_vtabptr_5pynba_4core_9collector_Timed;
@@ -5844,11 +5844,11 @@ PyMODINIT_FUNC PyInit_collector(void)
   __pyx_vtable_5pynba_4core_9collector_Timer.clone = (PyObject *(*)(struct __pyx_obj_5pynba_4core_9collector_Timer *, int __pyx_skip_dispatch))__pyx_f_5pynba_4core_9collector_5Timer_clone;
   __pyx_vtable_5pynba_4core_9collector_Timer.__pyx___enter__ = (PyObject *(*)(struct __pyx_obj_5pynba_4core_9collector_Timer *, int __pyx_skip_dispatch))__pyx_f_5pynba_4core_9collector_5Timer___enter__;
   __pyx_type_5pynba_4core_9collector_Timer.tp_base = __pyx_ptype_5pynba_4core_9collector_Timed;
-  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector_Timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector_Timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_5pynba_4core_9collector_Timer.tp_print = 0;
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_5pynba_4core_9collector_Timer, "__init__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_5pynba_4core_9collector_Timer, "__init__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_5pynba_4core_9collector_5Timer___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_5pynba_4core_9collector_5Timer___init__.doc = __pyx_doc_5pynba_4core_9collector_5Timer___init__;
@@ -5858,7 +5858,7 @@ PyMODINIT_FUNC PyInit_collector(void)
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_5pynba_4core_9collector_Timer, "__call__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_5pynba_4core_9collector_Timer, "__call__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_5pynba_4core_9collector_5Timer_14__call__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_5pynba_4core_9collector_5Timer_14__call__.doc = __pyx_doc_5pynba_4core_9collector_5Timer_14__call__;
@@ -5866,18 +5866,18 @@ PyMODINIT_FUNC PyInit_collector(void)
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_5pynba_4core_9collector_Timer.tp_dict, __pyx_vtabptr_5pynba_4core_9collector_Timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "Timer", (PyObject *)&__pyx_type_5pynba_4core_9collector_Timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_5pynba_4core_9collector_Timer.tp_dict, __pyx_vtabptr_5pynba_4core_9collector_Timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "Timer", (PyObject *)&__pyx_type_5pynba_4core_9collector_Timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5pynba_4core_9collector_Timer = &__pyx_type_5pynba_4core_9collector_Timer;
   __pyx_vtabptr_5pynba_4core_9collector_DataCollector = &__pyx_vtable_5pynba_4core_9collector_DataCollector;
   __pyx_vtable_5pynba_4core_9collector_DataCollector.__pyx_base = *__pyx_vtabptr_5pynba_4core_9collector_Timed;
   __pyx_type_5pynba_4core_9collector_DataCollector.tp_base = __pyx_ptype_5pynba_4core_9collector_Timed;
-  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector_DataCollector) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector_DataCollector) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 211; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_5pynba_4core_9collector_DataCollector.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_5pynba_4core_9collector_DataCollector.tp_dict, __pyx_vtabptr_5pynba_4core_9collector_DataCollector) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "DataCollector", (PyObject *)&__pyx_type_5pynba_4core_9collector_DataCollector) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_5pynba_4core_9collector_DataCollector.tp_dict, __pyx_vtabptr_5pynba_4core_9collector_DataCollector) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 211; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "DataCollector", (PyObject *)&__pyx_type_5pynba_4core_9collector_DataCollector) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 211; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5pynba_4core_9collector_DataCollector = &__pyx_type_5pynba_4core_9collector_DataCollector;
-  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector___pyx_scope_struct____call__) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_5pynba_4core_9collector___pyx_scope_struct____call__) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_5pynba_4core_9collector___pyx_scope_struct____call__.tp_print = 0;
   __pyx_ptype_5pynba_4core_9collector___pyx_scope_struct____call__ = &__pyx_type_5pynba_4core_9collector___pyx_scope_struct____call__;
   /*--- Type import code ---*/
@@ -5885,67 +5885,67 @@ PyMODINIT_FUNC PyInit_collector(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pynba/core/collector.pyx":13
+  /* "pynba/core/collector.pyx":11
  * from __future__ import absolute_import, unicode_literals
  * 
  * import functools             # <<<<<<<<<<<<<<
  * import os
  * import time
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_functools, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_functools, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_functools, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_functools, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":14
+  /* "pynba/core/collector.pyx":12
  * 
  * import functools
  * import os             # <<<<<<<<<<<<<<
  * import time
  * from .log import logger
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_os, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_os, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":15
+  /* "pynba/core/collector.pyx":13
  * import functools
  * import os
  * import time             # <<<<<<<<<<<<<<
  * from .log import logger
  * 
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_time, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_time, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/core/collector.pyx":16
+  /* "pynba/core/collector.pyx":14
  * import os
  * import time
  * from .log import logger             # <<<<<<<<<<<<<<
  * 
  * cdef extern from "sys/time.h":
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_logger);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_logger);
   __Pyx_GIVEREF(__pyx_n_s_logger);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_log, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_log, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_logger); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_logger); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_logger, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_logger, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "pynba/core/collector.pyx":1
- * # encoding: utf-8             # <<<<<<<<<<<<<<
- * 
- * """
+ * """             # <<<<<<<<<<<<<<
+ *     Pynba
+ *     ~~~~~
  */
   __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);

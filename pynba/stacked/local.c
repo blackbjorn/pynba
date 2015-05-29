@@ -432,7 +432,7 @@ static const char *__pyx_f[] = {
 /*--- Type declarations ---*/
 struct __pyx_obj_5pynba_7stacked_5local_LocalStack;
 
-/* "pynba/stacked/local.pyx":31
+/* "pynba/stacked/local.pyx":29
  * 
  * 
  * cdef class LocalStack(object):             # <<<<<<<<<<<<<<
@@ -642,7 +642,7 @@ static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_int_neg_1;
 static PyObject *__pyx_codeobj_;
 
-/* "pynba/stacked/local.pyx":19
+/* "pynba/stacked/local.pyx":17
  *         from six.moves._thread import get_ident
  *     except ImportError:
  *         def get_ident():             # <<<<<<<<<<<<<<
@@ -670,7 +670,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_get_ident(CYTHON_UNUSED PyObjec
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_ident", 0);
 
-  /* "pynba/stacked/local.pyx":26
+  /* "pynba/stacked/local.pyx":24
  *             only thread.  Thus a constant can be safely returned.
  *             """
  *             return -1             # <<<<<<<<<<<<<<
@@ -682,7 +682,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_get_ident(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_int_neg_1;
   goto __pyx_L0;
 
-  /* "pynba/stacked/local.pyx":19
+  /* "pynba/stacked/local.pyx":17
  *         from six.moves._thread import get_ident
  *     except ImportError:
  *         def get_ident():             # <<<<<<<<<<<<<<
@@ -697,7 +697,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_get_ident(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pynba/stacked/local.pyx":35
+/* "pynba/stacked/local.pyx":33
  *     cdef object indent_func
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -730,14 +730,14 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack___cinit__(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "pynba/stacked/local.pyx":36
+  /* "pynba/stacked/local.pyx":34
  * 
  *     def __cinit__(self):
  *         self.stacked = {}             # <<<<<<<<<<<<<<
  *         self.indent_func = get_ident
  * 
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->stacked);
@@ -745,14 +745,14 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack___cinit__(struct __pyx_o
   __pyx_v_self->stacked = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pynba/stacked/local.pyx":37
+  /* "pynba/stacked/local.pyx":35
  *     def __cinit__(self):
  *         self.stacked = {}
  *         self.indent_func = get_ident             # <<<<<<<<<<<<<<
  * 
  *     property indent:
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_get_ident); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_get_ident); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->indent_func);
@@ -760,7 +760,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack___cinit__(struct __pyx_o
   __pyx_v_self->indent_func = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pynba/stacked/local.pyx":35
+  /* "pynba/stacked/local.pyx":33
  *     cdef object indent_func
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -780,7 +780,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack___cinit__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pynba/stacked/local.pyx":40
+/* "pynba/stacked/local.pyx":38
  * 
  *     property indent:
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -812,7 +812,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_6indent___get__(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pynba/stacked/local.pyx":41
+  /* "pynba/stacked/local.pyx":39
  *     property indent:
  *         def __get__(self):
  *             return self.indent_func()             # <<<<<<<<<<<<<<
@@ -832,10 +832,10 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_6indent___get__(st
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -843,7 +843,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_6indent___get__(st
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pynba/stacked/local.pyx":40
+  /* "pynba/stacked/local.pyx":38
  * 
  *     property indent:
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -864,7 +864,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_6indent___get__(st
   return __pyx_r;
 }
 
-/* "pynba/stacked/local.pyx":44
+/* "pynba/stacked/local.pyx":42
  * 
  *     property pynba:
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -895,7 +895,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba___get__(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "pynba/stacked/local.pyx":45
+  /* "pynba/stacked/local.pyx":43
  *     property pynba:
  *         def __get__(self):
  *             return self.stacked.get(self.indent, None)             # <<<<<<<<<<<<<<
@@ -905,18 +905,18 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba___get__(str
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_self->stacked == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_indent); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_indent); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->stacked, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->stacked, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pynba/stacked/local.pyx":44
+  /* "pynba/stacked/local.pyx":42
  * 
  *     property pynba:
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -936,7 +936,7 @@ static PyObject *__pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba___get__(str
   return __pyx_r;
 }
 
-/* "pynba/stacked/local.pyx":47
+/* "pynba/stacked/local.pyx":45
  *             return self.stacked.get(self.indent, None)
  * 
  *         def __set__(self, pynba):             # <<<<<<<<<<<<<<
@@ -966,7 +966,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_2__set__(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "pynba/stacked/local.pyx":48
+  /* "pynba/stacked/local.pyx":46
  * 
  *         def __set__(self, pynba):
  *             self.stacked[self.indent] = pynba             # <<<<<<<<<<<<<<
@@ -975,14 +975,14 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_2__set__(struct _
  */
   if (unlikely(__pyx_v_self->stacked == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_indent); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_indent); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(PyDict_SetItem(__pyx_v_self->stacked, __pyx_t_1, __pyx_v_pynba) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(PyDict_SetItem(__pyx_v_self->stacked, __pyx_t_1, __pyx_v_pynba) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/stacked/local.pyx":47
+  /* "pynba/stacked/local.pyx":45
  *             return self.stacked.get(self.indent, None)
  * 
  *         def __set__(self, pynba):             # <<<<<<<<<<<<<<
@@ -1002,7 +1002,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_2__set__(struct _
   return __pyx_r;
 }
 
-/* "pynba/stacked/local.pyx":50
+/* "pynba/stacked/local.pyx":48
  *             self.stacked[self.indent] = pynba
  * 
  *         def __del__(self):             # <<<<<<<<<<<<<<
@@ -1036,7 +1036,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_4__del__(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__del__", 0);
 
-  /* "pynba/stacked/local.pyx":51
+  /* "pynba/stacked/local.pyx":49
  * 
  *         def __del__(self):
  *             try:             # <<<<<<<<<<<<<<
@@ -1050,7 +1050,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_4__del__(struct _
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pynba/stacked/local.pyx":52
+      /* "pynba/stacked/local.pyx":50
  *         def __del__(self):
  *             try:
  *                 del self.stacked[self.indent]             # <<<<<<<<<<<<<<
@@ -1059,11 +1059,11 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_4__del__(struct _
  */
       if (unlikely(__pyx_v_self->stacked == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_indent); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_indent); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_DelItem(__pyx_v_self->stacked, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      if (PyDict_DelItem(__pyx_v_self->stacked, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -1073,7 +1073,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_4__del__(struct _
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pynba/stacked/local.pyx":53
+    /* "pynba/stacked/local.pyx":51
  *             try:
  *                 del self.stacked[self.indent]
  *             except KeyError:             # <<<<<<<<<<<<<<
@@ -1100,7 +1100,7 @@ static int __pyx_pf_5pynba_7stacked_5local_10LocalStack_5pynba_4__del__(struct _
     __pyx_L10_try_end:;
   }
 
-  /* "pynba/stacked/local.pyx":50
+  /* "pynba/stacked/local.pyx":48
  *             self.stacked[self.indent] = pynba
  * 
  *         def __del__(self):             # <<<<<<<<<<<<<<
@@ -1302,8 +1302,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -1313,14 +1313,14 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pynba/stacked/local.pyx":19
+  /* "pynba/stacked/local.pyx":17
  *         from six.moves._thread import get_ident
  *     except ImportError:
  *         def get_ident():             # <<<<<<<<<<<<<<
  *             """Dummy implementation of thread.get_ident().
  * 
  */
-  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_get_ident, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_get_ident, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1429,16 +1429,16 @@ PyMODINIT_FUNC PyInit_local(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_5pynba_7stacked_5local_LocalStack) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_5pynba_7stacked_5local_LocalStack) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_5pynba_7stacked_5local_LocalStack.tp_print = 0;
-  if (PyObject_SetAttrString(__pyx_m, "LocalStack", (PyObject *)&__pyx_type_5pynba_7stacked_5local_LocalStack) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "LocalStack", (PyObject *)&__pyx_type_5pynba_7stacked_5local_LocalStack) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_5pynba_7stacked_5local_LocalStack = &__pyx_type_5pynba_7stacked_5local_LocalStack;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pynba/stacked/local.pyx":13
+  /* "pynba/stacked/local.pyx":11
  * from __future__ import absolute_import, unicode_literals
  * 
  * try:             # <<<<<<<<<<<<<<
@@ -1452,24 +1452,24 @@ PyMODINIT_FUNC PyInit_local(void)
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pynba/stacked/local.pyx":14
+      /* "pynba/stacked/local.pyx":12
  * 
  * try:
  *     from greenlet import getcurrent as get_ident             # <<<<<<<<<<<<<<
  * except ImportError:
  *     try:
  */
-      __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
+      __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_n_s_getcurrent);
       PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_getcurrent);
       __Pyx_GIVEREF(__pyx_n_s_getcurrent);
-      __pyx_t_5 = __Pyx_Import(__pyx_n_s_greenlet, __pyx_t_4, 0); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
+      __pyx_t_5 = __Pyx_Import(__pyx_n_s_greenlet, __pyx_t_4, 0); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_getcurrent); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
+      __pyx_t_4 = __Pyx_ImportFrom(__pyx_t_5, __pyx_n_s_getcurrent); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ident, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
+      if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ident, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L2_error;}
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -1481,7 +1481,7 @@ PyMODINIT_FUNC PyInit_local(void)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pynba/stacked/local.pyx":15
+    /* "pynba/stacked/local.pyx":13
  * try:
  *     from greenlet import getcurrent as get_ident
  * except ImportError:             # <<<<<<<<<<<<<<
@@ -1491,12 +1491,12 @@ PyMODINIT_FUNC PyInit_local(void)
     __pyx_t_6 = PyErr_ExceptionMatches(__pyx_builtin_ImportError);
     if (__pyx_t_6) {
       __Pyx_AddTraceback("pynba.stacked.local", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L4_except_error;}
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L4_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "pynba/stacked/local.pyx":16
+      /* "pynba/stacked/local.pyx":14
  *     from greenlet import getcurrent as get_ident
  * except ImportError:
  *     try:             # <<<<<<<<<<<<<<
@@ -1510,24 +1510,24 @@ PyMODINIT_FUNC PyInit_local(void)
         __Pyx_XGOTREF(__pyx_t_10);
         /*try:*/ {
 
-          /* "pynba/stacked/local.pyx":17
+          /* "pynba/stacked/local.pyx":15
  * except ImportError:
  *     try:
  *         from six.moves._thread import get_ident             # <<<<<<<<<<<<<<
  *     except ImportError:
  *         def get_ident():
  */
-          __pyx_t_11 = PyList_New(1); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+          __pyx_t_11 = PyList_New(1); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
           __Pyx_GOTREF(__pyx_t_11);
           __Pyx_INCREF(__pyx_n_s_get_ident);
           PyList_SET_ITEM(__pyx_t_11, 0, __pyx_n_s_get_ident);
           __Pyx_GIVEREF(__pyx_n_s_get_ident);
-          __pyx_t_12 = __Pyx_Import(__pyx_n_s_six_moves__thread, __pyx_t_11, 0); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+          __pyx_t_12 = __Pyx_Import(__pyx_n_s_six_moves__thread, __pyx_t_11, 0); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
           __Pyx_GOTREF(__pyx_t_12);
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-          __pyx_t_11 = __Pyx_ImportFrom(__pyx_t_12, __pyx_n_s_get_ident); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+          __pyx_t_11 = __Pyx_ImportFrom(__pyx_t_12, __pyx_n_s_get_ident); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
           __Pyx_GOTREF(__pyx_t_11);
-          if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ident, __pyx_t_11) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+          if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ident, __pyx_t_11) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         }
@@ -1539,7 +1539,7 @@ PyMODINIT_FUNC PyInit_local(void)
         __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-        /* "pynba/stacked/local.pyx":18
+        /* "pynba/stacked/local.pyx":16
  *     try:
  *         from six.moves._thread import get_ident
  *     except ImportError:             # <<<<<<<<<<<<<<
@@ -1549,21 +1549,21 @@ PyMODINIT_FUNC PyInit_local(void)
         __pyx_t_6 = PyErr_ExceptionMatches(__pyx_builtin_ImportError);
         if (__pyx_t_6) {
           __Pyx_AddTraceback("pynba.stacked.local", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_11, &__pyx_t_13) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L14_except_error;}
+          if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_11, &__pyx_t_13) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L14_except_error;}
           __Pyx_GOTREF(__pyx_t_12);
           __Pyx_GOTREF(__pyx_t_11);
           __Pyx_GOTREF(__pyx_t_13);
 
-          /* "pynba/stacked/local.pyx":19
+          /* "pynba/stacked/local.pyx":17
  *         from six.moves._thread import get_ident
  *     except ImportError:
  *         def get_ident():             # <<<<<<<<<<<<<<
  *             """Dummy implementation of thread.get_ident().
  * 
  */
-          __pyx_t_14 = PyCFunction_NewEx(&__pyx_mdef_5pynba_7stacked_5local_1get_ident, NULL, __pyx_n_s_pynba_stacked_local); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L14_except_error;}
+          __pyx_t_14 = PyCFunction_NewEx(&__pyx_mdef_5pynba_7stacked_5local_1get_ident, NULL, __pyx_n_s_pynba_stacked_local); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L14_except_error;}
           __Pyx_GOTREF(__pyx_t_14);
-          if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ident, __pyx_t_14) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L14_except_error;}
+          if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_ident, __pyx_t_14) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L14_except_error;}
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -1604,14 +1604,14 @@ PyMODINIT_FUNC PyInit_local(void)
     __pyx_L9_try_end:;
   }
 
-  /* "pynba/stacked/local.pyx":28
+  /* "pynba/stacked/local.pyx":26
  *             return -1
  * 
  * __all__ = ['LocalStack', 'LOCAL_STACK']             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_7 = PyList_New(2); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyList_New(2); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(__pyx_n_u_LocalStack);
   PyList_SET_ITEM(__pyx_t_7, 0, __pyx_n_u_LocalStack);
@@ -1619,23 +1619,23 @@ PyMODINIT_FUNC PyInit_local(void)
   __Pyx_INCREF(__pyx_n_u_LOCAL_STACK);
   PyList_SET_ITEM(__pyx_t_7, 1, __pyx_n_u_LOCAL_STACK);
   __Pyx_GIVEREF(__pyx_n_u_LOCAL_STACK);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "pynba/stacked/local.pyx":56
+  /* "pynba/stacked/local.pyx":54
  *                 pass
  * 
  * LOCAL_STACK = LocalStack()             # <<<<<<<<<<<<<<
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_7stacked_5local_LocalStack)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_7stacked_5local_LocalStack)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_LOCAL_STACK, __pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_LOCAL_STACK, __pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "pynba/stacked/local.pyx":1
- * # encoding: utf-8             # <<<<<<<<<<<<<<
- * 
- * """
+ * """             # <<<<<<<<<<<<<<
+ *     Pynba
+ *     ~~~~~
  */
   __pyx_t_7 = PyDict_New(); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
