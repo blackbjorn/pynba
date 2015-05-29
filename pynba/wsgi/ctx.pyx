@@ -1,4 +1,4 @@
-# coding: utf-8
+# encoding: utf-8
 
 """
     Pynba
@@ -8,7 +8,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from __future__ import absolute_import #, unicode_literals
+from __future__ import absolute_import, unicode_literals
 
 import resource
 from pynba.core import DataCollector
@@ -40,7 +40,7 @@ cdef class RequestContext(object):
         def __get__(self):
             cdef str out
             cdef object pynba
-            out = config.get('prefix', '')
+            out = self.config.get('prefix', '')
 
             if self.pynba:
                 pynba = self.pynba

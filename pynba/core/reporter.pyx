@@ -1,4 +1,4 @@
-# coding: utf-8
+# encoding: utf-8
 
 """
     Pynba
@@ -8,7 +8,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from __future__ import absolute_import #, unicode_literals
+from __future__ import absolute_import, unicode_literals
 
 import collections
 from .log import logger
@@ -179,11 +179,8 @@ cpdef flattener(dict tags):
 
     """
     cdef set data
-    cdef str ns
 
-    ns = ''
-
-    data = set(flatten(tags, ns))
+    data = set(flatten(tags, <str>''))
     return sorted([(key, str(value)) for key, value in data])
 
 cdef inline list flatten(dict tags, str namespace):
