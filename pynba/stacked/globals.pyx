@@ -8,7 +8,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import absolute_import #, unicode_literals
 
 from .local import LOCAL_STACK
 from functools import wraps
