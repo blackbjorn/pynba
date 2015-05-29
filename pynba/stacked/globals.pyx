@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,11 +6,14 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from functools import wraps
-from .local import LOCAL_STACK
-from .log import logger
+from __future__ import absolute_import, unicode_literals
 
-__all__ = ['pynba']
+from .local import LOCAL_STACK
+from functools import wraps
+from pynba.core import logger
+
+__all__ = ['LocalProxy']
+
 
 cdef class LocalProxy(object):
 
@@ -60,5 +62,3 @@ cdef class LocalProxy(object):
             delattr(LOCAL_STACK.pynba, name)
         except TypeError:
             raise RuntimeError('working outside of request context')
-
-pynba = LocalProxy(enabled=False)

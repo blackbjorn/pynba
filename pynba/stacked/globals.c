@@ -242,8 +242,8 @@ class __Pyx_FakeReference {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__pynba__globals
-#define __PYX_HAVE_API__pynba__globals
+#define __PYX_HAVE__pynba__stacked__globals
+#define __PYX_HAVE_API__pynba__stacked__globals
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -426,50 +426,50 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "pynba/globals.pyx",
+  "pynba/stacked/globals.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_5pynba_7globals_LocalProxy;
-struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer;
-struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator;
+struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy;
+struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer;
+struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator;
 
-/* "pynba/globals.pyx":16
- * __all__ = ['pynba']
+/* "pynba/stacked/globals.pyx":18
+ * 
  * 
  * cdef class LocalProxy(object):             # <<<<<<<<<<<<<<
  * 
  *     cdef dict defaults
  */
-struct __pyx_obj_5pynba_7globals_LocalProxy {
+struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy {
   PyObject_HEAD
   PyObject *defaults;
 };
 
 
-/* "pynba/globals.pyx":23
+/* "pynba/stacked/globals.pyx":25
  *         self.defaults = defaults
  * 
  *     def timer(self, **tags):             # <<<<<<<<<<<<<<
  *         pynba = LOCAL_STACK.pynba
  *         if pynba:
  */
-struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer {
+struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer {
   PyObject_HEAD
   PyObject *__pyx_v_tags;
 };
 
 
-/* "pynba/globals.pyx":28
+/* "pynba/stacked/globals.pyx":30
  *             return pynba.timer(**tags)
  * 
  *         def decorator(func):             # <<<<<<<<<<<<<<
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):
  */
-struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator {
+struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator {
   PyObject_HEAD
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *__pyx_outer_scope;
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *__pyx_outer_scope;
   PyObject *__pyx_v_func;
 };
 
@@ -734,29 +734,28 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'pynba.globals' */
-static PyTypeObject *__pyx_ptype_5pynba_7globals_LocalProxy = 0;
-static PyTypeObject *__pyx_ptype_5pynba_7globals___pyx_scope_struct__timer = 0;
-static PyTypeObject *__pyx_ptype_5pynba_7globals___pyx_scope_struct_1_decorator = 0;
-#define __Pyx_MODULE_NAME "pynba.globals"
-int __pyx_module_is_main_pynba__globals = 0;
+/* Module declarations from 'pynba.stacked.globals' */
+static PyTypeObject *__pyx_ptype_5pynba_7stacked_7globals_LocalProxy = 0;
+static PyTypeObject *__pyx_ptype_5pynba_7stacked_7globals___pyx_scope_struct__timer = 0;
+static PyTypeObject *__pyx_ptype_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator = 0;
+#define __Pyx_MODULE_NAME "pynba.stacked.globals"
+int __pyx_module_is_main_pynba__stacked__globals = 0;
 
-/* Implementation of 'pynba.globals' */
+/* Implementation of 'pynba.stacked.globals' */
 static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_AttributeError;
 static PyObject *__pyx_builtin_RuntimeError;
-static int __pyx_pf_5pynba_7globals_10LocalProxy___init__(struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper(PyObject *__pyx_self, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs); /* proto */
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject *__pyx_self, PyObject *__pyx_v_func); /* proto */
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_tags); /* proto */
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
-static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value); /* proto */
-static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
-static PyObject *__pyx_tp_new_5pynba_7globals_LocalProxy(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_5pynba_7globals___pyx_scope_struct__timer(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_5pynba_7globals___pyx_scope_struct_1_decorator(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_5pynba_7stacked_7globals_10LocalProxy___init__(struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_defaults); /* proto */
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_wrapper(PyObject *__pyx_self, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs); /* proto */
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_5timer_decorator(PyObject *__pyx_self, PyObject *__pyx_v_func); /* proto */
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_2timer(CYTHON_UNUSED struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_tags); /* proto */
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_4__getattr__(struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
+static int __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value); /* proto */
+static int __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
+static PyObject *__pyx_tp_new_5pynba_7stacked_7globals_LocalProxy(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct__timer(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_all[] = "__all__";
-static char __pyx_k_log[] = "log";
 static char __pyx_k_args[] = "args";
 static char __pyx_k_exit[] = "__exit__";
 static char __pyx_k_func[] = "func";
@@ -771,31 +770,32 @@ static char __pyx_k_wraps[] = "wraps";
 static char __pyx_k_import[] = "__import__";
 static char __pyx_k_kwargs[] = "kwargs";
 static char __pyx_k_logger[] = "logger";
-static char __pyx_k_enabled[] = "enabled";
 static char __pyx_k_wrapper[] = "wrapper";
 static char __pyx_k_response[] = "response";
 static char __pyx_k_TypeError[] = "TypeError";
 static char __pyx_k_decorator[] = "decorator";
 static char __pyx_k_functools[] = "functools";
+static char __pyx_k_LocalProxy[] = "LocalProxy";
+static char __pyx_k_pynba_core[] = "pynba.core";
 static char __pyx_k_LOCAL_STACK[] = "LOCAL_STACK";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
-static char __pyx_k_pynba_globals[] = "pynba.globals";
 static char __pyx_k_AttributeError[] = "AttributeError";
+static char __pyx_k_pynba_stacked_globals[] = "pynba.stacked.globals";
 static char __pyx_k_timer_locals_decorator[] = "timer.<locals>.decorator";
 static char __pyx_k_Pynba_copyright_c_2015_by_Xavie[] = "\n    Pynba\n    ~~~~~\n\n    :copyright: (c) 2015 by Xavier Barbosa.\n    :license: MIT, see LICENSE for more details.\n";
-static char __pyx_k_Users_xavierbarbosa_Sources_pyn[] = "/Users/xavierbarbosa/Sources/pynba/src/pynba/globals.pyx";
+static char __pyx_k_Users_xavierbarbosa_Sources_pyn[] = "/Users/xavierbarbosa/Sources/pynba/pynba/stacked/globals.pyx";
 static char __pyx_k_timer_locals_decorator_locals_wr[] = "timer.<locals>.decorator.<locals>.wrapper";
 static char __pyx_k_working_outside_of_request_conte[] = "working outside of request context";
 static char __pyx_k_working_outside_of_request_conte_2[] = "working outside of request context render %s with %s";
 static PyObject *__pyx_n_s_AttributeError;
 static PyObject *__pyx_n_s_LOCAL_STACK;
+static PyObject *__pyx_n_u_LocalProxy;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_kp_s_Users_xavierbarbosa_Sources_pyn;
 static PyObject *__pyx_n_s_all;
 static PyObject *__pyx_n_s_args;
 static PyObject *__pyx_n_s_decorator;
-static PyObject *__pyx_n_s_enabled;
 static PyObject *__pyx_n_s_enter;
 static PyObject *__pyx_n_s_exit;
 static PyObject *__pyx_n_s_func;
@@ -803,19 +803,19 @@ static PyObject *__pyx_n_s_functools;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_kwargs;
 static PyObject *__pyx_n_s_local;
-static PyObject *__pyx_n_s_log;
 static PyObject *__pyx_n_s_logger;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_pynba;
-static PyObject *__pyx_n_s_pynba_globals;
+static PyObject *__pyx_n_s_pynba_core;
+static PyObject *__pyx_n_s_pynba_stacked_globals;
 static PyObject *__pyx_n_s_response;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_timer;
 static PyObject *__pyx_n_s_timer_locals_decorator;
 static PyObject *__pyx_n_s_timer_locals_decorator_locals_wr;
 static PyObject *__pyx_n_s_warn;
-static PyObject *__pyx_kp_s_working_outside_of_request_conte;
-static PyObject *__pyx_kp_s_working_outside_of_request_conte_2;
+static PyObject *__pyx_kp_u_working_outside_of_request_conte;
+static PyObject *__pyx_kp_u_working_outside_of_request_conte_2;
 static PyObject *__pyx_n_s_wrapper;
 static PyObject *__pyx_n_s_wraps;
 static PyObject *__pyx_tuple_;
@@ -828,7 +828,7 @@ static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_codeobj__4;
 static PyObject *__pyx_codeobj__6;
 
-/* "pynba/globals.pyx":20
+/* "pynba/stacked/globals.pyx":22
  *     cdef dict defaults
  * 
  *     def __init__(self, **defaults):             # <<<<<<<<<<<<<<
@@ -837,8 +837,8 @@ static PyObject *__pyx_codeobj__6;
  */
 
 /* Python wrapper */
-static int __pyx_pw_5pynba_7globals_10LocalProxy_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_5pynba_7globals_10LocalProxy_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_defaults = 0;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -849,7 +849,7 @@ static int __pyx_pw_5pynba_7globals_10LocalProxy_1__init__(PyObject *__pyx_v_sel
   __pyx_v_defaults = (__pyx_kwds) ? PyDict_Copy(__pyx_kwds) : PyDict_New();
   if (unlikely(!__pyx_v_defaults)) return -1;
   __Pyx_GOTREF(__pyx_v_defaults);
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy___init__(((struct __pyx_obj_5pynba_7globals_LocalProxy *)__pyx_v_self), __pyx_v_defaults);
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy___init__(((struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)__pyx_v_self), __pyx_v_defaults);
 
   /* function exit code */
   __Pyx_XDECREF(__pyx_v_defaults);
@@ -857,12 +857,12 @@ static int __pyx_pw_5pynba_7globals_10LocalProxy_1__init__(PyObject *__pyx_v_sel
   return __pyx_r;
 }
 
-static int __pyx_pf_5pynba_7globals_10LocalProxy___init__(struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_defaults) {
+static int __pyx_pf_5pynba_7stacked_7globals_10LocalProxy___init__(struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_defaults) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pynba/globals.pyx":21
+  /* "pynba/stacked/globals.pyx":23
  * 
  *     def __init__(self, **defaults):
  *         self.defaults = defaults             # <<<<<<<<<<<<<<
@@ -875,7 +875,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy___init__(struct __pyx_obj_5pynb
   __Pyx_DECREF(__pyx_v_self->defaults);
   __pyx_v_self->defaults = __pyx_v_defaults;
 
-  /* "pynba/globals.pyx":20
+  /* "pynba/stacked/globals.pyx":22
  *     cdef dict defaults
  * 
  *     def __init__(self, **defaults):             # <<<<<<<<<<<<<<
@@ -889,7 +889,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy___init__(struct __pyx_obj_5pynb
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":23
+/* "pynba/stacked/globals.pyx":25
  *         self.defaults = defaults
  * 
  *     def timer(self, **tags):             # <<<<<<<<<<<<<<
@@ -898,8 +898,8 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy___init__(struct __pyx_obj_5pynb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_3timer(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_3timer(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_3timer(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_3timer(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_tags = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -910,7 +910,7 @@ static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_3timer(PyObject *__pyx_v_
   __pyx_v_tags = (__pyx_kwds) ? PyDict_Copy(__pyx_kwds) : PyDict_New();
   if (unlikely(!__pyx_v_tags)) return NULL;
   __Pyx_GOTREF(__pyx_v_tags);
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy_2timer(((struct __pyx_obj_5pynba_7globals_LocalProxy *)__pyx_v_self), __pyx_v_tags);
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_2timer(((struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)__pyx_v_self), __pyx_v_tags);
 
   /* function exit code */
   __Pyx_XDECREF(__pyx_v_tags);
@@ -918,7 +918,7 @@ static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_3timer(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":28
+/* "pynba/stacked/globals.pyx":30
  *             return pynba.timer(**tags)
  * 
  *         def decorator(func):             # <<<<<<<<<<<<<<
@@ -927,20 +927,20 @@ static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_3timer(PyObject *__pyx_v_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_1decorator(PyObject *__pyx_self, PyObject *__pyx_v_func); /*proto*/
-static PyMethodDef __pyx_mdef_5pynba_7globals_10LocalProxy_5timer_1decorator = {"decorator", (PyCFunction)__pyx_pw_5pynba_7globals_10LocalProxy_5timer_1decorator, METH_O, 0};
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_1decorator(PyObject *__pyx_self, PyObject *__pyx_v_func) {
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5timer_1decorator(PyObject *__pyx_self, PyObject *__pyx_v_func); /*proto*/
+static PyMethodDef __pyx_mdef_5pynba_7stacked_7globals_10LocalProxy_5timer_1decorator = {"decorator", (PyCFunction)__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5timer_1decorator, METH_O, 0};
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5timer_1decorator(PyObject *__pyx_self, PyObject *__pyx_v_func) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("decorator (wrapper)", 0);
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(__pyx_self, ((PyObject *)__pyx_v_func));
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_5timer_decorator(__pyx_self, ((PyObject *)__pyx_v_func));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":30
+/* "pynba/stacked/globals.pyx":32
  *         def decorator(func):
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
@@ -949,9 +949,9 @@ static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_1decorator(PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrapper(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrapper = {"wrapper", (PyCFunction)__pyx_pw_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrapper, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrapper(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_1wrapper(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_1wrapper = {"wrapper", (PyCFunction)__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_1wrapper, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_1wrapper(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_args = 0;
   PyObject *__pyx_v_kwargs = 0;
   PyObject *__pyx_r = 0;
@@ -963,7 +963,7 @@ static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrappe
   __Pyx_GOTREF(__pyx_v_kwargs);
   __Pyx_INCREF(__pyx_args);
   __pyx_v_args = __pyx_args;
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper(__pyx_self, __pyx_v_args, __pyx_v_kwargs);
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_wrapper(__pyx_self, __pyx_v_args, __pyx_v_kwargs);
 
   /* function exit code */
   __Pyx_XDECREF(__pyx_v_args);
@@ -972,9 +972,9 @@ static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrappe
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper(PyObject *__pyx_self, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs) {
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *__pyx_cur_scope;
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *__pyx_outer_scope;
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_wrapper(PyObject *__pyx_self, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs) {
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *__pyx_cur_scope;
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *__pyx_outer_scope;
   PyObject *__pyx_v_timer = NULL;
   PyObject *__pyx_v_response = NULL;
   PyObject *__pyx_r = NULL;
@@ -995,10 +995,10 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("wrapper", 0);
-  __pyx_outer_scope = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "pynba/globals.pyx":31
+  /* "pynba/stacked/globals.pyx":33
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):
  *                 try:             # <<<<<<<<<<<<<<
@@ -1012,29 +1012,29 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pynba/globals.pyx":32
+      /* "pynba/stacked/globals.pyx":34
  *             def wrapper(*args, **kwargs):
  *                 try:
  *                     timer = LOCAL_STACK.pynba.timer(**tags)             # <<<<<<<<<<<<<<
  *                 except (TypeError, AttributeError):
  *                     raise RuntimeError('working outside of request context')
  */
-      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_timer); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_timer); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_tags)) { __Pyx_RaiseClosureNameError("tags"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;} }
+      if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_tags)) { __Pyx_RaiseClosureNameError("tags"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L3_error;} }
       if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_tags == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "argument after ** must be a mapping, not NoneType");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
       __pyx_t_5 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_tags;
       __Pyx_INCREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1050,7 +1050,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pynba/globals.pyx":33
+    /* "pynba/stacked/globals.pyx":35
  *                 try:
  *                     timer = LOCAL_STACK.pynba.timer(**tags)
  *                 except (TypeError, AttributeError):             # <<<<<<<<<<<<<<
@@ -1059,24 +1059,24 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
  */
     __pyx_t_7 = PyErr_ExceptionMatches(__pyx_builtin_TypeError) || PyErr_ExceptionMatches(__pyx_builtin_AttributeError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_5, &__pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_5, &__pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "pynba/globals.pyx":34
+      /* "pynba/stacked/globals.pyx":36
  *                     timer = LOCAL_STACK.pynba.timer(**tags)
  *                 except (TypeError, AttributeError):
  *                     raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
  * 
  *                 with timer:
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
     }
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
@@ -1088,7 +1088,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
     __pyx_L10_try_end:;
   }
 
-  /* "pynba/globals.pyx":36
+  /* "pynba/stacked/globals.pyx":38
  *                     raise RuntimeError('working outside of request context')
  * 
  *                 with timer:             # <<<<<<<<<<<<<<
@@ -1096,9 +1096,9 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
  *                 return response
  */
   /*with:*/ {
-    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_v_timer, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_v_timer, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_v_timer, __pyx_n_s_enter); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L13_error;}
+    __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_v_timer, __pyx_n_s_enter); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L13_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_5))) {
@@ -1111,10 +1111,10 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
       }
     }
     if (__pyx_t_6) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L13_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L13_error;}
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else {
-      __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L13_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L13_error;}
     }
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1127,19 +1127,19 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
         __Pyx_XGOTREF(__pyx_t_9);
         /*try:*/ {
 
-          /* "pynba/globals.pyx":37
+          /* "pynba/stacked/globals.pyx":39
  * 
  *                 with timer:
  *                     response = func(*args, **kwargs)             # <<<<<<<<<<<<<<
  *                 return response
  *             return wrapper
  */
-          if (unlikely(!__pyx_cur_scope->__pyx_v_func)) { __Pyx_RaiseClosureNameError("func"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L17_error;} }
-          __pyx_t_4 = PySequence_Tuple(__pyx_v_args); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L17_error;}
+          if (unlikely(!__pyx_cur_scope->__pyx_v_func)) { __Pyx_RaiseClosureNameError("func"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L17_error;} }
+          __pyx_t_4 = PySequence_Tuple(__pyx_v_args); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L17_error;}
           __Pyx_GOTREF(__pyx_t_4);
           __pyx_t_5 = __pyx_v_kwargs;
           __Pyx_INCREF(__pyx_t_5);
-          __pyx_t_6 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_func, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L17_error;}
+          __pyx_t_6 = __Pyx_PyObject_Call(__pyx_cur_scope->__pyx_v_func, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L17_error;}
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1156,7 +1156,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pynba/globals.pyx":36
+        /* "pynba/stacked/globals.pyx":38
  *                     raise RuntimeError('working outside of request context')
  * 
  *                 with timer:             # <<<<<<<<<<<<<<
@@ -1164,21 +1164,21 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
  *                 return response
  */
         /*except:*/ {
-          __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_5, &__pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
+          __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_5, &__pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_8 = PyTuple_Pack(3, __pyx_t_6, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
+          __pyx_t_8 = PyTuple_Pack(3, __pyx_t_6, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
           __Pyx_GOTREF(__pyx_t_8);
           __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-          if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
+          if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
           __Pyx_GOTREF(__pyx_t_10);
           __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_10);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-          if (__pyx_t_11 < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
+          if (__pyx_t_11 < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
           __pyx_t_12 = ((!(__pyx_t_11 != 0)) != 0);
           if (__pyx_t_12) {
             __Pyx_GIVEREF(__pyx_t_6);
@@ -1186,7 +1186,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
             __Pyx_XGIVEREF(__pyx_t_4);
             __Pyx_ErrRestore(__pyx_t_6, __pyx_t_5, __pyx_t_4);
             __pyx_t_6 = 0; __pyx_t_5 = 0; __pyx_t_4 = 0; 
-            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
+            {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L19_except_error;}
           }
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1212,7 +1212,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
         if (__pyx_t_3) {
           __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__2, NULL);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           __Pyx_GOTREF(__pyx_t_9);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
@@ -1227,7 +1227,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
     __pyx_L28:;
   }
 
-  /* "pynba/globals.pyx":38
+  /* "pynba/stacked/globals.pyx":40
  *                 with timer:
  *                     response = func(*args, **kwargs)
  *                 return response             # <<<<<<<<<<<<<<
@@ -1235,12 +1235,12 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
  *         return decorator
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_response)) { __Pyx_RaiseUnboundLocalError("response"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
+  if (unlikely(!__pyx_v_response)) { __Pyx_RaiseUnboundLocalError("response"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
   __Pyx_INCREF(__pyx_v_response);
   __pyx_r = __pyx_v_response;
   goto __pyx_L0;
 
-  /* "pynba/globals.pyx":30
+  /* "pynba/stacked/globals.pyx":32
  *         def decorator(func):
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
@@ -1254,7 +1254,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.timer.decorator.wrapper", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_timer);
@@ -1264,7 +1264,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":28
+/* "pynba/stacked/globals.pyx":30
  *             return pynba.timer(**tags)
  * 
  *         def decorator(func):             # <<<<<<<<<<<<<<
@@ -1272,8 +1272,8 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_9decorator_wrapper
  *             def wrapper(*args, **kwargs):
  */
 
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject *__pyx_self, PyObject *__pyx_v_func) {
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *__pyx_cur_scope;
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_5timer_decorator(PyObject *__pyx_self, PyObject *__pyx_v_func) {
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *__pyx_cur_scope;
   PyObject *__pyx_v_wrapper = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1286,27 +1286,27 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decorator", 0);
-  __pyx_cur_scope = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *)__pyx_tp_new_5pynba_7globals___pyx_scope_struct_1_decorator(__pyx_ptype_5pynba_7globals___pyx_scope_struct_1_decorator, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *)__pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator(__pyx_ptype_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
     __Pyx_RefNannyFinishContext();
     return NULL;
   }
   __Pyx_GOTREF(__pyx_cur_scope);
-  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   __pyx_cur_scope->__pyx_v_func = __pyx_v_func;
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_func);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_func);
 
-  /* "pynba/globals.pyx":29
+  /* "pynba/stacked/globals.pyx":31
  * 
  *         def decorator(func):
  *             @wraps(func)             # <<<<<<<<<<<<<<
  *             def wrapper(*args, **kwargs):
  *                 try:
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_wraps); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_wraps); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -1319,29 +1319,29 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_cur_scope->__pyx_v_func); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_cur_scope->__pyx_v_func); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_func);
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_cur_scope->__pyx_v_func);
     __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_func);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pynba/globals.pyx":30
+  /* "pynba/stacked/globals.pyx":32
  *         def decorator(func):
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
  *                 try:
  *                     timer = LOCAL_STACK.pynba.timer(**tags)
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pynba_7globals_10LocalProxy_5timer_9decorator_1wrapper, 0, __pyx_n_s_timer_locals_decorator_locals_wr, ((PyObject*)__pyx_cur_scope), __pyx_n_s_pynba_globals, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pynba_7stacked_7globals_10LocalProxy_5timer_9decorator_1wrapper, 0, __pyx_n_s_timer_locals_decorator_locals_wr, ((PyObject*)__pyx_cur_scope), __pyx_n_s_pynba_stacked_globals, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -1354,17 +1354,17 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
@@ -1372,7 +1372,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
   __pyx_v_wrapper = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pynba/globals.pyx":39
+  /* "pynba/stacked/globals.pyx":41
  *                     response = func(*args, **kwargs)
  *                 return response
  *             return wrapper             # <<<<<<<<<<<<<<
@@ -1384,7 +1384,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
   __pyx_r = __pyx_v_wrapper;
   goto __pyx_L0;
 
-  /* "pynba/globals.pyx":28
+  /* "pynba/stacked/globals.pyx":30
  *             return pynba.timer(**tags)
  * 
  *         def decorator(func):             # <<<<<<<<<<<<<<
@@ -1399,7 +1399,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("pynba.globals.LocalProxy.timer.decorator", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.timer.decorator", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_wrapper);
@@ -1409,7 +1409,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":23
+/* "pynba/stacked/globals.pyx":25
  *         self.defaults = defaults
  * 
  *     def timer(self, **tags):             # <<<<<<<<<<<<<<
@@ -1417,8 +1417,8 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_5timer_decorator(PyObject
  *         if pynba:
  */
 
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_tags) {
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *__pyx_cur_scope;
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_2timer(CYTHON_UNUSED struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_tags) {
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *__pyx_cur_scope;
   PyObject *__pyx_v_pynba = NULL;
   PyObject *__pyx_v_decorator = 0;
   PyObject *__pyx_r = NULL;
@@ -1431,7 +1431,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("timer", 0);
-  __pyx_cur_scope = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *)__pyx_tp_new_5pynba_7globals___pyx_scope_struct__timer(__pyx_ptype_5pynba_7globals___pyx_scope_struct__timer, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *)__pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct__timer(__pyx_ptype_5pynba_7stacked_7globals___pyx_scope_struct__timer, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
     __Pyx_RefNannyFinishContext();
     return NULL;
@@ -1441,32 +1441,32 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_tags);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_tags);
 
-  /* "pynba/globals.pyx":24
+  /* "pynba/stacked/globals.pyx":26
  * 
  *     def timer(self, **tags):
  *         pynba = LOCAL_STACK.pynba             # <<<<<<<<<<<<<<
  *         if pynba:
  *             return pynba.timer(**tags)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pynba); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pynba); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_pynba = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pynba/globals.pyx":25
+  /* "pynba/stacked/globals.pyx":27
  *     def timer(self, **tags):
  *         pynba = LOCAL_STACK.pynba
  *         if pynba:             # <<<<<<<<<<<<<<
  *             return pynba.timer(**tags)
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_v_pynba); if (unlikely(__pyx_t_3 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_v_pynba); if (unlikely(__pyx_t_3 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_3) {
 
-    /* "pynba/globals.pyx":26
+    /* "pynba/stacked/globals.pyx":28
  *         pynba = LOCAL_STACK.pynba
  *         if pynba:
  *             return pynba.timer(**tags)             # <<<<<<<<<<<<<<
@@ -1474,11 +1474,11 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
  *         def decorator(func):
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_pynba, __pyx_n_s_timer); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_pynba, __pyx_n_s_timer); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = __pyx_cur_scope->__pyx_v_tags;
     __Pyx_INCREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -1487,19 +1487,19 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
     goto __pyx_L0;
   }
 
-  /* "pynba/globals.pyx":28
+  /* "pynba/stacked/globals.pyx":30
  *             return pynba.timer(**tags)
  * 
  *         def decorator(func):             # <<<<<<<<<<<<<<
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pynba_7globals_10LocalProxy_5timer_1decorator, 0, __pyx_n_s_timer_locals_decorator, ((PyObject*)__pyx_cur_scope), __pyx_n_s_pynba_globals, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pynba_7stacked_7globals_10LocalProxy_5timer_1decorator, 0, __pyx_n_s_timer_locals_decorator, ((PyObject*)__pyx_cur_scope), __pyx_n_s_pynba_stacked_globals, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_decorator = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pynba/globals.pyx":40
+  /* "pynba/stacked/globals.pyx":42
  *                 return response
  *             return wrapper
  *         return decorator             # <<<<<<<<<<<<<<
@@ -1511,7 +1511,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
   __pyx_r = __pyx_v_decorator;
   goto __pyx_L0;
 
-  /* "pynba/globals.pyx":23
+  /* "pynba/stacked/globals.pyx":25
  *         self.defaults = defaults
  * 
  *     def timer(self, **tags):             # <<<<<<<<<<<<<<
@@ -1524,7 +1524,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pynba.globals.LocalProxy.timer", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.timer", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pynba);
@@ -1535,7 +1535,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":42
+/* "pynba/stacked/globals.pyx":44
  *         return decorator
  * 
  *     def __getattr__(self, name):             # <<<<<<<<<<<<<<
@@ -1544,19 +1544,19 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_2timer(CYTHON_UNUSED stru
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5__getattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name); /*proto*/
-static PyObject *__pyx_pw_5pynba_7globals_10LocalProxy_5__getattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name) {
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5__getattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name); /*proto*/
+static PyObject *__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5__getattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__getattr__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(((struct __pyx_obj_5pynba_7globals_LocalProxy *)__pyx_v_self), ((PyObject *)__pyx_v_name));
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_4__getattr__(((struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)__pyx_v_self), ((PyObject *)__pyx_v_name));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name) {
+static PyObject *__pyx_pf_5pynba_7stacked_7globals_10LocalProxy_4__getattr__(struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name) {
   PyObject *__pyx_v_value = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1579,7 +1579,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__getattr__", 0);
 
-  /* "pynba/globals.pyx":43
+  /* "pynba/stacked/globals.pyx":45
  * 
  *     def __getattr__(self, name):
  *         try:             # <<<<<<<<<<<<<<
@@ -1593,7 +1593,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pynba/globals.pyx":44
+      /* "pynba/stacked/globals.pyx":46
  *     def __getattr__(self, name):
  *         try:
  *             return getattr(LOCAL_STACK.pynba, name)             # <<<<<<<<<<<<<<
@@ -1601,12 +1601,12 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
  *             if name in self.defaults:
  */
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_GetAttr(__pyx_t_5, __pyx_v_name); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_GetAttr(__pyx_t_5, __pyx_v_name); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_r = __pyx_t_4;
@@ -1617,7 +1617,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pynba/globals.pyx":45
+    /* "pynba/stacked/globals.pyx":47
  *         try:
  *             return getattr(LOCAL_STACK.pynba, name)
  *         except (TypeError, AttributeError):             # <<<<<<<<<<<<<<
@@ -1626,13 +1626,13 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
  */
     __pyx_t_6 = PyErr_ExceptionMatches(__pyx_builtin_TypeError) || PyErr_ExceptionMatches(__pyx_builtin_AttributeError);
     if (__pyx_t_6) {
-      __Pyx_AddTraceback("pynba.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_5, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_5, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "pynba/globals.pyx":46
+      /* "pynba/stacked/globals.pyx":48
  *             return getattr(LOCAL_STACK.pynba, name)
  *         except (TypeError, AttributeError):
  *             if name in self.defaults:             # <<<<<<<<<<<<<<
@@ -1641,13 +1641,13 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
  */
       if (unlikely(__pyx_v_self->defaults == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       }
-      __pyx_t_8 = (__Pyx_PyDict_Contains(__pyx_v_name, __pyx_v_self->defaults, Py_EQ)); if (unlikely(__pyx_t_8 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __pyx_t_8 = (__Pyx_PyDict_Contains(__pyx_v_name, __pyx_v_self->defaults, Py_EQ)); if (unlikely(__pyx_t_8 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __pyx_t_9 = (__pyx_t_8 != 0);
       if (__pyx_t_9) {
 
-        /* "pynba/globals.pyx":47
+        /* "pynba/stacked/globals.pyx":49
  *         except (TypeError, AttributeError):
  *             if name in self.defaults:
  *                 value = self.defaults[name]             # <<<<<<<<<<<<<<
@@ -1656,23 +1656,23 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
  */
         if (unlikely(__pyx_v_self->defaults == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
         }
-        __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_self->defaults, __pyx_v_name); if (unlikely(__pyx_t_10 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;};
+        __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_self->defaults, __pyx_v_name); if (unlikely(__pyx_t_10 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;};
         __Pyx_GOTREF(__pyx_t_10);
         __pyx_v_value = __pyx_t_10;
         __pyx_t_10 = 0;
 
-        /* "pynba/globals.pyx":48
+        /* "pynba/stacked/globals.pyx":50
  *             if name in self.defaults:
  *                 value = self.defaults[name]
  *                 logger.warn('working outside of request context render %s with %s', name, value)             # <<<<<<<<<<<<<<
  *                 return value
  *             raise RuntimeError('working outside of request context')
  */
-        __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_logger); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+        __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_logger); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
         __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_warn); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_warn); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __pyx_t_11 = NULL;
@@ -1687,27 +1687,27 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
             __pyx_t_13 = 1;
           }
         }
-        __pyx_t_14 = PyTuple_New(3+__pyx_t_13); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+        __pyx_t_14 = PyTuple_New(3+__pyx_t_13); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
         __Pyx_GOTREF(__pyx_t_14);
         if (__pyx_t_11) {
           PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_11); __Pyx_GIVEREF(__pyx_t_11); __pyx_t_11 = NULL;
         }
-        __Pyx_INCREF(__pyx_kp_s_working_outside_of_request_conte_2);
-        PyTuple_SET_ITEM(__pyx_t_14, 0+__pyx_t_13, __pyx_kp_s_working_outside_of_request_conte_2);
-        __Pyx_GIVEREF(__pyx_kp_s_working_outside_of_request_conte_2);
+        __Pyx_INCREF(__pyx_kp_u_working_outside_of_request_conte_2);
+        PyTuple_SET_ITEM(__pyx_t_14, 0+__pyx_t_13, __pyx_kp_u_working_outside_of_request_conte_2);
+        __Pyx_GIVEREF(__pyx_kp_u_working_outside_of_request_conte_2);
         __Pyx_INCREF(__pyx_v_name);
         PyTuple_SET_ITEM(__pyx_t_14, 1+__pyx_t_13, __pyx_v_name);
         __Pyx_GIVEREF(__pyx_v_name);
         __Pyx_INCREF(__pyx_v_value);
         PyTuple_SET_ITEM(__pyx_t_14, 2+__pyx_t_13, __pyx_v_value);
         __Pyx_GIVEREF(__pyx_v_value);
-        __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_14, NULL); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+        __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_14, NULL); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-        /* "pynba/globals.pyx":49
+        /* "pynba/stacked/globals.pyx":51
  *                 value = self.defaults[name]
  *                 logger.warn('working outside of request context render %s with %s', name, value)
  *                 return value             # <<<<<<<<<<<<<<
@@ -1723,18 +1723,18 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
         goto __pyx_L6_except_return;
       }
 
-      /* "pynba/globals.pyx":50
+      /* "pynba/stacked/globals.pyx":52
  *                 logger.warn('working outside of request context render %s with %s', name, value)
  *                 return value
  *             raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
  * 
  *     def __setattr__(self, name, value):
  */
-      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_Raise(__pyx_t_10, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
     }
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
@@ -1757,7 +1757,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
     goto __pyx_L0;
   }
 
-  /* "pynba/globals.pyx":42
+  /* "pynba/stacked/globals.pyx":44
  *         return decorator
  * 
  *     def __getattr__(self, name):             # <<<<<<<<<<<<<<
@@ -1774,7 +1774,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("pynba.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.__getattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_value);
@@ -1783,7 +1783,7 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":52
+/* "pynba/stacked/globals.pyx":54
  *             raise RuntimeError('working outside of request context')
  * 
  *     def __setattr__(self, name, value):             # <<<<<<<<<<<<<<
@@ -1792,19 +1792,19 @@ static PyObject *__pyx_pf_5pynba_7globals_10LocalProxy_4__getattr__(struct __pyx
  */
 
 /* Python wrapper */
-static int __pyx_pw_5pynba_7globals_10LocalProxy_7__setattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_5pynba_7globals_10LocalProxy_7__setattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value) {
+static int __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_7__setattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_7__setattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setattr__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(((struct __pyx_obj_5pynba_7globals_LocalProxy *)__pyx_v_self), ((PyObject *)__pyx_v_name), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_6__setattr__(((struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)__pyx_v_self), ((PyObject *)__pyx_v_name), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value) {
+static int __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1821,7 +1821,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__setattr__", 0);
 
-  /* "pynba/globals.pyx":53
+  /* "pynba/stacked/globals.pyx":55
  * 
  *     def __setattr__(self, name, value):
  *         try:             # <<<<<<<<<<<<<<
@@ -1835,19 +1835,19 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pynba/globals.pyx":54
+      /* "pynba/stacked/globals.pyx":56
  *     def __setattr__(self, name, value):
  *         try:
  *             setattr(LOCAL_STACK.pynba, name, value)             # <<<<<<<<<<<<<<
  *         except TypeError:
  *             raise RuntimeError('working outside of request context')
  */
-      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_6 = PyObject_SetAttr(__pyx_t_5, __pyx_v_name, __pyx_v_value); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_6 = PyObject_SetAttr(__pyx_t_5, __pyx_v_name, __pyx_v_value); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -1858,7 +1858,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pynba/globals.pyx":55
+    /* "pynba/stacked/globals.pyx":57
  *         try:
  *             setattr(LOCAL_STACK.pynba, name, value)
  *         except TypeError:             # <<<<<<<<<<<<<<
@@ -1867,24 +1867,24 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
  */
     __pyx_t_7 = PyErr_ExceptionMatches(__pyx_builtin_TypeError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("pynba.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "pynba/globals.pyx":56
+      /* "pynba/stacked/globals.pyx":58
  *             setattr(LOCAL_STACK.pynba, name, value)
  *         except TypeError:
  *             raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
  * 
  *     def __delattr__(self, name):
  */
-      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_Raise(__pyx_t_9, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
     }
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
@@ -1896,7 +1896,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
     __pyx_L10_try_end:;
   }
 
-  /* "pynba/globals.pyx":52
+  /* "pynba/stacked/globals.pyx":54
  *             raise RuntimeError('working outside of request context')
  * 
  *     def __setattr__(self, name, value):             # <<<<<<<<<<<<<<
@@ -1912,14 +1912,14 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pynba.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.__setattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "pynba/globals.pyx":58
+/* "pynba/stacked/globals.pyx":60
  *             raise RuntimeError('working outside of request context')
  * 
  *     def __delattr__(self, name):             # <<<<<<<<<<<<<<
@@ -1928,19 +1928,19 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_6__setattr__(CYTHON_UNUSED stru
  */
 
 /* Python wrapper */
-static int __pyx_pw_5pynba_7globals_10LocalProxy_9__delattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name); /*proto*/
-static int __pyx_pw_5pynba_7globals_10LocalProxy_9__delattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name) {
+static int __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_9__delattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name); /*proto*/
+static int __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_9__delattr__(PyObject *__pyx_v_self, PyObject *__pyx_v_name) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__delattr__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(((struct __pyx_obj_5pynba_7globals_LocalProxy *)__pyx_v_self), ((PyObject *)__pyx_v_name));
+  __pyx_r = __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_8__delattr__(((struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)__pyx_v_self), ((PyObject *)__pyx_v_name));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name) {
+static int __pyx_pf_5pynba_7stacked_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *__pyx_v_self, PyObject *__pyx_v_name) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1957,7 +1957,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__delattr__", 0);
 
-  /* "pynba/globals.pyx":59
+  /* "pynba/stacked/globals.pyx":61
  * 
  *     def __delattr__(self, name):
  *         try:             # <<<<<<<<<<<<<<
@@ -1971,19 +1971,19 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED stru
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pynba/globals.pyx":60
+      /* "pynba/stacked/globals.pyx":62
  *     def __delattr__(self, name):
  *         try:
  *             delattr(LOCAL_STACK.pynba, name)             # <<<<<<<<<<<<<<
  *         except TypeError:
  *             raise RuntimeError('working outside of request context')
  */
-      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pynba); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_6 = PyObject_DelAttr(__pyx_t_5, __pyx_v_name); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_t_6 = PyObject_DelAttr(__pyx_t_5, __pyx_v_name); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -1994,33 +1994,30 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED stru
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pynba/globals.pyx":61
+    /* "pynba/stacked/globals.pyx":63
  *         try:
  *             delattr(LOCAL_STACK.pynba, name)
  *         except TypeError:             # <<<<<<<<<<<<<<
  *             raise RuntimeError('working outside of request context')
- * 
  */
     __pyx_t_7 = PyErr_ExceptionMatches(__pyx_builtin_TypeError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("pynba.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "pynba/globals.pyx":62
+      /* "pynba/stacked/globals.pyx":64
  *             delattr(LOCAL_STACK.pynba, name)
  *         except TypeError:
  *             raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
- * 
- * pynba = LocalProxy(enabled=False)
  */
-      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_RuntimeError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_Raise(__pyx_t_9, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
     }
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
@@ -2032,7 +2029,7 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED stru
     __pyx_L10_try_end:;
   }
 
-  /* "pynba/globals.pyx":58
+  /* "pynba/stacked/globals.pyx":60
  *             raise RuntimeError('working outside of request context')
  * 
  *     def __delattr__(self, name):             # <<<<<<<<<<<<<<
@@ -2048,15 +2045,15 @@ static int __pyx_pf_5pynba_7globals_10LocalProxy_8__delattr__(CYTHON_UNUSED stru
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pynba.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pynba.stacked.globals.LocalProxy.__delattr__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_tp_new_5pynba_7globals_LocalProxy(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_5pynba_7globals_LocalProxy *p;
+static PyObject *__pyx_tp_new_5pynba_7stacked_7globals_LocalProxy(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -2064,13 +2061,13 @@ static PyObject *__pyx_tp_new_5pynba_7globals_LocalProxy(PyTypeObject *t, CYTHON
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_5pynba_7globals_LocalProxy *)o);
+  p = ((struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)o);
   p->defaults = ((PyObject*)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_5pynba_7globals_LocalProxy(PyObject *o) {
-  struct __pyx_obj_5pynba_7globals_LocalProxy *p = (struct __pyx_obj_5pynba_7globals_LocalProxy *)o;
+static void __pyx_tp_dealloc_5pynba_7stacked_7globals_LocalProxy(PyObject *o) {
+  struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *p = (struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)o;
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -2081,54 +2078,54 @@ static void __pyx_tp_dealloc_5pynba_7globals_LocalProxy(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_5pynba_7globals_LocalProxy(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_5pynba_7stacked_7globals_LocalProxy(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_5pynba_7globals_LocalProxy *p = (struct __pyx_obj_5pynba_7globals_LocalProxy *)o;
+  struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *p = (struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)o;
   if (p->defaults) {
     e = (*v)(p->defaults, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_5pynba_7globals_LocalProxy(PyObject *o) {
+static int __pyx_tp_clear_5pynba_7stacked_7globals_LocalProxy(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_5pynba_7globals_LocalProxy *p = (struct __pyx_obj_5pynba_7globals_LocalProxy *)o;
+  struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *p = (struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy *)o;
   tmp = ((PyObject*)p->defaults);
   p->defaults = ((PyObject*)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyObject *__pyx_tp_getattro_5pynba_7globals_LocalProxy(PyObject *o, PyObject *n) {
+static PyObject *__pyx_tp_getattro_5pynba_7stacked_7globals_LocalProxy(PyObject *o, PyObject *n) {
   PyObject *v = PyObject_GenericGetAttr(o, n);
   if (!v && PyErr_ExceptionMatches(PyExc_AttributeError)) {
     PyErr_Clear();
-    v = __pyx_pw_5pynba_7globals_10LocalProxy_5__getattr__(o, n);
+    v = __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5__getattr__(o, n);
   }
   return v;
 }
 
-static int __pyx_tp_setattro_5pynba_7globals_LocalProxy(PyObject *o, PyObject *n, PyObject *v) {
+static int __pyx_tp_setattro_5pynba_7stacked_7globals_LocalProxy(PyObject *o, PyObject *n, PyObject *v) {
   if (v) {
-    return __pyx_pw_5pynba_7globals_10LocalProxy_7__setattr__(o, n, v);
+    return __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_7__setattr__(o, n, v);
   }
   else {
-    return __pyx_pw_5pynba_7globals_10LocalProxy_9__delattr__(o, n);
+    return __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_9__delattr__(o, n);
   }
 }
 
-static PyMethodDef __pyx_methods_5pynba_7globals_LocalProxy[] = {
-  {"timer", (PyCFunction)__pyx_pw_5pynba_7globals_10LocalProxy_3timer, METH_VARARGS|METH_KEYWORDS, 0},
-  {"__getattr__", (PyCFunction)__pyx_pw_5pynba_7globals_10LocalProxy_5__getattr__, METH_O|METH_COEXIST, 0},
+static PyMethodDef __pyx_methods_5pynba_7stacked_7globals_LocalProxy[] = {
+  {"timer", (PyCFunction)__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_3timer, METH_VARARGS|METH_KEYWORDS, 0},
+  {"__getattr__", (PyCFunction)__pyx_pw_5pynba_7stacked_7globals_10LocalProxy_5__getattr__, METH_O|METH_COEXIST, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_5pynba_7globals_LocalProxy = {
+static PyTypeObject __pyx_type_5pynba_7stacked_7globals_LocalProxy = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pynba.globals.LocalProxy", /*tp_name*/
-  sizeof(struct __pyx_obj_5pynba_7globals_LocalProxy), /*tp_basicsize*/
+  "pynba.stacked.globals.LocalProxy", /*tp_name*/
+  sizeof(struct __pyx_obj_5pynba_7stacked_7globals_LocalProxy), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_5pynba_7globals_LocalProxy, /*tp_dealloc*/
+  __pyx_tp_dealloc_5pynba_7stacked_7globals_LocalProxy, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -2144,18 +2141,18 @@ static PyTypeObject __pyx_type_5pynba_7globals_LocalProxy = {
   0, /*tp_hash*/
   0, /*tp_call*/
   0, /*tp_str*/
-  __pyx_tp_getattro_5pynba_7globals_LocalProxy, /*tp_getattro*/
-  __pyx_tp_setattro_5pynba_7globals_LocalProxy, /*tp_setattro*/
+  __pyx_tp_getattro_5pynba_7stacked_7globals_LocalProxy, /*tp_getattro*/
+  __pyx_tp_setattro_5pynba_7stacked_7globals_LocalProxy, /*tp_setattro*/
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_5pynba_7globals_LocalProxy, /*tp_traverse*/
-  __pyx_tp_clear_5pynba_7globals_LocalProxy, /*tp_clear*/
+  __pyx_tp_traverse_5pynba_7stacked_7globals_LocalProxy, /*tp_traverse*/
+  __pyx_tp_clear_5pynba_7stacked_7globals_LocalProxy, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_5pynba_7globals_LocalProxy, /*tp_methods*/
+  __pyx_methods_5pynba_7stacked_7globals_LocalProxy, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -2163,9 +2160,9 @@ static PyTypeObject __pyx_type_5pynba_7globals_LocalProxy = {
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_5pynba_7globals_10LocalProxy_1__init__, /*tp_init*/
+  __pyx_pw_5pynba_7stacked_7globals_10LocalProxy_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_5pynba_7globals_LocalProxy, /*tp_new*/
+  __pyx_tp_new_5pynba_7stacked_7globals_LocalProxy, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -2180,14 +2177,14 @@ static PyTypeObject __pyx_type_5pynba_7globals_LocalProxy = {
   #endif
 };
 
-static struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *__pyx_freelist_5pynba_7globals___pyx_scope_struct__timer[8];
-static int __pyx_freecount_5pynba_7globals___pyx_scope_struct__timer = 0;
+static struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *__pyx_freelist_5pynba_7stacked_7globals___pyx_scope_struct__timer[8];
+static int __pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct__timer = 0;
 
-static PyObject *__pyx_tp_new_5pynba_7globals___pyx_scope_struct__timer(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct__timer(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_5pynba_7globals___pyx_scope_struct__timer > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer)))) {
-    o = (PyObject*)__pyx_freelist_5pynba_7globals___pyx_scope_struct__timer[--__pyx_freecount_5pynba_7globals___pyx_scope_struct__timer];
-    memset(o, 0, sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct__timer > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer)))) {
+    o = (PyObject*)__pyx_freelist_5pynba_7stacked_7globals___pyx_scope_struct__timer[--__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct__timer];
+    memset(o, 0, sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -2197,41 +2194,41 @@ static PyObject *__pyx_tp_new_5pynba_7globals___pyx_scope_struct__timer(PyTypeOb
   return o;
 }
 
-static void __pyx_tp_dealloc_5pynba_7globals___pyx_scope_struct__timer(PyObject *o) {
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *p = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *)o;
+static void __pyx_tp_dealloc_5pynba_7stacked_7globals___pyx_scope_struct__timer(PyObject *o) {
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *p = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_tags);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_5pynba_7globals___pyx_scope_struct__timer < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer)))) {
-    __pyx_freelist_5pynba_7globals___pyx_scope_struct__timer[__pyx_freecount_5pynba_7globals___pyx_scope_struct__timer++] = ((struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct__timer < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer)))) {
+    __pyx_freelist_5pynba_7stacked_7globals___pyx_scope_struct__timer[__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct__timer++] = ((struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_5pynba_7globals___pyx_scope_struct__timer(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_5pynba_7stacked_7globals___pyx_scope_struct__timer(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *p = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *)o;
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *p = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *)o;
   if (p->__pyx_v_tags) {
     e = (*v)(p->__pyx_v_tags, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_5pynba_7globals___pyx_scope_struct__timer(PyObject *o) {
+static int __pyx_tp_clear_5pynba_7stacked_7globals___pyx_scope_struct__timer(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *p = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *)o;
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *p = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *)o;
   tmp = ((PyObject*)p->__pyx_v_tags);
   p->__pyx_v_tags = ((PyObject*)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct__timer = {
+static PyTypeObject __pyx_type_5pynba_7stacked_7globals___pyx_scope_struct__timer = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pynba.globals.__pyx_scope_struct__timer", /*tp_name*/
-  sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer), /*tp_basicsize*/
+  "pynba.stacked.globals.__pyx_scope_struct__timer", /*tp_name*/
+  sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_5pynba_7globals___pyx_scope_struct__timer, /*tp_dealloc*/
+  __pyx_tp_dealloc_5pynba_7stacked_7globals___pyx_scope_struct__timer, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -2252,8 +2249,8 @@ static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct__timer = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_5pynba_7globals___pyx_scope_struct__timer, /*tp_traverse*/
-  __pyx_tp_clear_5pynba_7globals___pyx_scope_struct__timer, /*tp_clear*/
+  __pyx_tp_traverse_5pynba_7stacked_7globals___pyx_scope_struct__timer, /*tp_traverse*/
+  __pyx_tp_clear_5pynba_7stacked_7globals___pyx_scope_struct__timer, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -2268,7 +2265,7 @@ static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct__timer = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_5pynba_7globals___pyx_scope_struct__timer, /*tp_new*/
+  __pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct__timer, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -2283,14 +2280,14 @@ static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct__timer = {
   #endif
 };
 
-static struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *__pyx_freelist_5pynba_7globals___pyx_scope_struct_1_decorator[8];
-static int __pyx_freecount_5pynba_7globals___pyx_scope_struct_1_decorator = 0;
+static struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *__pyx_freelist_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator[8];
+static int __pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator = 0;
 
-static PyObject *__pyx_tp_new_5pynba_7globals___pyx_scope_struct_1_decorator(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_5pynba_7globals___pyx_scope_struct_1_decorator > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator)))) {
-    o = (PyObject*)__pyx_freelist_5pynba_7globals___pyx_scope_struct_1_decorator[--__pyx_freecount_5pynba_7globals___pyx_scope_struct_1_decorator];
-    memset(o, 0, sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator)))) {
+    o = (PyObject*)__pyx_freelist_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator[--__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator];
+    memset(o, 0, sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -2300,21 +2297,21 @@ static PyObject *__pyx_tp_new_5pynba_7globals___pyx_scope_struct_1_decorator(PyT
   return o;
 }
 
-static void __pyx_tp_dealloc_5pynba_7globals___pyx_scope_struct_1_decorator(PyObject *o) {
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *p = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *)o;
+static void __pyx_tp_dealloc_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator(PyObject *o) {
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *p = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_outer_scope);
   Py_CLEAR(p->__pyx_v_func);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_5pynba_7globals___pyx_scope_struct_1_decorator < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator)))) {
-    __pyx_freelist_5pynba_7globals___pyx_scope_struct_1_decorator[__pyx_freecount_5pynba_7globals___pyx_scope_struct_1_decorator++] = ((struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator)))) {
+    __pyx_freelist_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator[__pyx_freecount_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator++] = ((struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_5pynba_7globals___pyx_scope_struct_1_decorator(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *p = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *)o;
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *p = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *)o;
   if (p->__pyx_outer_scope) {
     e = (*v)(((PyObject*)p->__pyx_outer_scope), a); if (e) return e;
   }
@@ -2324,11 +2321,11 @@ static int __pyx_tp_traverse_5pynba_7globals___pyx_scope_struct_1_decorator(PyOb
   return 0;
 }
 
-static int __pyx_tp_clear_5pynba_7globals___pyx_scope_struct_1_decorator(PyObject *o) {
+static int __pyx_tp_clear_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *p = (struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator *)o;
+  struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *p = (struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator *)o;
   tmp = ((PyObject*)p->__pyx_outer_scope);
-  p->__pyx_outer_scope = ((struct __pyx_obj_5pynba_7globals___pyx_scope_struct__timer *)Py_None); Py_INCREF(Py_None);
+  p->__pyx_outer_scope = ((struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct__timer *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->__pyx_v_func);
   p->__pyx_v_func = Py_None; Py_INCREF(Py_None);
@@ -2336,12 +2333,12 @@ static int __pyx_tp_clear_5pynba_7globals___pyx_scope_struct_1_decorator(PyObjec
   return 0;
 }
 
-static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct_1_decorator = {
+static PyTypeObject __pyx_type_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pynba.globals.__pyx_scope_struct_1_decorator", /*tp_name*/
-  sizeof(struct __pyx_obj_5pynba_7globals___pyx_scope_struct_1_decorator), /*tp_basicsize*/
+  "pynba.stacked.globals.__pyx_scope_struct_1_decorator", /*tp_name*/
+  sizeof(struct __pyx_obj_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_5pynba_7globals___pyx_scope_struct_1_decorator, /*tp_dealloc*/
+  __pyx_tp_dealloc_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -2362,8 +2359,8 @@ static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct_1_decorator = 
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_5pynba_7globals___pyx_scope_struct_1_decorator, /*tp_traverse*/
-  __pyx_tp_clear_5pynba_7globals___pyx_scope_struct_1_decorator, /*tp_clear*/
+  __pyx_tp_traverse_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator, /*tp_traverse*/
+  __pyx_tp_clear_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -2378,7 +2375,7 @@ static PyTypeObject __pyx_type_5pynba_7globals___pyx_scope_struct_1_decorator = 
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_5pynba_7globals___pyx_scope_struct_1_decorator, /*tp_new*/
+  __pyx_tp_new_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -2418,13 +2415,13 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_AttributeError, __pyx_k_AttributeError, sizeof(__pyx_k_AttributeError), 0, 0, 1, 1},
   {&__pyx_n_s_LOCAL_STACK, __pyx_k_LOCAL_STACK, sizeof(__pyx_k_LOCAL_STACK), 0, 0, 1, 1},
+  {&__pyx_n_u_LocalProxy, __pyx_k_LocalProxy, sizeof(__pyx_k_LocalProxy), 0, 1, 0, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
   {&__pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_k_Users_xavierbarbosa_Sources_pyn, sizeof(__pyx_k_Users_xavierbarbosa_Sources_pyn), 0, 0, 1, 0},
   {&__pyx_n_s_all, __pyx_k_all, sizeof(__pyx_k_all), 0, 0, 1, 1},
   {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
   {&__pyx_n_s_decorator, __pyx_k_decorator, sizeof(__pyx_k_decorator), 0, 0, 1, 1},
-  {&__pyx_n_s_enabled, __pyx_k_enabled, sizeof(__pyx_k_enabled), 0, 0, 1, 1},
   {&__pyx_n_s_enter, __pyx_k_enter, sizeof(__pyx_k_enter), 0, 0, 1, 1},
   {&__pyx_n_s_exit, __pyx_k_exit, sizeof(__pyx_k_exit), 0, 0, 1, 1},
   {&__pyx_n_s_func, __pyx_k_func, sizeof(__pyx_k_func), 0, 0, 1, 1},
@@ -2432,27 +2429,27 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_kwargs, __pyx_k_kwargs, sizeof(__pyx_k_kwargs), 0, 0, 1, 1},
   {&__pyx_n_s_local, __pyx_k_local, sizeof(__pyx_k_local), 0, 0, 1, 1},
-  {&__pyx_n_s_log, __pyx_k_log, sizeof(__pyx_k_log), 0, 0, 1, 1},
   {&__pyx_n_s_logger, __pyx_k_logger, sizeof(__pyx_k_logger), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_pynba, __pyx_k_pynba, sizeof(__pyx_k_pynba), 0, 0, 1, 1},
-  {&__pyx_n_s_pynba_globals, __pyx_k_pynba_globals, sizeof(__pyx_k_pynba_globals), 0, 0, 1, 1},
+  {&__pyx_n_s_pynba_core, __pyx_k_pynba_core, sizeof(__pyx_k_pynba_core), 0, 0, 1, 1},
+  {&__pyx_n_s_pynba_stacked_globals, __pyx_k_pynba_stacked_globals, sizeof(__pyx_k_pynba_stacked_globals), 0, 0, 1, 1},
   {&__pyx_n_s_response, __pyx_k_response, sizeof(__pyx_k_response), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_timer, __pyx_k_timer, sizeof(__pyx_k_timer), 0, 0, 1, 1},
   {&__pyx_n_s_timer_locals_decorator, __pyx_k_timer_locals_decorator, sizeof(__pyx_k_timer_locals_decorator), 0, 0, 1, 1},
   {&__pyx_n_s_timer_locals_decorator_locals_wr, __pyx_k_timer_locals_decorator_locals_wr, sizeof(__pyx_k_timer_locals_decorator_locals_wr), 0, 0, 1, 1},
   {&__pyx_n_s_warn, __pyx_k_warn, sizeof(__pyx_k_warn), 0, 0, 1, 1},
-  {&__pyx_kp_s_working_outside_of_request_conte, __pyx_k_working_outside_of_request_conte, sizeof(__pyx_k_working_outside_of_request_conte), 0, 0, 1, 0},
-  {&__pyx_kp_s_working_outside_of_request_conte_2, __pyx_k_working_outside_of_request_conte_2, sizeof(__pyx_k_working_outside_of_request_conte_2), 0, 0, 1, 0},
+  {&__pyx_kp_u_working_outside_of_request_conte, __pyx_k_working_outside_of_request_conte, sizeof(__pyx_k_working_outside_of_request_conte), 0, 1, 0, 0},
+  {&__pyx_kp_u_working_outside_of_request_conte_2, __pyx_k_working_outside_of_request_conte_2, sizeof(__pyx_k_working_outside_of_request_conte_2), 0, 1, 0, 0},
   {&__pyx_n_s_wrapper, __pyx_k_wrapper, sizeof(__pyx_k_wrapper), 0, 0, 1, 1},
   {&__pyx_n_s_wraps, __pyx_k_wraps, sizeof(__pyx_k_wraps), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -2462,82 +2459,80 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pynba/globals.pyx":34
+  /* "pynba/stacked/globals.pyx":36
  *                     timer = LOCAL_STACK.pynba.timer(**tags)
  *                 except (TypeError, AttributeError):
  *                     raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
  * 
  *                 with timer:
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_working_outside_of_request_conte); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_working_outside_of_request_conte); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pynba/globals.pyx":36
+  /* "pynba/stacked/globals.pyx":38
  *                     raise RuntimeError('working outside of request context')
  * 
  *                 with timer:             # <<<<<<<<<<<<<<
  *                     response = func(*args, **kwargs)
  *                 return response
  */
-  __pyx_tuple__2 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__2 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pynba/globals.pyx":30
+  /* "pynba/stacked/globals.pyx":32
  *         def decorator(func):
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):             # <<<<<<<<<<<<<<
  *                 try:
  *                     timer = LOCAL_STACK.pynba.timer(**tags)
  */
-  __pyx_tuple__3 = PyTuple_Pack(4, __pyx_n_s_args, __pyx_n_s_kwargs, __pyx_n_s_timer, __pyx_n_s_response); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__3 = PyTuple_Pack(4, __pyx_n_s_args, __pyx_n_s_kwargs, __pyx_n_s_timer, __pyx_n_s_response); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 4, 0, CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_wrapper, 30, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 4, 0, CO_VARARGS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_wrapper, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pynba/globals.pyx":28
+  /* "pynba/stacked/globals.pyx":30
  *             return pynba.timer(**tags)
  * 
  *         def decorator(func):             # <<<<<<<<<<<<<<
  *             @wraps(func)
  *             def wrapper(*args, **kwargs):
  */
-  __pyx_tuple__5 = PyTuple_Pack(3, __pyx_n_s_func, __pyx_n_s_wrapper, __pyx_n_s_wrapper); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__5 = PyTuple_Pack(3, __pyx_n_s_func, __pyx_n_s_wrapper, __pyx_n_s_wrapper); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_decorator, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_xavierbarbosa_Sources_pyn, __pyx_n_s_decorator, 30, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pynba/globals.pyx":50
+  /* "pynba/stacked/globals.pyx":52
  *                 logger.warn('working outside of request context render %s with %s', name, value)
  *                 return value
  *             raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
  * 
  *     def __setattr__(self, name, value):
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_working_outside_of_request_conte); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_u_working_outside_of_request_conte); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "pynba/globals.pyx":56
+  /* "pynba/stacked/globals.pyx":58
  *             setattr(LOCAL_STACK.pynba, name, value)
  *         except TypeError:
  *             raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
  * 
  *     def __delattr__(self, name):
  */
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_working_outside_of_request_conte); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_u_working_outside_of_request_conte); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "pynba/globals.pyx":62
+  /* "pynba/stacked/globals.pyx":64
  *             delattr(LOCAL_STACK.pynba, name)
  *         except TypeError:
  *             raise RuntimeError('working outside of request context')             # <<<<<<<<<<<<<<
- * 
- * pynba = LocalProxy(enabled=False)
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_s_working_outside_of_request_conte); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_working_outside_of_request_conte); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
   __Pyx_RefNannyFinishContext();
@@ -2616,14 +2611,14 @@ PyMODINIT_FUNC PyInit_globals(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_pynba__globals) {
+  if (__pyx_module_is_main_pynba__stacked__globals) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "pynba.globals")) {
-      if (unlikely(PyDict_SetItemString(modules, "pynba.globals", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pynba.stacked.globals")) {
+      if (unlikely(PyDict_SetItemString(modules, "pynba.stacked.globals", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -2635,122 +2630,108 @@ PyMODINIT_FUNC PyInit_globals(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_5pynba_7globals_LocalProxy) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_5pynba_7globals_LocalProxy.tp_print = 0;
-  if (PyObject_SetAttrString(__pyx_m, "LocalProxy", (PyObject *)&__pyx_type_5pynba_7globals_LocalProxy) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_5pynba_7globals_LocalProxy = &__pyx_type_5pynba_7globals_LocalProxy;
-  if (PyType_Ready(&__pyx_type_5pynba_7globals___pyx_scope_struct__timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_5pynba_7globals___pyx_scope_struct__timer.tp_print = 0;
-  __pyx_ptype_5pynba_7globals___pyx_scope_struct__timer = &__pyx_type_5pynba_7globals___pyx_scope_struct__timer;
-  if (PyType_Ready(&__pyx_type_5pynba_7globals___pyx_scope_struct_1_decorator) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_5pynba_7globals___pyx_scope_struct_1_decorator.tp_print = 0;
-  __pyx_ptype_5pynba_7globals___pyx_scope_struct_1_decorator = &__pyx_type_5pynba_7globals___pyx_scope_struct_1_decorator;
+  if (PyType_Ready(&__pyx_type_5pynba_7stacked_7globals_LocalProxy) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_5pynba_7stacked_7globals_LocalProxy.tp_print = 0;
+  if (PyObject_SetAttrString(__pyx_m, "LocalProxy", (PyObject *)&__pyx_type_5pynba_7stacked_7globals_LocalProxy) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_5pynba_7stacked_7globals_LocalProxy = &__pyx_type_5pynba_7stacked_7globals_LocalProxy;
+  if (PyType_Ready(&__pyx_type_5pynba_7stacked_7globals___pyx_scope_struct__timer) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_5pynba_7stacked_7globals___pyx_scope_struct__timer.tp_print = 0;
+  __pyx_ptype_5pynba_7stacked_7globals___pyx_scope_struct__timer = &__pyx_type_5pynba_7stacked_7globals___pyx_scope_struct__timer;
+  if (PyType_Ready(&__pyx_type_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator.tp_print = 0;
+  __pyx_ptype_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator = &__pyx_type_5pynba_7stacked_7globals___pyx_scope_struct_1_decorator;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pynba/globals.pyx":10
- * """
+  /* "pynba/stacked/globals.pyx":11
+ * from __future__ import absolute_import, unicode_literals
  * 
- * from functools import wraps             # <<<<<<<<<<<<<<
- * from .local import LOCAL_STACK
- * from .log import logger
- */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_wraps);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_wraps);
-  __Pyx_GIVEREF(__pyx_n_s_wraps);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_functools, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_wraps); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_wraps, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "pynba/globals.pyx":11
- * 
- * from functools import wraps
  * from .local import LOCAL_STACK             # <<<<<<<<<<<<<<
- * from .log import logger
+ * from functools import wraps
+ * from pynba.core import logger
+ */
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_INCREF(__pyx_n_s_LOCAL_STACK);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_LOCAL_STACK);
+  __Pyx_GIVEREF(__pyx_n_s_LOCAL_STACK);
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_local, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_LOCAL_STACK, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "pynba/stacked/globals.pyx":12
+ * 
+ * from .local import LOCAL_STACK
+ * from functools import wraps             # <<<<<<<<<<<<<<
+ * from pynba.core import logger
  * 
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(__pyx_n_s_LOCAL_STACK);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_LOCAL_STACK);
-  __Pyx_GIVEREF(__pyx_n_s_LOCAL_STACK);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_local, __pyx_t_2, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_INCREF(__pyx_n_s_wraps);
+  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_wraps);
+  __Pyx_GIVEREF(__pyx_n_s_wraps);
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_functools, __pyx_t_2, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_LOCAL_STACK); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_wraps); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_LOCAL_STACK, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_wraps, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pynba/globals.pyx":12
- * from functools import wraps
+  /* "pynba/stacked/globals.pyx":13
  * from .local import LOCAL_STACK
- * from .log import logger             # <<<<<<<<<<<<<<
+ * from functools import wraps
+ * from pynba.core import logger             # <<<<<<<<<<<<<<
  * 
- * __all__ = ['pynba']
+ * __all__ = ['LocalProxy']
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_logger);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_logger);
   __Pyx_GIVEREF(__pyx_n_s_logger);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_log, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pynba_core, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_logger); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_logger); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_logger, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_logger, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pynba/globals.pyx":14
- * from .log import logger
+  /* "pynba/stacked/globals.pyx":15
+ * from pynba.core import logger
  * 
- * __all__ = ['pynba']             # <<<<<<<<<<<<<<
+ * __all__ = ['LocalProxy']             # <<<<<<<<<<<<<<
  * 
- * cdef class LocalProxy(object):
+ * 
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(__pyx_n_s_pynba);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_pynba);
-  __Pyx_GIVEREF(__pyx_n_s_pynba);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 14; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_INCREF(__pyx_n_u_LocalProxy);
+  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_u_LocalProxy);
+  __Pyx_GIVEREF(__pyx_n_u_LocalProxy);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pynba/globals.pyx":64
- *             raise RuntimeError('working outside of request context')
- * 
- * pynba = LocalProxy(enabled=False)             # <<<<<<<<<<<<<<
- */
-  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_enabled, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_5pynba_7globals_LocalProxy)), __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pynba, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "pynba/globals.pyx":1
- * # -*- coding: utf-8 -*-             # <<<<<<<<<<<<<<
- * """
+  /* "pynba/stacked/globals.pyx":1
+ * """             # <<<<<<<<<<<<<<
  *     Pynba
+ *     ~~~~~
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /*--- Wrapped vars code ---*/
 
@@ -2760,11 +2741,11 @@ PyMODINIT_FUNC PyInit_globals(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pynba.globals", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pynba.stacked.globals", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pynba.globals");
+    PyErr_SetString(PyExc_ImportError, "init pynba.stacked.globals");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

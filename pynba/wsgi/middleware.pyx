@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,8 +6,13 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from .reporter import Reporter
+from __future__ import absolute_import, unicode_literals
+
 from .ctx import RequestContext
+from pynba.core import Reporter
+
+__all__ = ['PynbaMiddleware']
+
 
 cdef class PynbaMiddleware(object):
     """Used to decorate main apps.

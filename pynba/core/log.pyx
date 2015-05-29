@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,9 +6,11 @@
     :license: MIT, see LICENSE for more details.
 """
 
-__all__ = ['logger']
+from __future__ import absolute_import, unicode_literals
 
 import logging
+
+__all__ = ['logger']
 
 logger = logging.getLogger('pynba')
 if not logger.handlers:

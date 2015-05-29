@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -6,6 +5,8 @@
     :copyright: (c) 2015 by Xavier Barbosa.
     :license: MIT, see LICENSE for more details.
 """
+
+from __future__ import absolute_import, unicode_literals
 
 try:
     from greenlet import getcurrent as get_ident
@@ -22,7 +23,8 @@ except ImportError:
             """
             return -1
 
-__all__ = ['LOCAL_STACK']
+__all__ = ['LocalStack', 'LOCAL_STACK']
+
 
 cdef class LocalStack(object):
     cdef dict stacked

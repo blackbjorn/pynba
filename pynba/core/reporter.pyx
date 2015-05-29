@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,10 +6,14 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from socket import socket, AF_INET, SOCK_DGRAM, gaierror
+from __future__ import absolute_import, unicode_literals
+
 import collections
 from .log import logger
 from .message import dumps
+from socket import socket, AF_INET, SOCK_DGRAM
+
+__all__ = ['Reporter', 'flattener']
 
 
 cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
@@ -174,8 +177,10 @@ cpdef flattener(dict tags):
 
     """
     cdef set data
+    cdef char* ns = ''
+    uns = str(ns.decode('UTF-8'))
 
-    data = set(flatten(tags, ''))
+    data = set(flatten(tags, uns))
     return sorted([(key, str(value)) for key, value in data])
 
 cdef inline list flatten(dict tags, str namespace):

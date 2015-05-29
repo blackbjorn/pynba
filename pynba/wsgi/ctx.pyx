@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,9 +6,13 @@
     :license: MIT, see LICENSE for more details.
 """
 
+from __future__ import absolute_import, unicode_literals
+
 import resource
-from .local import LOCAL_STACK
-from .collector import DataCollector
+from pynba.core import DataCollector
+from pynba.stacked import LOCAL_STACK
+
+__all__ = ['RequestContext']
 
 
 cdef class RequestContext(object):

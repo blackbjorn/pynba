@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,9 +6,12 @@
     :license: MIT, see LICENSE for more details.
 """
 
-import functools
-from .log import logger
+from __future__ import absolute_import, unicode_literals
 
+import functools
+import os
+import time
+from .log import logger
 
 cdef extern from "sys/time.h":
     ctypedef long time_t
