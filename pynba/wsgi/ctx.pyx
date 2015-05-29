@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
     Pynba
     ~~~~~
@@ -38,7 +40,7 @@ cdef class RequestContext(object):
         def __get__(self):
             cdef str out
             cdef object pynba
-            out = self.config.get('prefix', '')
+            out = config.get('prefix', '')
 
             if self.pynba:
                 pynba = self.pynba
@@ -88,9 +90,9 @@ cdef class RequestContext(object):
         #: will keep a snap of :func:`resource.getrusage`
         self.resources = None
 
-        self._scriptname = environ.get('PATH_INFO', '')
-        self._hostname = environ.get('SERVER_NAME', None)
-        self._schema = environ.get('wsgi.url_scheme', None)
+        self._scriptname = <str>on.get('PATH_INFO', '')
+        self._hostname = <str>on.get('SERVER_NAME', None)
+        self._schema = <str>on.get('wsgi.url_scheme', None)
 
     cpdef push(self):
         """Pushes current context into local stack.

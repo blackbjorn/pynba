@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
     Pynba
     ~~~~~
@@ -177,10 +179,11 @@ cpdef flattener(dict tags):
 
     """
     cdef set data
-    cdef char* ns = ''
-    uns = str(ns.decode('UTF-8'))
+    cdef str ns
 
-    data = set(flatten(tags, uns))
+    ns = ''
+
+    data = set(flatten(tags, ns))
     return sorted([(key, str(value)) for key, value in data])
 
 cdef inline list flatten(dict tags, str namespace):
