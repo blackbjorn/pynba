@@ -121,7 +121,9 @@ setup(
 
     # see https://www.python.org/dev/peps/pep-0426/#environment-markers
     extras_require={
-        ':python_version<="3.3"': ['enum34'],
+        ':python_version=="2.7"': ['enum34'],
+        ':python_version=="3.2"': ['enum34'],
+        ':python_version=="3.3"': ['enum34'],
     },
     tests_require=['nose-exclude'],
     ext_modules=extension_maker(),
