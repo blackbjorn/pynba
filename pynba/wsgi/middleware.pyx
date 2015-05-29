@@ -23,8 +23,10 @@ cdef class PynbaMiddleware(object):
     """
 
     cdef object _default_ctx
+    cdef object _default_reporter
     cdef public object app
     cdef public object reporter
+    cdef public object ctx_factory
     cdef public object config
 
     property default_ctx:
@@ -39,9 +41,22 @@ cdef class PynbaMiddleware(object):
         def __del__(self):
             self._default_ctx = None
 
-    def __init__(self, object app, object address, **config):
+    property default_reporter:
+        def __get__(self):
+            if self._default_reporter:
+                return self._default_reporter
+            return Reporter
+
+        def __set__(self, ctx):
+            self._default_reporter = ctx
+
+        def __del__(self):
+            self._default_reporter = None
+
+    def __init__(self, object app, object address, object reporter=None, object ctx_factory=None, **config):
         self.app = app
-        self.reporter = Reporter(address)
+        self.reporter = reporter or self.default_reporter(address)
+        self.ctx_factory = ctx_factory or self.default_ctx
         self.config = config
 
     def __call__(self, object environ, object start_response):
@@ -53,6 +68,6 @@ cdef class PynbaMiddleware(object):
         :param environ: The WSGI environ mapping.
         :return: will return a new instance of :class:`~.ctx.RequestContext`
         """
-        return self.default_ctx(self.reporter, environ, **self.config)
+        return self.ctx_factory(self.reporter, environ, **self.config)
 
 # PynbaMiddleware.default_ctx = RequestContext

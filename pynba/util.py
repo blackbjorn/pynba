@@ -38,7 +38,7 @@ class ScriptMonitor(object):
     default_reporter = Reporter
 
     def __init__(self, address, hostname=None, scriptname=None,
-                 servername=None, reporter=None, tags=None):
+                 servername=None, reporter=None, tags=None, autostart=True):
         self.reporter = reporter or self.default_reporter(address)
         self.collector = DataCollector(tags=tags or {})
         self.hostname = hostname or socket.gethostname()
@@ -47,7 +47,9 @@ class ScriptMonitor(object):
         self.resources = None
         self.ru_utime = None
         self.ru_stime = None
-        self.start()
+
+        if autostart:
+            self.start()
 
     def start(self):
         """Starts"""

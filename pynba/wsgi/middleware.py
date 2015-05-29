@@ -21,13 +21,18 @@ class PynbaMiddleware(object):
         app (callable): The main WSGI app that will be monitored.
         address (str): The address to the UDP server.
         config (dict): basically optional parameters
+        reporter (Reporter): A custom reporter
+        ctx_factory (RequestContext): A custom request_context
     """
 
     default_ctx = RequestContext
+    default_reporter = Reporter
 
-    def __init__(self, app, address, **config):
+    def __init__(self, app, address, reporter=None, ctx_factory=None, **config):
         self.app = app
-        self.reporter = Reporter(address)
+        self.address = address
+        self.reporter = reporter or self.default_reporter(address)
+        self.ctx_factory = ctx_factory or self.default_ctx
         self.config = config
 
     def __call__(self, environ, start_response):
@@ -39,4 +44,4 @@ class PynbaMiddleware(object):
         :param environ: The WSGI environ mapping.
         :return: will return a new instance of :class:`~.ctx.RequestContext`
         """
-        return self.default_ctx(self.reporter, environ, **self.config)
+        return self.ctx_factory(self.reporter, environ, **self.config)
