@@ -1,17 +1,15 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
-
+import unittest
 import logging
 from collections import defaultdict
 
-from pynba.log import logger
-from pynba.collector import DataCollector
-from pynba.reporter import Reporter
+from pynba.core import logger
+from pynba.core import DataCollector
+from pynba.core import Reporter
+
 
 class MockLoggingHandler(logging.Handler):
     """Mock logging handler to check for expected logs.
+
     <http://stackoverflow.com/a/1049375>
     <http://www.domenkozar.com/category/mock/>
     """
@@ -50,10 +48,10 @@ class LogTestCase(unittest.TestCase):
         logger.critical('trololo')
 
         assert self.handler.messages == {
-            'debug': ['foo'], 
-            'info': ['bar'], 
-            'warning': ['baz'], 
-            'critical': ['trololo'], 
+            'debug': ['foo'],
+            'info': ['bar'],
+            'warning': ['baz'],
+            'critical': ['trololo'],
             'error': ['qux']
             }
 

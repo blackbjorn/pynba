@@ -1,14 +1,12 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
-
-from pynba.globals import pynba
-from pynba.local import LOCAL_STACK
+import unittest
 from contextlib import contextmanager
+from pynba.stacked import LOCAL_STACK, LocalProxy
+
 
 class GlobalTestCase(unittest.TestCase):
     def test_context(self):
+        pynba = LocalProxy(enabled=False)
+
         @pynba.timer(foo="bar")
         def foo():
             """docstring for foo"""

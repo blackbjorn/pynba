@@ -1,9 +1,6 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
+from pynba.core import DataCollector
 
-from pynba.collector import DataCollector
 
 class CollectorTestCase(unittest.TestCase):
     def test_data_collector(self):
@@ -12,43 +9,42 @@ class CollectorTestCase(unittest.TestCase):
         schema = "http"
         tags = {"baz": "qux"}
         collector = DataCollector(scriptname, hostname, schema, tags)
-        self.assertTrue(collector.enabled)
-        self.assertEqual(collector.timers, set())
-        self.assertEqual(collector.scriptname, scriptname)
-        self.assertEqual(collector.hostname, hostname)
-        self.assertEqual(collector.schema, schema)
-        self.assertEqual(collector.tags, tags)
-        self.assertEqual(collector.dt_start, None)
-        self.assertFalse(collector.started)
-        self.assertEqual(collector.elapsed, None)
+        assert collector.enabled is True
+        assert collector.timers == set()
+        assert collector.scriptname == scriptname
+        assert collector.hostname == hostname
+        assert collector.schema == schema
+        assert collector.tags == tags
+        assert collector.dt_start is None
+        assert collector.started is False
+        assert collector.elapsed is None
         with self.assertRaises(RuntimeError):
             collector.stop()
 
         collector.start()
-        self.assertTrue(collector.started)
-        self.assertEqual(collector.elapsed, None)
+        assert collector.started is True
+        assert collector.elapsed is None
         with self.assertRaises(RuntimeError):
             collector.start()
         collector.stop()
-        self.assertNotEqual(collector.elapsed, None)
+        assert collector.elapsed is not None
 
     def test_linked_timer(self):
         collector = DataCollector()
         timer = collector.timer(foo='bar')
 
-        self.assertIn(timer, collector.timers)
+        assert timer in collector.timers
         cloned = timer.clone()
-        self.assertIn(cloned, collector.timers)
+        assert cloned in collector.timers
 
         timer.delete()
-        self.assertNotIn(timer, collector.timers)
-        self.assertIn(cloned, collector.timers)
+        assert timer not in collector.timers
+        assert cloned in collector.timers
 
         cloned.delete()
-        self.assertNotIn(cloned, collector.timers)
-
+        assert cloned not in collector.timers
 
         timer2 = collector.timer(foo='bar')
-        self.assertIn(timer2, collector.timers)
+        assert timer2 in collector.timers
         collector.flush()
-        self.assertNotIn(timer2, collector.timers)
+        assert timer2 not in collector.timers

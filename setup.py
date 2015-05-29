@@ -1,6 +1,7 @@
+import os
+import platform
 from setuptools import setup, find_packages, Extension, Command
 import sys
-import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
@@ -11,9 +12,6 @@ version = '0.4.3'
 install_requires = [
     'six'
 ]
-
-if sys.version_info < (2, 7):
-    install_requires += ['unittest2']
 
 
 def loop(directory, module=None):
@@ -31,15 +29,17 @@ def loop(directory, module=None):
 def extension_maker():
     extensions = []
 
-    for path, name in loop('src/pynba', 'pynba'):
-        if path.endswith(".c"):
-            extensions.append(
-                Extension(
-                    name=name,
-                    sources=[path],
-                    include_dirs=['src', "."],
+    root = os.path.join(here, 'pynba')
+    if platform.python_implementation() == 'CPython':
+        for path, name in loop(root, 'pynba'):
+            if path.endswith(".c"):
+                extensions.append(
+                    Extension(
+                        name=name,
+                        sources=[path],
+                        include_dirs=['src', "."],
+                    )
                 )
-            )
     return extensions
 
 
@@ -96,7 +96,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
@@ -119,6 +118,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
+
+    # see https://www.python.org/dev/peps/pep-0426/#environment-markers
+    extras_require={
+        ':python_version<="3.3"': ['enum34'],
+    },
     tests_require=['nose-exclude'],
     ext_modules=extension_maker(),
     cmdclass = {'cythonize': CythonizeCommand},

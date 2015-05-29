@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Pynba
     ~~~~~
@@ -7,83 +6,77 @@
     :license: MIT, see LICENSE for more details.
 """
 
+from __future__ import absolute_import, unicode_literals
+
+__all__ = ['DataCollector', 'Timer']
+
 import functools
+import os
+import time
 from .log import logger
+from enum import Enum
+
+# time.clock() has better accuracy in windows
+now = time.clock if os.name == 'nt' else time.time
 
 
-cdef extern from "sys/time.h":
-    ctypedef long time_t
-    struct timeval:
-        time_t tv_sec
-        time_t tv_usec
-    struct timezone:
-        pass
-    int gettimeofday(timeval *tv, timezone *tz)
-
-
-cdef enum RunningState:
-    initialized = 0,
-    started = 1,
+class RunningState(Enum):
+    initialized = 0
+    started = 1
     stoped = 2
 
 
-cdef class Timed(object):
+class Timed:
 
-    cdef public object tags
-    cdef RunningState _state
-    cdef timeval _tt_start
-    cdef timeval _tt_end
-    cdef long _tt_elapsed
+    def __init__(self):
+        self._state = RunningState.initialized
 
-    def __cinit__(self):
-        self._state = initialized
-
-    property started:
+    @property
+    def started(self):
         """Tell if timer is started
         """
-        def __get__(self):
-            return self._state == started
+        return self._state == RunningState.started
 
-    property elapsed:
+    @property
+    def elapsed(self):
         """Returns the elapsed time in seconds
         """
-        def __get__(self):
-            if self._state == stoped:
-                return <float>self._tt_elapsed / 1000000
-            return None
+        if self._state == RunningState.stoped:
+            return self._tt_elapsed
 
-    property dt_start:
-        """Returns the elapsed time in seconds"""
-        def __get__(self):
-            cdef long time
-            if self._state != initialized:
-                time = self._tt_start.tv_sec * 1000000 + self._tt_start.tv_usec
-                return <float>time / 1000000
-            return None
+    @property
+    def dt_start(self):
+        """Returns the elapsed time in seconds
+        """
+        if self._state != RunningState.initialized:
+            return self._tt_start
+        return None
 
-    cdef _start(self):
-        """Starts timer"""
-        if self._state == started:
+    def _start(self):
+        """Starts timer
+        """
+        if self._state == RunningState.started:
             raise RuntimeError('Already started')
-        self._state = started
-        gettimeofday(&self._tt_start, NULL)
+        self._state = RunningState.started
+        self._tt_start = now()
 
-    cdef _stop(self):
-        """Stops timer"""
-        if self._state != started:
+    def _stop(self):
+        """Stops timer
+        """
+        if self._state != RunningState.started:
             raise RuntimeError('Not started')
-        gettimeofday(&self._tt_end, NULL)
-        self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
-        self._state = stoped
+        self._tt_end = now()
+        self._tt_elapsed = self._tt_end - self._tt_start
+        self._state = RunningState.stoped
 
-    cdef _flush(self):
+    def _flush(self):
         """Flushs.
         """
-        gettimeofday(&self._tt_start, NULL)
-        self._state = started
+        self._state = RunningState.started
+        self._tt_start = now()
 
 
-cdef class Timer(Timed):
+class Timer(Timed):
     """
     Properties:
         tags (dict): tags for the current timer
@@ -102,10 +95,7 @@ cdef class Timer(Timed):
 
     """
 
-    cdef public object data
-    cdef DataCollector parent
-
-    def __init__(self, object tags, DataCollector parent=None):
+    def __init__(self, tags, parent=None):
         """
         Tags values can be any scalar, mapping, sequence or callable.
         In case of a callable, rendered value must be a sequence.
@@ -116,20 +106,20 @@ cdef class Timer(Timed):
                          be a sequence.
             parent (DataCollector): attached data collector
         """
+        Timed.__init__(self)
         self.tags = dict(tags)
         self.parent = parent
         self.data = None
 
-    cpdef delete(self):
+    def delete(self):
         """Discards timer from parent
         """
         if self.parent:
             self.parent.timers.discard(self)
 
-    cpdef clone(self):
+    def clone(self):
         """Clones timer
         """
-        cdef Timer instance
         instance = Timer(self.tags, self.parent)
         if self.data:
             instance.data = self.data
@@ -139,19 +129,21 @@ cdef class Timer(Timed):
         return instance
 
     def start(self):
-        """Starts timer"""
+        """Starts timer
+        """
         self._start()
         return self
 
     def stop(self):
-        """Stops timer"""
+        """Stops timer
+        """
         self._stop()
         return self
 
-    cpdef __enter__(self):
+    def __enter__(self):
         """Acts as a context manager.
 
-        Automatically starts timer
+        Automatically starts timer.
         Example::
 
             with pynba.timer(foo=bar) as timer:
@@ -162,7 +154,7 @@ cdef class Timer(Timed):
             self.start()
         return self
 
-    def __exit__(self, object exc_type, object exc_value, object traceback):
+    def __exit__(self, exc_type, exc_value, traceback):
         """Closes context manager.
 
         Automatically stops timer
@@ -170,7 +162,7 @@ cdef class Timer(Timed):
         if self.started:
             self.stop()
 
-    def __call__(self, object func):
+    def __call__(self, func):
         """Acts as a decorator.
 
         Automatically starts and stops timer's clone.
@@ -188,12 +180,10 @@ cdef class Timer(Timed):
         return wrapper
 
     def __repr__(self):
-        cdef char* label
-        cdef float period
-        if self._state == stoped:
+        if self._state == RunningState.stoped:
             label = ' elapsed:'
             period = self.elapsed
-        elif self._state == started:
+        elif self._state == RunningState.started:
             label = ' started:'
             period = self.dt_start
         else:
@@ -206,7 +196,7 @@ cdef class Timer(Timed):
             label, period)
 
 
-cdef class DataCollector(Timed):
+class DataCollector(Timed):
     """
     This is the main data container.
 
@@ -230,16 +220,8 @@ cdef class DataCollector(Timed):
 
     """
 
-    cdef public bint enabled
-    cdef public set timers
-    cdef public str scriptname
-    cdef public str hostname
-    cdef public object document_size
-    cdef public object memory_peak
-    cdef public object memory_footprint
-    cdef public str schema
-
-    def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
+    def __init__(self, scriptname=None, hostname=None, schema=None, tags=None):
+        Timed.__init__(self)
         self.enabled = True
         self.timers = set()
         self.scriptname = scriptname
@@ -262,7 +244,6 @@ cdef class DataCollector(Timed):
     def stop(self):
         """Stops current elapsed time and every attached timers.
         """
-        cdef Timer timer
         self._stop()
         for timer in self.timers:
             if timer.started:
@@ -272,7 +253,6 @@ cdef class DataCollector(Timed):
     def timer(self, **tags):
         """Factory new timer.
         """
-        cdef Timer timer
         timer = Timer(tags, self)
         self.timers.add(timer)
         return timer
@@ -287,4 +267,3 @@ cdef class DataCollector(Timed):
         self._flush()
         self.timers.clear()
         return self
-

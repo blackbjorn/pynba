@@ -1,12 +1,8 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
+from pynba.stacked import LOCAL_STACK
+from pynba.wsgi import pynba
+from pynba.wsgi import RequestContext
 
-from pynba.ctx import RequestContext
-from pynba.collector import DataCollector
-from pynba.globals import pynba
-from pynba.local import LOCAL_STACK
 
 class ContextTestCase(unittest.TestCase):
     def test_config(self):
@@ -44,11 +40,11 @@ class ContextTestCase(unittest.TestCase):
         with RequestContext(reporter, environ) as ctx:
             assert pynba.enabled
             timer = pynba.timer(foo='bar')
-            self.assertIn(timer, pynba.timers)
+            assert timer in pynba.timers
 
         ctx.flush()
         with self.assertRaises((RuntimeError, AttributeError)):
-            self.assertIn(timer, pynba.timers)
+            assert timer in pynba.timers
 
         with ctx:
             ctx.flush()

@@ -1,10 +1,6 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
+from pynba.core import dumps, cast
 
-from pynba.message import dumps, cast
-from six import binary_type
 
 class ProtoTestCase(unittest.TestCase):
     def test_hostname(self):
@@ -14,26 +10,30 @@ class ProtoTestCase(unittest.TestCase):
         assert cast('\x12\nserver.lan') == dumps(server_name='server.lan')
 
     def test_script_name(self):
-        assert cast('\x1a\x05/path') == dumps(script_name = '/path')
+        assert cast('\x1a\x05/path') == dumps(script_name='/path')
 
     def test_request_count(self):
-        assert cast(' \x01') == dumps(request_count = 1)
-        assert cast(' \x96\x01') == dumps(request_count = 150)
-        assert cast(' \xa7\x1f') == dumps(request_count = 4007)
-        assert cast(' \x87\x92\x8a\xf7\x0e') == dumps(request_count = 4007823623)
+        assert cast(' \x01') == dumps(request_count=1)
+        assert cast(' \x96\x01') == dumps(request_count=150)
+        assert cast(' \xa7\x1f') == dumps(request_count=4007)
+        assert cast(' \x87\x92\x8a\xf7\x0e') == dumps(request_count=4007823623)
 
     def test_request_time(self):
-        assert cast(b'=\xf86M>') == dumps(request_time = 0.200405)
+        assert cast(b'=\xf86M>') == dumps(request_time=0.200405)
 
     def test_dictionary(self):
-        assert cast('z\x03fooz\x03barz\x03baz') == dumps(dictionary = ['foo', 'bar', 'baz'])
+        casted = cast('z\x03fooz\x03barz\x03baz')
+        assert casted == dumps(dictionary=['foo', 'bar', 'baz'])
 
     def test_timer_hit_count(self):
-        assert cast('P*P\xe8\x07P\x02') == dumps(timer_hit_count = [42, 1000, 2])
+        assert cast('P*P\xe8\x07P\x02') == dumps(timer_hit_count=[42, 1000, 2])
 
     def test_timer_value(self):
-        assert cast(b']ff(B]\xcd\xcc\xcc=]ff\x06@') == dumps(timer_value = [42.1, .1000, 2.1])
+        casted = cast(b']ff(B]\xcd\xcc\xcc=]ff\x06@')
+        assert casted == dumps(timer_value=[42.1, .1000, 2.1])
 
     def test_mix_1(self):
-        assert cast('\n\x0bexample.com \x17z\x03fooz\x03barz\x03baz') == dumps(
-            hostname='example.com', request_count=23, dictionary=['foo', 'bar' , 'baz'])
+        casted = cast('\n\x0bexample.com \x17z\x03fooz\x03barz\x03baz')
+        assert casted == dumps(hostname='example.com',
+                               request_count=23,
+                               dictionary=['foo', 'bar', 'baz'])

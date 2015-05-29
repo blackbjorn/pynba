@@ -1,11 +1,8 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
-
+import unittest
 from pynba.util import ScriptMonitor
-from multiprocessing import Process
-from time import sleep
+# from multiprocessing import Process
+# from time import sleep
+
 
 class ScriptMonitorCase(unittest.TestCase):
     def test_main(self):
@@ -15,7 +12,7 @@ class ScriptMonitorCase(unittest.TestCase):
 
         assert len(monitor.collector.timers) == 0
 
-        timer = monitor.timer(tag1="foo")
+        timer = monitor.timer(tag1="foo")  # noqa
         assert len(monitor.collector.timers) == 1
 
         monitor.flush()

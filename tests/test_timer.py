@@ -1,49 +1,46 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
+from pynba.core import Timer
 
-from pynba.collector import Timer
 
 class TimerTestCase(unittest.TestCase):
     def test_timer(self):
         def runner(timer):
-            self.assertFalse(timer.started)
-            self.assertEqual(timer.elapsed, None)
+            assert timer.started is False
+            assert timer.elapsed is None
 
             with self.assertRaises(RuntimeError):
                 timer.stop()
 
             timer.start()
-            self.assertEqual(timer.elapsed, None)
-            self.assertTrue(timer.started)
+            assert timer.elapsed == None
+            assert timer.started is True
             with self.assertRaises(RuntimeError):
                 timer.start()
 
             timer.stop()
-            self.assertFalse(timer.started)
-            self.assertIsInstance(timer.elapsed, float)
+            assert timer.started is False
+            assert isinstance(timer.elapsed, float)
 
-            self.assertEqual(timer.tags, {'foo': 'bar'})
+            assert timer.tags == {'foo': 'bar'}
 
         timer = Timer({"foo": "bar"})
 
         runner(timer)
 
         cloned = timer.clone()
-        self.assertIsNot(timer, cloned)
+        assert timer is not cloned
 
         runner(cloned)
 
     def test_timer_context(self):
         timer = Timer({"foo": "bar"})
-        self.assertFalse(timer.started)
+        assert timer.started is False
         with timer as t:
-            self.assertIs(timer, t)
-            self.assertTrue(t.started)
+            assert timer is t
+            assert t.started is True
 
-        self.assertIs(timer, t)
-        self.assertFalse(t.started)
+        assert timer is t
+        assert t.started is False
 
     def test_timer_decorator(self):
         def runner():

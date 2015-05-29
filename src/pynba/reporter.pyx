@@ -109,8 +109,9 @@ cpdef Reporter_prepare(servername, hostname, scriptname, elapsed, list timers,
 cdef class Reporter(object):
     """Formats and send report to pinba server.
 
-    :param address: the address to the udp server.
-    :param raise_on_fail: raise exception on fail.
+    Properties:
+        address (str): the address to the udp server.
+        raise_on_fail (bool): raise exception on fail.
     """
 
     cdef public object address
@@ -178,7 +179,9 @@ cpdef flattener(dict tags):
     return sorted([(key, str(value)) for key, value in data])
 
 cdef inline list flatten(dict tags, str namespace):
-    """Flatten recursively"""
+    """Flatten recursively
+    """
+
     cdef object pref
     cdef object key
     cdef object value

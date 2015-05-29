@@ -1,9 +1,6 @@
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
+from pynba.core import flattener
 
-from pynba.reporter import flattener
 
 class ReporterTestCase(unittest.TestCase):
     def test_flattener(self):
@@ -12,6 +9,7 @@ class ReporterTestCase(unittest.TestCase):
         assert flattener({'foo': [12]}) == [('foo', '12')]
         assert flattener({'foo': [12]}) == [('foo', '12')]
         assert flattener({'foo': {'foo': [12]}}) == [('foo.foo', '12')]
-        assert flattener({'foo': lambda : ['bar', 'baz']}) == [('foo', 'bar'), ('foo', 'baz')]
+        assert flattener({'foo': lambda: ['bar', 'baz']}) == [('foo', 'bar'),
+                                                              ('foo', 'baz')]
         assert flattener({'foo': {42: [12]}}) == [('foo.42', '12')]
         assert flattener({'foo': 'bar'}) == [('foo', 'bar')]
