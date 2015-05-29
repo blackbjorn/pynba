@@ -19,7 +19,7 @@ __all__ = ['LocalProxy']
 class LocalProxy(object):
 
     def __init__(self, **defaults):
-        super(LocalProxy, self).__setattr__('defaults', defaults)
+        object.__setattr__(self, 'defaults', defaults)
 
     def timer(self, **tags):
         pynba = LOCAL_STACK.pynba

@@ -37,9 +37,10 @@ class RequestContext(object):
         #: will keep a snap of :func:`resource.getrusage`
         self.resources = None
 
-        self._scriptname = environ.get('PATH_INFO', '')
         self._hostname = environ.get('SERVER_NAME', None)
         self._schema = environ.get('wsgi.url_scheme', None)
+        self._scriptname = environ.get('PATH_INFO', '')
+        self._servername = ''
 
     @property
     def scriptname(self):
