@@ -246,7 +246,7 @@ cdef class DataCollector(Timed):
     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
         self.enabled = True
         self.timers = set()
-        self.scriptname = scriptname
+        self.scriptname = <str>scriptname
         self.hostname = hostname
         self.schema = schema
         self.tags = dict(tags or {})

@@ -3498,7 +3498,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
  *     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
  *         self.enabled = True             # <<<<<<<<<<<<<<
  *         self.timers = set()
- *         self.scriptname = scriptname
+ *         self.scriptname = <str>scriptname
  */
   __pyx_v_self->enabled = 1;
 
@@ -3506,7 +3506,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
  *     def __init__(self, object scriptname=None, object hostname=None, object schema=None, object tags=None):
  *         self.enabled = True
  *         self.timers = set()             # <<<<<<<<<<<<<<
- *         self.scriptname = scriptname
+ *         self.scriptname = <str>scriptname
  *         self.hostname = hostname
  */
   __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3520,11 +3520,10 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   /* "pynba/core/collector.pyx":249
  *         self.enabled = True
  *         self.timers = set()
- *         self.scriptname = scriptname             # <<<<<<<<<<<<<<
+ *         self.scriptname = <str>scriptname             # <<<<<<<<<<<<<<
  *         self.hostname = hostname
  *         self.schema = schema
  */
-  if (!(likely(PyString_CheckExact(__pyx_v_scriptname))||((__pyx_v_scriptname) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_scriptname)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_scriptname;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -3535,7 +3534,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
 
   /* "pynba/core/collector.pyx":250
  *         self.timers = set()
- *         self.scriptname = scriptname
+ *         self.scriptname = <str>scriptname
  *         self.hostname = hostname             # <<<<<<<<<<<<<<
  *         self.schema = schema
  *         self.tags = dict(tags or {})
@@ -3550,7 +3549,7 @@ static int __pyx_pf_5pynba_4core_9collector_13DataCollector___init__(struct __py
   __pyx_t_1 = 0;
 
   /* "pynba/core/collector.pyx":251
- *         self.scriptname = scriptname
+ *         self.scriptname = <str>scriptname
  *         self.hostname = hostname
  *         self.schema = schema             # <<<<<<<<<<<<<<
  *         self.tags = dict(tags or {})
