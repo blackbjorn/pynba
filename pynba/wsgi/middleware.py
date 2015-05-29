@@ -28,7 +28,8 @@ class PynbaMiddleware(object):
     default_ctx = RequestContext
     default_reporter = Reporter
 
-    def __init__(self, app, address, reporter=None, ctx_factory=None, **config):
+    def __init__(self, app, address, reporter=None, ctx_factory=None,
+                 **config):
         self.app = app
         self.address = address
         self.reporter = reporter or self.default_reporter(address)
