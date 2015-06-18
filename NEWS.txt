@@ -88,10 +88,10 @@ News
 
 * fix util.ScriptMonitor tags
 
-0.5.0
+0.5.4
 -----
 
-*Release date: 29-May-2015*
+*Release date: 18-Jun-2015*
 
 * PyPy support !
 * forked from iscool_e.pynba

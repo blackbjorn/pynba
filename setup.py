@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
-version = '0.5.0'
+version = '0.5.4'
 
 install_requires = [
     'six'
@@ -29,15 +29,13 @@ def loop(directory, module=None):
 def extension_maker():
     extensions = []
 
-    root = os.path.join(here, 'pynba')
     if platform.python_implementation() == 'CPython':
-        for path, name in loop(root, 'pynba'):
+        for path, name in loop('pynba', 'pynba'):
             if path.endswith(".c"):
-                extensions.append(
+                    extensions.append(
                     Extension(
                         name=name,
-                        sources=[path],
-                        include_dirs=['.'],
+                        sources=[path]
                     )
                 )
     return extensions
@@ -110,6 +108,7 @@ setup(
         "Topic :: System :: Monitoring",
         "Topic :: Utilities"
     ],
+    packages=find_packages(),
     keywords='pinba wsgi monitoring',
     author='Xavier Barbosa',
     author_email='clint.northwood@gmail.com',
