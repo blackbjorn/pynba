@@ -124,7 +124,7 @@ setup(
         ':python_version=="3.2"': ['enum34'],
         ':python_version=="3.3"': ['enum34'],
     },
-    tests_require=['nose-exclude'],
+    tests_require=[],
     ext_modules=extension_maker(),
     cmdclass = {'cythonize': CythonizeCommand},
 )

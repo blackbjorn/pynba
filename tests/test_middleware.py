@@ -1,13 +1,8 @@
 import unittest
-# from wsgiref.simple_server import make_server
-
-# from nose.tools import nottest
-from wsgiref.util import setup_testing_defaults
-# setup_testing_defaults = nottest(setup_testing_defaults)
-
 from pynba.stacked import LocalProxy
 from pynba.wsgi import monitor
 from pynba.wsgi import PynbaMiddleware
+from wsgiref.util import setup_testing_defaults
 
 
 class MiddlewareTestCase(unittest.TestCase):

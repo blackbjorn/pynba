@@ -51,8 +51,17 @@ class ScriptMonitor(object):
         if autostart:
             self.start()
 
+    @property
+    def started(self):
+        return self.collector.started
+
+    @property
+    def elapsed(self):
+        return self.collector.elapsed
+
     def start(self):
-        """Starts"""
+        """Starts monitoring.
+        """
         self.collector.start()
         self.resources = resource.getrusage(resource.RUSAGE_SELF)
         return self
@@ -68,7 +77,8 @@ class ScriptMonitor(object):
 
     @property
     def tags(self):
-        """Return collector tags"""
+        """Returns collector tags.
+        """
         return self.collector.tags
 
     def timer(self, **kwargs):
