@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
-version = '0.5.4'
+version = '0.5.5'
 
 install_requires = [
     'six'
@@ -99,6 +99,7 @@ setup(
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Internet :: Log Analysis",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters",

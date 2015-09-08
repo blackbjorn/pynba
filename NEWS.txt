@@ -96,3 +96,10 @@ News
 * PyPy support !
 * forked from iscool_e.pynba
 * refactored packages: it's not a wsgi only usage anymore
+
+0.5.5
+-----
+
+*Release date: 8-Sept-2015*
+
+* Cython unicode fix
