@@ -53,7 +53,7 @@ def write_uvarint(file, value):
 
 
 def write_float(file, value):
-    packed_value = struct.pack('<f', value)
+    packed_value = struct.pack(str('<f'), value)
     file.write(packed_value)
 
 
