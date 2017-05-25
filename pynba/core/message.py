@@ -48,12 +48,12 @@ def write_uvarint(file, value):
     shifted_value = True
     while shifted_value:
         shifted_value = value >> 7
-        file.write(cast(chr((value & 0x7F) | (0x80 if shifted_value != 0 else 0x00))))  # noqa
+        file.write(bytes(bytearray(((value & 0x7F) | (0x80 if shifted_value != 0 else 0x00),))))  # noqa
         value = shifted_value
 
 
 def write_float(file, value):
-    packed_value = struct.pack(str('<f'), value)
+    packed_value = struct.pack(cast(str('<f')), value)
     file.write(packed_value)
 
 
@@ -103,8 +103,6 @@ if PY3:
     def cast(value):
         """Cast any value to bytes()
         """
-        if isinstance(value, str):
-            return value.encode('utf-8')
         if not isinstance(value, bytes):
             return bytes(value, 'utf-8')
         return value
