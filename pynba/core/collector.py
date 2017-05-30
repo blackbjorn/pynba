@@ -30,6 +30,7 @@ class Timed:
 
     def __init__(self):
         self._state = RunningState.initialized
+        self._tt_elapsed = 0
 
     @property
     def started(self):
@@ -66,7 +67,7 @@ class Timed:
         if self._state != RunningState.started:
             raise RuntimeError('Not started')
         self._tt_end = now()
-        self._tt_elapsed = self._tt_end - self._tt_start
+        self._tt_elapsed += self._tt_end - self._tt_start
         self._state = RunningState.stoped
 
     def _flush(self):

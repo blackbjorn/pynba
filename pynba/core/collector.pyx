@@ -39,6 +39,7 @@ cdef class Timed(object):
 
     def __cinit__(self):
         self._state = initialized
+        self._tt_elapsed = 0
 
     property started:
         """Tell if timer is started
@@ -75,7 +76,7 @@ cdef class Timed(object):
         if self._state != started:
             raise RuntimeError('Not started')
         gettimeofday(&self._tt_end, NULL)
-        self._tt_elapsed = (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
+        self._tt_elapsed += (self._tt_end.tv_sec-self._tt_start.tv_sec) * 1000000 + self._tt_end.tv_usec-self._tt_start.tv_usec
         self._state = stoped
 
     cdef _flush(self):
